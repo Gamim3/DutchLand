@@ -85,6 +85,9 @@ public class CarController : MonoBehaviour
             // add extra gravity
             sphereRB.AddForce(transform.up * gravityCar);
         }
+
+        // Makes the collider rotate with the car
+        carRB.MoveRotation(transform.rotation);
     }
 
 }
