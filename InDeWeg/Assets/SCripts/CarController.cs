@@ -20,13 +20,13 @@ public class CarController : MonoBehaviour
     public float alignToGroundTime;
 
     public Rigidbody sphereRB;
+    public Rigidbody carRB;
     
     void Start()
     {
         // detach rigidbody from car
         sphereRB.transform.parent = null;
-
-
+        carRB.transform.parent = null;
     }
 
     
@@ -35,14 +35,14 @@ public class CarController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Vertical");
         turnInput = Input.GetAxisRaw("Horizontal");
 
-        // for Fun
+        // Nitrous
         if (Input.GetButton("Jump"))
         {
-            turnSpeed = 200f;
+            fwdSpeed = 300;
         }
         else
         {
-            turnSpeed = 150f;
+            fwdSpeed = 150;
         }
 
         // adjust speed for car
