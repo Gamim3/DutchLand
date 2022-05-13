@@ -4,49 +4,25 @@ using UnityEngine;
 
 public class WheelController : MonoBehaviour
 {
-    public GameObject[] wheelsToRotate;
+    public Transform[] wheelsToRotate;
     public float rotationSpeed;
-
-    private Animator anim;
-    // Start is called before the first frame update
-    void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
-
+    public Transform[] wheelsToTurn;
+    public float turnSpeed;
+   
     // Update is called once per frame
     void Update()
     {
+        
         float verticalAxis = Input.GetAxisRaw("Vertical");
         float horizontalAxis = Input.GetAxisRaw("Horizontal");
 
-        foreach(var wheel in wheelsToRotate)
+        foreach (Transform wheel in wheelsToRotate)
         {
-            wheel.transform.Rotate(Time.deltaTime * verticalAxis * rotationSpeed, 0f, 0f, Space.Self);
+            wheel.Rotate(new Vector3(Time.deltaTime * verticalAxis * rotationSpeed, 0f, 0f));
         }
-
-        if (horizontalAxis > 0)
+        foreach(Transform wheel in wheelsToTurn)
         {
-            // Turning Right
-            anim.SetBool("GoingLeft",false);
-            anim.SetBool("GoingRight", true);
-
+            wheel.Rotate(new Vector3(0, Time.deltaTime * horizontalAxis * turnSpeed, 0));
         }
-        else if (horizontalAxis < 0)
-        {
-            // Turning Left
-            anim.SetBool("GoingLeft", true);
-            anim.SetBool("GoingRight", false);
-
-        }
-        else
-        {
-            // Must Be Going Straight
-            anim.SetBool("GoingLeft", false);
-            anim.SetBool("GoingRight", false);
-
-        }
-        
-        
     }
 }
