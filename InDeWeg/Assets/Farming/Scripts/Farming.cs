@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Farming : MonoBehaviour
 {
-    public Transform cam;
+    public RaycastHit hit;
+
+    public Vector3 direction;
+    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
+
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
-            Vector3 mousePos = Input.mousePosition;
-
-            print("schiet");
-            if (Physics.Raycast(cam.position, mousePos, 100f))
+            if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
-                print("raak");
+
             }
         }
     }
