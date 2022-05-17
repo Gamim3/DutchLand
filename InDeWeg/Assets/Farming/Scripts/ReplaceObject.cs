@@ -36,7 +36,7 @@ public class ReplaceObject : MonoBehaviour
             Instantiate(groundTile, transform.position, Quaternion.identity);
             Destroy(groundTile);
             canPlace = false;
-            groundstates =
+            // groundstates =
         }
         if (GroundState == 1 && groundstates !< 2 && groundstates! > 0)
         {
