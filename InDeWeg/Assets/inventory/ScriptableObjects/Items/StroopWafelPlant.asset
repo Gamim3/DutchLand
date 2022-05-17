@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15983c96b217dd4b8ae99f710c8e2e7, type: 3}
   m_Name: StroopWafelPlant
   m_EditorClassIdentifier: 
-  prefabs: {fileID: 0}
+  prefabs: {fileID: 180926227744654962, guid: b781d2f099bdd2d46bf5708d5a4237e3, type: 3}
   types: 1
   description: 'StroopWafel Plant
 

@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09355c6a9c143444d9a95e10a9f8bd6e, type: 3}
   m_Name: Speler Inventaris
   m_EditorClassIdentifier: 
-  Container: []
+  Container:
+  - item: {fileID: 11400000, guid: 22155dab6527fdd4e8f3bae3dcd9c05d, type: 2}
+    amount: 5
+  - item: {fileID: 11400000, guid: cdae4addd49094e489fbca2049c68483, type: 2}
+    amount: 10
