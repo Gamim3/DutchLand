@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Farming : MonoBehaviour
+public class Watering : MonoBehaviour
 {
     public RaycastHit hit;
 
@@ -22,7 +22,7 @@ public class Farming : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
-                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(1);
+                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(2);
                 print("raak");
             }
         }
