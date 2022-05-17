@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8580830501357004334}
   - component: {fileID: 5783363901327931866}
   m_Layer: 0
-  m_Name: grote plantjes gewaterd
+  m_Name: grond standaard gewaterd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
