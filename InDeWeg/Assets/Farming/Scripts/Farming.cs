@@ -6,7 +6,7 @@ public class Farming : MonoBehaviour
 {
     public RaycastHit hit;
 
-    public Vector3 direction;
+    public GameObject cam;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,14 @@ public class Farming : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3 direction = cam.transform.forward;
+
         if (Input.GetButton("Fire1"))
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
-
+                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(0);
+                print("raak");
             }
         }
     }
