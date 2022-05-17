@@ -324,7 +324,6 @@ MonoBehaviour:
   groundTileWatered: {fileID: 0}
   origin: {fileID: 1068357977}
   groundstates: 0
-  canPlace: 0
 --- !u!4 &1068357977
 Transform:
   m_ObjectHideFlags: 0
@@ -632,7 +631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
+  replaceO: 1
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 919132149155446097, guid: 4acabb8cab232b549bc098c49308344c,
@@ -641,7 +640,6 @@ MonoBehaviour:
   groundTileWatered: {fileID: 0}
   origin: {fileID: 1950909869}
   groundstates: 0
-  canPlace: 0
 --- !u!4 &1950909869
 Transform:
   m_ObjectHideFlags: 0

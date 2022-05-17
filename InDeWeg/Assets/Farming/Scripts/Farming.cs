@@ -18,11 +18,12 @@ public class Farming : MonoBehaviour
     {
         Vector3 direction = cam.transform.forward;
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
                 hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(0);
+                hit.transform.gameObject.GetComponent<ReplaceObject>().replaceO = true;
                 print("raak");
             }
         }
