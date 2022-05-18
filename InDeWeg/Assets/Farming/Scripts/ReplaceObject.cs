@@ -10,6 +10,8 @@ public class ReplaceObject : MonoBehaviour
     public GameObject groundTileWatered;
 
     public GameObject seeds;
+    public GameObject growth1;
+    public GameObject growth2;
 
     public Transform origin;
 
@@ -61,6 +63,19 @@ public class ReplaceObject : MonoBehaviour
             groundstates = 4;
 
             Instantiate(seeds, transform.position, Quaternion.identity);
+            StartCoroutine(Growing1());
         }
     }
+    public IEnumerator Growing1()
+    {
+        yield return new WaitForSeconds(8f);
+        Instantiate(growth1, transform.position, Quaternion.identity);
+        StartCoroutine(Growing2());
+    }
+    public IEnumerator Growing2()
+    {
+        yield return new WaitForSeconds(5f);
+        Instantiate(growth2, transform.position, Quaternion.identity);
+    }
 }
+
