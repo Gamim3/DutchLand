@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 184226592}
   - component: {fileID: 184226598}
   - component: {fileID: 184226599}
+  - component: {fileID: 184226600}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -267,7 +268,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184226591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bdc0df12fe00724d9f1083f20c985a5, type: 3}
   m_Name: 
@@ -280,9 +281,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184226591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 937c592a9081fb641bcedc4095898142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1559241900}
+--- !u!114 &184226600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184226591}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27469c80548e6f143bde74f0cfeb1dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1559241900}
@@ -344,17 +358,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 209771658}
   groundstates: 0
 --- !u!1 &551040308
@@ -613,17 +625,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 649557697}
   groundstates: 0
 --- !u!1 &985621753
@@ -684,17 +694,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 985621754}
   groundstates: 0
 --- !u!1 &1065821250
@@ -837,17 +845,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 1068357977}
   groundstates: 0
 --- !u!4 &1068357977
@@ -1028,17 +1034,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 1297738061}
   groundstates: 0
 --- !u!1 &1559241900
@@ -1233,17 +1237,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 1624508159}
   groundstates: 0
 --- !u!1 &1667230079
@@ -1304,17 +1306,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 1667230080}
   groundstates: 0
 --- !u!1 &1721005854
@@ -1375,17 +1375,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 1721005855}
   groundstates: 0
 --- !u!1 &1760498187
@@ -1561,17 +1559,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaceO: 0
-  replaceT: 0
-  replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
-  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+  groundWatered: {fileID: 5418882795303890708, guid: 63af6957f15db594da2b388c56720fb1,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
     type: 3}
+  seeds: {fileID: 6393832058634149321, guid: 76a06b27118b8dd4bb5747c17900941b, type: 3}
   origin: {fileID: 2075277725}
   groundstates: 0
 --- !u!1 &2090724578

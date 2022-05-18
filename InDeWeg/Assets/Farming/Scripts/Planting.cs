@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Watering : MonoBehaviour
+public class Planting : MonoBehaviour
 {
     public RaycastHit hit;
 
@@ -29,6 +29,6 @@ public class Watering : MonoBehaviour
     public IEnumerator Working()
     {
         yield return new WaitForSeconds(0.8f);
-        hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("WateringCan");
+        hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("Shovel");
     }
 }

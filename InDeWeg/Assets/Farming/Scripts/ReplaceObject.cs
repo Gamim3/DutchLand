@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class ReplaceObject : MonoBehaviour
 {
-    public bool replaceO;
-    public bool replaceT;
-    public bool replaceW;
-
     public GameObject groundTile;
     public GameObject groundWatered;
     public GameObject groundTileTilled;
     public GameObject groundTileWatered;
+
+    public GameObject seeds;
 
     public Transform origin;
 
@@ -20,10 +18,6 @@ public class ReplaceObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        replaceO = false;
-        replaceT = false;
-        replaceW = false;
-
         groundstates = 0;
     }
     // Update is called once per frame
@@ -31,41 +25,42 @@ public class ReplaceObject : MonoBehaviour
     {
 
     }
-    public void Replace(int GroundState)
+    public void Replace(string Toolstate)
     {
         // tilled ground
-        if (GroundState == 1 && groundstates == 0)
+        if (Toolstate == "Hoe" && groundstates == 0)
         {
-            Instantiate(groundTileTilled, transform.position, Quaternion.identity);
-
             groundstates = 1;
+
+            Instantiate(groundTileTilled, transform.position, Quaternion.identity);
         }
         // waterd ground
-        if (GroundState == 3 && groundstates == 0)
+        if (Toolstate == "WateringCan" && groundstates == 0)
         {
-            Instantiate(groundWatered, transform.position, Quaternion.identity);
+            groundstates = 2;
 
-            groundstates = 3;
+            Instantiate(groundWatered, transform.position, Quaternion.identity);
         }
         // waterd tilled ground Water can last
-        if (GroundState == 2)
+        if (Toolstate == "WateringCan" && groundstates == 1)
         {
-            if (groundstates == 1)
-            {
-                Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+            groundstates = 3;
 
-                groundstates = 2;
-            }
+            Instantiate(groundTileWatered, transform.position, Quaternion.identity);
         }
         // waterd tilled ground Hoe last
-        if (GroundState == 4)
+        if (Toolstate == "Hoe" && groundstates == 2)
         {
-            if (groundstates == 3)
-            {
-                Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+            groundstates = 3;
+            
+            Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+        }
+        // planting seeds
+        if (Toolstate == "Shovel" && groundstates == 3)
+        {
+            groundstates = 4;
 
-                groundstates = 2;
-            }
+            Instantiate(seeds, transform.position, Quaternion.identity);
         }
     }
 }

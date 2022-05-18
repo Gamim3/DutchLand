@@ -18,7 +18,7 @@ public class Movers : MonoBehaviour
 
     void Start()
     {
-        speed = 1;
+        speed = 1.5f;
         rb = GetComponent<Rigidbody>();
     }
     void Update()
@@ -29,6 +29,6 @@ public class Movers : MonoBehaviour
         move.x = horizontal;
         move.z = vertical;
 
-        transform.Translate(move * speed * Time.deltaTime * 10);
+        transform.Translate(move * speed * Time.deltaTime * 5);
     }
 }

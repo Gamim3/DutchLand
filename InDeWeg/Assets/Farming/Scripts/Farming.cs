@@ -22,9 +22,16 @@ public class Farming : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
-                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(1);
-                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(4);
+                // maybe make speed of the player lower when working
+                //GetComponent<Movers>().speed = 0.5f;
+                StartCoroutine(Working());
             }
         }
+    }
+    public IEnumerator Working()
+    {
+        yield return new WaitForSeconds(0.8f);
+        hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("Hoe");
+        //GetComponent<Movers>().speed = 1.0f;
     }
 }
