@@ -267,7 +267,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184226591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3bdc0df12fe00724d9f1083f20c985a5, type: 3}
   m_Name: 
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184226591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 937c592a9081fb641bcedc4095898142, type: 3}
   m_Name: 
@@ -348,6 +348,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
@@ -616,6 +618,8 @@ MonoBehaviour:
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+    type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
@@ -684,6 +688,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
@@ -835,6 +841,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
@@ -1024,6 +1032,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
@@ -1228,6 +1238,8 @@ MonoBehaviour:
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+    type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
@@ -1297,6 +1309,8 @@ MonoBehaviour:
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
     type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
+    type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
   groundTileWatered: {fileID: 3065320516445137125, guid: b6a1a493d9debca448c9cae7afa2c6d2,
@@ -1365,6 +1379,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}
@@ -1549,6 +1565,8 @@ MonoBehaviour:
   replaceT: 0
   replaceW: 0
   groundTile: {fileID: 5893149573688539269, guid: da68be76b37e8184094edb0fa68693a4,
+    type: 3}
+  groundWatered: {fileID: 7788350554070517755, guid: fe8f5def274d08941aa61263a05ccaf4,
     type: 3}
   groundTileTilled: {fileID: 9201800068937262781, guid: a827114cd2c05af4b9c404ee83705c9b,
     type: 3}

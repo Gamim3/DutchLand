@@ -9,6 +9,7 @@ public class ReplaceObject : MonoBehaviour
     public bool replaceW;
 
     public GameObject groundTile;
+    public GameObject groundWatered;
     public GameObject groundTileTilled;
     public GameObject groundTileWatered;
 
@@ -32,26 +33,39 @@ public class ReplaceObject : MonoBehaviour
     }
     public void Replace(int GroundState)
     {
-        // if ground tiles will be placeable
-        //if (GroundState == 0 && replaceO == true)
-       // {
-            //Instantiate(groundTile, transform.position, Quaternion.identity);
-            //Destroy(groundTile);
-            //replaceO = false;
-            //groundstates = 0;
-       // }
+        // tilled ground
         if (GroundState == 1 && groundstates == 0)
         {
             Instantiate(groundTileTilled, transform.position, Quaternion.identity);
-            Destroy(groundTile);
+
             groundstates = 1;
         }
-        if (GroundState == 2 && groundstates == 1)
+        // waterd ground
+        if (GroundState == 3 && groundstates == 0)
         {
-            
-            Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+            Instantiate(groundWatered, transform.position, Quaternion.identity);
 
-            groundstates = 2;
+            groundstates = 3;
+        }
+        // waterd tilled ground Water can last
+        if (GroundState == 2)
+        {
+            if (groundstates == 1)
+            {
+                Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+
+                groundstates = 2;
+            }
+        }
+        // waterd tilled ground Hoe last
+        if (GroundState == 4)
+        {
+            if (groundstates == 3)
+            {
+                Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+
+                groundstates = 2;
+            }
         }
     }
 }

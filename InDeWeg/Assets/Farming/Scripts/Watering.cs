@@ -23,6 +23,7 @@ public class Watering : MonoBehaviour
             if (Physics.Raycast(transform.position, direction, out hit, 3f)&& hit.transform.tag == "FarmTile")
             {
                 hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(2);
+                hit.transform.gameObject.GetComponent<ReplaceObject>().Replace(3);
                 print("raak");
             }
         }
