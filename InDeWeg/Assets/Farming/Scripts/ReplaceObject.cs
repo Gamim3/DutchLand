@@ -62,20 +62,22 @@ public class ReplaceObject : MonoBehaviour
         {
             groundstates = 4;
 
-            Instantiate(seeds, transform.position, Quaternion.identity);
+            GameObject seedsClone = Instantiate(seeds, transform.position, Quaternion.identity);
             StartCoroutine(Growing1());
+            Destroy(seedsClone, 8f);
         }
     }
     public IEnumerator Growing1()
     {
         yield return new WaitForSeconds(8f);
-        Instantiate(growth1, transform.position, Quaternion.identity);
+        GameObject growth1clone = Instantiate(growth1, transform.position, Quaternion.identity);
+        Destroy(growth1clone, 5f);
         StartCoroutine(Growing2());
     }
     public IEnumerator Growing2()
     {
         yield return new WaitForSeconds(5f);
-        Instantiate(growth2, transform.position, Quaternion.identity);
+        GameObject growth2clone = Instantiate(growth2, transform.position, Quaternion.identity);
     }
 }
 
