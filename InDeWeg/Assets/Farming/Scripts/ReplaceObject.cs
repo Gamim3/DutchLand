@@ -84,6 +84,18 @@ public class ReplaceObject : MonoBehaviour
 
             Destroy(pPlantedClone, 8f);
         }
+        if (Toolstate == "Scythe" && GrowthStage == "FinalStage")
+        {
+            Destroy(pPlantedClone);
+            Destroy(gTiledClone);
+
+            gTiledClone = Instantiate(groundTile, transform.position, Quaternion.identity);
+
+            var item = other.GetComponent<Item>();
+            GetComponent<Speler>().inventaris.AddItem(item.item, 1);
+
+            groundstates = 0;
+        }
     }
     public IEnumerator Growing1()
     {
