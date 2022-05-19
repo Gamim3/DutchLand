@@ -7,6 +7,8 @@ public class Planting : MonoBehaviour
     public RaycastHit hit;
 
     public GameObject cam;
+
+    public bool working;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +20,12 @@ public class Planting : MonoBehaviour
     {
         Vector3 direction = cam.transform.forward;
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && working == false)
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
             {
+                working = true;
+
                 StartCoroutine(Working());
             }
         }
@@ -29,6 +33,9 @@ public class Planting : MonoBehaviour
     public IEnumerator Working()
     {
         yield return new WaitForSeconds(0.8f);
+
         hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("Shovel");
+
+        working = false;
     }
 }

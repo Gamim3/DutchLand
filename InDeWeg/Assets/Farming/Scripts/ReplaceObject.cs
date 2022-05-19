@@ -12,6 +12,8 @@ public class ReplaceObject : MonoBehaviour
     public GameObject seeds;
     public GameObject growth1;
     public GameObject growth2;
+    public GameObject growth3;
+    public GameObject growth4;
 
     public GameObject gTiledClone;
     public GameObject pPlantedClone;
@@ -91,6 +93,20 @@ public class ReplaceObject : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         pPlantedClone = Instantiate(growth2, transform.position, Quaternion.identity);
+        Destroy(pPlantedClone, 5f);
+        StartCoroutine(Growing3());
+    }
+    public IEnumerator Growing3()
+    {
+        yield return new WaitForSeconds(5f);
+        pPlantedClone = Instantiate(growth3, transform.position, Quaternion.identity);
+        Destroy(pPlantedClone, 5f);
+        StartCoroutine(Growing4());
+    }
+    public IEnumerator Growing4()
+    {
+        yield return new WaitForSeconds(5f);
+        pPlantedClone = Instantiate(growth4, transform.position, Quaternion.identity);
     }
 }
 
