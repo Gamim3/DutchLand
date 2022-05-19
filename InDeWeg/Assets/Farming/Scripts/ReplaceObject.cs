@@ -91,9 +91,6 @@ public class ReplaceObject : MonoBehaviour
 
             gTiledClone = Instantiate(groundTile, transform.position, Quaternion.identity);
 
-            var item = other.GetComponent<Item>();
-            GetComponent<Speler>().inventaris.AddItem(item.item, 1);
-
             groundstates = 0;
         }
     }
