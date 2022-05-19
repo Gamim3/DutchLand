@@ -16,4 +16,8 @@ public class Speler : MonoBehaviour
         }
     }
 
+    private void OnApplicationQuit()
+    {
+        inventaris.Container.Clear();
+    }
 }
