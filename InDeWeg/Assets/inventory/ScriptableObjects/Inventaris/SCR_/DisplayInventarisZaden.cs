@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-public class DisplayInventaris : MonoBehaviour
+public class DisplayInventarisZaden : MonoBehaviour
 {
     public InventarisObject inventaris;
-    public int x_Space_Between_Items;
-    public int number_Of_Column;
-    public int y_Space_Between_Items;
+
+    public int x_Start_Zaden;
+    public int y_Start_Zaden;
+    public int x_Space_Between_Items_Zaden;
+    public int number_Of_Column_Zaden;
+    public int y_Space_Between_Items_Zaden;
 
     Dictionary<InventarisSlot, GameObject> itemsDisplayed = new Dictionary<InventarisSlot, GameObject>();
     // Start is called before the first frame update
@@ -33,6 +36,8 @@ public class DisplayInventaris : MonoBehaviour
     }
     public Vector3 GetPosition(int i)
     {
-        return new Vector3(x_Space_Between_Items * (i % number_Of_Column), (-y_Space_Between_Items * (i / number_Of_Column)), 0f);
+        return new Vector3(x_Start_Zaden + (x_Space_Between_Items_Zaden * (i % number_Of_Column_Zaden)), y_Start_Zaden + (-y_Space_Between_Items_Zaden * (i % number_Of_Column_Zaden)), 0f);
     }
+
+
 }
