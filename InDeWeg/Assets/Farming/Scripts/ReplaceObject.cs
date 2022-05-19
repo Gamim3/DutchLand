@@ -34,7 +34,7 @@ public class ReplaceObject : MonoBehaviour
         {
             groundstates = 1;
 
-            Instantiate(groundTileTilled, transform.position, Quaternion.identity);
+            GameObject gTClone = Instantiate(groundTileTilled, transform.position, Quaternion.identity);
         }
         // waterd ground
         if (Toolstate == "WateringCan" && groundstates == 0)
@@ -54,7 +54,7 @@ public class ReplaceObject : MonoBehaviour
         if (Toolstate == "Hoe" && groundstates == 2)
         {
             groundstates = 3;
-            
+
             Instantiate(groundTileWatered, transform.position, Quaternion.identity);
         }
         // planting seeds
