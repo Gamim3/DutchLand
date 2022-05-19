@@ -137,9 +137,7 @@ GameObject:
   - component: {fileID: 184226593}
   - component: {fileID: 184226597}
   - component: {fileID: 184226592}
-  - component: {fileID: 184226598}
-  - component: {fileID: 184226599}
-  - component: {fileID: 184226600}
+  - component: {fileID: 184226601}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -261,119 +259,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &184226598
+--- !u!114 &184226601
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184226591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bdc0df12fe00724d9f1083f20c985a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1559241900}
-  working: 0
---- !u!114 &184226599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184226591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 937c592a9081fb641bcedc4095898142, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1559241900}
-  working: 0
---- !u!114 &184226600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184226591}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27469c80548e6f143bde74f0cfeb1dc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1559241900}
-  working: 0
---- !u!1 &209771657
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 209771658}
-  - component: {fileID: 209771660}
-  - component: {fileID: 209771659}
-  m_Layer: 0
-  m_Name: GameObject (2)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &209771658
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209771657}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &209771659
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209771657}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &209771660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209771657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d498179fe4db0045a2d278f97c49ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 209771658}
-  groundstates: 0
+  state: 0
+  cam: {fileID: 1559241900}
+  working: 0
 --- !u!1 &551040308
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,148 +472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &649557696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 649557697}
-  - component: {fileID: 649557699}
-  - component: {fileID: 649557698}
-  m_Layer: 0
-  m_Name: GameObject (4)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &649557697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649557696}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &649557698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649557696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &649557699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 649557696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 649557697}
-  groundstates: 0
---- !u!1 &985621753
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 985621754}
-  - component: {fileID: 985621756}
-  - component: {fileID: 985621755}
-  m_Layer: 0
-  m_Name: GameObject (5)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &985621754
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985621753}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &985621755
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985621753}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &985621756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985621753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 985621754}
-  groundstates: 0
 --- !u!1 &1065821250
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,85 +569,6 @@ Transform:
   m_Father: {fileID: 645719585}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &1068357974
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1068357977}
-  - component: {fileID: 1068357976}
-  - component: {fileID: 1068357975}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1068357975
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068357974}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1068357976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068357974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 1068357977}
-  groundstates: 0
---- !u!4 &1068357977
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068357974}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.25, z: 2}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1297738061}
-  - {fileID: 209771658}
-  - {fileID: 1721005855}
-  - {fileID: 649557697}
-  - {fileID: 985621754}
-  - {fileID: 2075277725}
-  - {fileID: 1624508159}
-  - {fileID: 1667230080}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070532687
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,77 +666,6 @@ Transform:
   m_Father: {fileID: 645719585}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1297738060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1297738061}
-  - component: {fileID: 1297738063}
-  - component: {fileID: 1297738062}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1297738061
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297738060}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1297738062
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297738060}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1297738063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297738060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 1297738061}
-  groundstates: 0
 --- !u!1 &1559241900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1192,219 +800,6 @@ MonoBehaviour:
   mouseSensitivity: 0
   playerBody: {fileID: 184226596}
   mSpeed: 60
---- !u!1 &1624508158
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624508159}
-  - component: {fileID: 1624508161}
-  - component: {fileID: 1624508160}
-  m_Layer: 0
-  m_Name: GameObject (7)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1624508159
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624508158}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1624508160
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624508158}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1624508161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624508158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 1624508159}
-  groundstates: 0
---- !u!1 &1667230079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1667230080}
-  - component: {fileID: 1667230082}
-  - component: {fileID: 1667230081}
-  m_Layer: 0
-  m_Name: GameObject (8)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1667230080
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667230079}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1667230081
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667230079}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1667230082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1667230079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 1667230080}
-  groundstates: 0
---- !u!1 &1721005854
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1721005855}
-  - component: {fileID: 1721005857}
-  - component: {fileID: 1721005856}
-  m_Layer: 0
-  m_Name: GameObject (3)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1721005855
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721005854}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1721005856
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721005854}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1721005857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721005854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 1721005855}
-  groundstates: 0
 --- !u!1 &1760498187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,77 +915,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &2075277724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2075277725}
-  - component: {fileID: 2075277727}
-  - component: {fileID: 2075277726}
-  m_Layer: 0
-  m_Name: GameObject (6)
-  m_TagString: FarmTile
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2075277725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075277724}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1068357977}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2075277726
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075277724}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2075277727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075277724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
-  pPlantedClone: {fileID: 0}
-  origin: {fileID: 2075277725}
-  groundstates: 0
 --- !u!1 &2090724578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,3 +1012,617 @@ Transform:
   m_Father: {fileID: 645719585}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &6971303209364914777
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910720, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303209638910735, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_Name
+      value: GameObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: seeds
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3a1a5c192e5f5d944bfa4725616329ad,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth1
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 1d22f9daa1f084943b922c5b369a5466,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth2
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: ae3b430e16112a84cbfbe3803cf0e0b7,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth3
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 793855e89371357438bbdeee2744401d,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: growth4
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 9306bc31162f9b14e9c8cac2a46c4c24,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTile
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: gTiledClone
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 3eeee662d74939e49a022e88eeb821ec,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 12295e91de006834d858ea1b678ad7a7,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileTilled
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: d7729938d674a06498ca2d5b3b0d9ab5,
+        type: 3}
+    - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: groundTileWatered
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 79f0c047157e909499a30008457e1ee4,
+        type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56aab86944ee2ed428ca5c21f2173ae1, type: 3}

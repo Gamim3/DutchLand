@@ -18,6 +18,8 @@ public class ReplaceObject : MonoBehaviour
     public GameObject gTiledClone;
     public GameObject pPlantedClone;
 
+    public string GrowthStage;
+
     public Transform origin;
 
     public int groundstates;
@@ -79,34 +81,30 @@ public class ReplaceObject : MonoBehaviour
 
             pPlantedClone = Instantiate(seeds, transform.position, Quaternion.identity);
             StartCoroutine(Growing1());
+
             Destroy(pPlantedClone, 8f);
         }
     }
     public IEnumerator Growing1()
     {
         yield return new WaitForSeconds(8f);
+
         pPlantedClone = Instantiate(growth1, transform.position, Quaternion.identity);
         Destroy(pPlantedClone, 5f);
-        StartCoroutine(Growing2());
-    }
-    public IEnumerator Growing2()
-    {
+
         yield return new WaitForSeconds(5f);
+
         pPlantedClone = Instantiate(growth2, transform.position, Quaternion.identity);
         Destroy(pPlantedClone, 5f);
-        StartCoroutine(Growing3());
-    }
-    public IEnumerator Growing3()
-    {
+
         yield return new WaitForSeconds(5f);
+
         pPlantedClone = Instantiate(growth3, transform.position, Quaternion.identity);
         Destroy(pPlantedClone, 5f);
-        StartCoroutine(Growing4());
-    }
-    public IEnumerator Growing4()
-    {
+
         yield return new WaitForSeconds(5f);
+
         pPlantedClone = Instantiate(growth4, transform.position, Quaternion.identity);
+        GrowthStage = ("FinalStage");
     }
 }
-
