@@ -2548,6 +2548,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
+      propertyPath: finalCrop
+      value: 
+      objectReference: {fileID: 770772948761960747, guid: 8acf228017faaa543a3463f44086590b,
+        type: 3}
+    - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
