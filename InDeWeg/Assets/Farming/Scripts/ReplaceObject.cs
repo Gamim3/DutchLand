@@ -80,6 +80,7 @@ public class ReplaceObject : MonoBehaviour
             groundstates = 4;
 
             pPlantedClone = Instantiate(seeds, transform.position, Quaternion.identity);
+
             StartCoroutine(Growing1());
 
             Destroy(pPlantedClone, 8f);
