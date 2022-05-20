@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ReplaceObject : MonoBehaviour
 {
+    public GameObject finaCrop;
+
     public GameObject groundTile;
     public GameObject groundWatered;
     public GameObject groundTileTilled;
@@ -87,6 +89,8 @@ public class ReplaceObject : MonoBehaviour
         }
         if (Toolstate == "Scythe" && GrowthStage == "FinalStage")
         {
+            Instantiate(finaCrop);
+
             Destroy(pPlantedClone);
             Destroy(gTiledClone);
 
