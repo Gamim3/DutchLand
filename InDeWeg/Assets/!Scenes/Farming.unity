@@ -383,8 +383,6 @@ GameObject:
   - component: {fileID: 184226597}
   - component: {fileID: 184226592}
   - component: {fileID: 184226601}
-  - component: {fileID: 184226603}
-  - component: {fileID: 184226602}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -521,32 +519,6 @@ MonoBehaviour:
   state: 0
   cam: {fileID: 1559241900}
   working: 0
---- !u!114 &184226602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184226591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf0a89a45986df54ba8c54bee41836ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 80723669}
---- !u!114 &184226603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184226591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bad51046c7acf640b18b13653dcda58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventaris: {fileID: 11400000, guid: 7af9811831bc3ba42ad16204df47e9a5, type: 2}
 --- !u!1 &551040308
 GameObject:
   m_ObjectHideFlags: 0

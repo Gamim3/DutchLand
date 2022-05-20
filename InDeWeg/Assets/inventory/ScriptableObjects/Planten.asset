@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bae58288fa46eaf4bb8d0c48344c3748, type: 3}
-  m_Name: StroopWafelZaden
+  m_Script: {fileID: 11500000, guid: 481b68a14c1a61542acfe47b2df18368, type: 3}
+  m_Name: Planten
   m_EditorClassIdentifier: 
-  prefabs: {fileID: 3878845471339594960, guid: b781d2f099bdd2d46bf5708d5a4237e3, type: 3}
-  types: 0
-  description: StroopWafel Zaden
+  iD: 0
+  displayName: StroopWafel Planten
+  description: StroopWafel Planten
+  icon: {fileID: 0}
+  maxStackSize: 5
