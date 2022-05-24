@@ -35,16 +35,6 @@ public class CarController : MonoBehaviour
         moveInput = Input.GetAxisRaw("Vertical");
         turnInput = Input.GetAxisRaw("Horizontal");
 
-        // Nitrous
-        if (Input.GetButton("Jump"))
-        {
-            fwdSpeed = 300;
-        }
-        else
-        {
-            fwdSpeed = 150;
-        }
-
         // adjust speed for car
         moveInput *= moveInput > 0 ? fwdSpeed : revSpeed;
 
