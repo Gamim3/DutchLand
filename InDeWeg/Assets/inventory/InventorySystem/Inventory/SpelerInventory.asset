@@ -9,14 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481b68a14c1a61542acfe47b2df18368, type: 3}
-  m_Name: Zaden
+  m_Script: {fileID: 11500000, guid: 38436e54ef1bf934a9bb8dd754ccfc08, type: 3}
+  m_Name: SpelerInventory
   m_EditorClassIdentifier: 
-  iD: 0
-  displayName: StroopWafel Zaden
-  description: StroopWafel Zaden
-  icon: {fileID: 0}
-  maxStackSize: 5
-  titleTXT: {fileID: 0}
-  descritionTXT: {fileID: 0}
-  costTXT: {fileID: 0}
+  Container: []
