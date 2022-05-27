@@ -16,4 +16,7 @@ MonoBehaviour:
   displayName: StroopWafel Zaden
   description: StroopWafel Zaden
   icon: {fileID: 0}
-  maxStackSize: 1
+  maxStackSize: 5
+  titleTXT: {fileID: 0}
+  descritionTXT: {fileID: 0}
+  costTXT: {fileID: 0}
