@@ -36,7 +36,7 @@ public class ReplaceObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     public void Replace(string Toolstate)
     {
