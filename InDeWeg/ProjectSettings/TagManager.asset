@@ -6,6 +6,10 @@ TagManager:
   tags:
   - FarmTile
   - Busje
+  - GroundWalkSound
+  - GrassWalkSound
+  - WoodWalkSound
+  - FarmWalkSound
   layers:
   - Default
   - TransparentFX

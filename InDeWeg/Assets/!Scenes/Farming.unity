@@ -383,6 +383,8 @@ GameObject:
   - component: {fileID: 184226597}
   - component: {fileID: 184226592}
   - component: {fileID: 184226601}
+  - component: {fileID: 184226603}
+  - component: {fileID: 184226602}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -519,6 +521,122 @@ MonoBehaviour:
   state: 0
   cam: {fileID: 1559241900}
   working: 0
+--- !u!82 &184226602
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184226591}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &184226603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184226591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c41c3785750c449ebec87ab71d140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps: 0
+  stepSpeed: 0.5
+  footstepAudioSource: {fileID: 184226602}
+  woodClips: []
+  groundClips: []
+  grassClips: []
+  farmTileClips: []
+  footstepTimer: 0
 --- !u!1 &551040308
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +651,7 @@ GameObject:
   - component: {fileID: 551040309}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: WoodWalkSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -630,7 +748,7 @@ GameObject:
   - component: {fileID: 645719582}
   m_Layer: 0
   m_Name: platform
-  m_TagString: Untagged
+  m_TagString: GrassWalkSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -947,7 +1065,7 @@ GameObject:
   - component: {fileID: 1065821251}
   m_Layer: 0
   m_Name: Wall (3)
-  m_TagString: Untagged
+  m_TagString: WoodWalkSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1044,7 +1162,7 @@ GameObject:
   - component: {fileID: 1070532688}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: WoodWalkSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1651,7 +1769,7 @@ GameObject:
   - component: {fileID: 2090724579}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: WoodWalkSound
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1741,6 +1859,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6971303208344185621, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -1802,6 +1925,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303208632105925, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -1863,6 +1991,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303208717710663, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -1924,6 +2057,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303208780262182, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -1985,6 +2123,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303208822539431, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -2046,6 +2189,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303209423625936, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -2239,6 +2387,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject
       objectReference: {fileID: 0}
+    - target: {fileID: 6971303209638910735, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971303209721915040, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
@@ -2300,6 +2458,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
         type: 3}
+    - target: {fileID: 6971303209789551769, guid: 56aab86944ee2ed428ca5c21f2173ae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: FarmTile
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: seeds
