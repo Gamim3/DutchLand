@@ -4,11 +4,11 @@ ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: -1978303741906493279
-    second: Armature|idle
+      74: 6954441946025995879
+    second: Cube.004|idle
   - first:
-      74: 409825400523893715
-    second: Armature|use
+      74: -3972980869892883098
+    second: Cube.004|use
   externalObjects: {}
   materials:
     materialImportMode: 2
