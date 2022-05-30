@@ -218,7 +218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &80723670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,12 +1522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b099ca1ecf9ef419dfc0a40d1a0cd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventaris: {fileID: 11400000, guid: 7af9811831bc3ba42ad16204df47e9a5, type: 2}
-  x_Start_Zaden: -500
-  y_Start_Zaden: 225
-  x_Space_Between_Items_Zaden: 0
-  number_Of_Column_Zaden: 6
-  y_Space_Between_Items_Zaden: 350
 --- !u!1 &1760498187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,32 +1745,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208344185622, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -1817,32 +1806,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208632105926, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -1883,32 +1867,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208717710712, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -1949,32 +1928,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208780262363, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -2015,32 +1989,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303208822539608, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -2081,32 +2050,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209423625941, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -2202,32 +2166,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209638910721, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finaCrop
@@ -2284,32 +2243,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209721915045, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
@@ -2350,32 +2304,27 @@ PrefabInstance:
         type: 3}
       propertyPath: seeds
       value: 
-      objectReference: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth1
       value: 
-      objectReference: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth2
       value: 
-      objectReference: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth3
       value: 
-      objectReference: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: growth4
       value: 
-      objectReference: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6971303209789551770, guid: 56aab86944ee2ed428ca5c21f2173ae1,
         type: 3}
       propertyPath: finalCrop
