@@ -21,6 +21,14 @@ public class ToolSwamp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (working == false)
+        {
+            GetComponent<Movers>().speed = 1.0f;
+        }
+        else
+        {
+            GetComponent<Movers>().speed = 0.0f;
+        }
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             state += 1;
