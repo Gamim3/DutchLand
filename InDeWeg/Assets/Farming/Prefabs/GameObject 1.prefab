@@ -55,11 +55,11 @@ MonoBehaviour:
     type: 3}
   groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
     type: 3}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
+  seeds: {fileID: 919132149155446097, guid: 81e0c7236d8b3e144a254ae4228ce184, type: 3}
+  growth1: {fileID: 919132149155446097, guid: abcd988ca868d4f4e803bd22cdbd5cd9, type: 3}
+  growth2: {fileID: 919132149155446097, guid: 223e47289b82f99458bfcddc968063c3, type: 3}
+  growth3: {fileID: 919132149155446097, guid: 83ea3eb0961c3ce418061c34688d053b, type: 3}
+  growth4: {fileID: 919132149155446097, guid: 4166e8914e03e314c8616102b62ec132, type: 3}
   gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
     type: 3}
   pPlantedClone: {fileID: 0}

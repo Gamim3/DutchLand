@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303208344185622
 MonoBehaviour:
@@ -45,17 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303208344185620}
   groundstates: 0
 --- !u!65 &6971303208344185623
@@ -102,7 +109,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303208632105926
 MonoBehaviour:
@@ -116,17 +123,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303208632105924}
   groundstates: 0
 --- !u!65 &6971303208632105927
@@ -173,7 +187,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303208717710712
 MonoBehaviour:
@@ -187,17 +201,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303208717710662}
   groundstates: 0
 --- !u!65 &6971303208717710713
@@ -244,7 +265,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303208780262363
 MonoBehaviour:
@@ -258,17 +279,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303208780262361}
   groundstates: 0
 --- !u!65 &6971303208780262360
@@ -315,7 +343,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303208822539608
 MonoBehaviour:
@@ -329,17 +357,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303208822539430}
   groundstates: 0
 --- !u!65 &6971303208822539609
@@ -386,7 +421,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303209423625941
 MonoBehaviour:
@@ -400,17 +435,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303209423625939}
   groundstates: 0
 --- !u!65 &6971303209423625938
@@ -456,7 +498,6 @@ Transform:
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6971303208344185620}
   - {fileID: 6971303209423625939}
   - {fileID: 6971303208717710662}
   - {fileID: 6971303209789551768}
@@ -464,6 +505,7 @@ Transform:
   - {fileID: 6971303208632105924}
   - {fileID: 6971303208822539430}
   - {fileID: 6971303208780262361}
+  - {fileID: 6971303208344185620}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,17 +521,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303209638910720}
   groundstates: 0
 --- !u!65 &6971303209638910734
@@ -536,7 +585,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303209721915045
 MonoBehaviour:
@@ -550,17 +599,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303209721915043}
   groundstates: 0
 --- !u!65 &6971303209721915042
@@ -607,7 +663,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6971303209638910720}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6971303209789551770
 MonoBehaviour:
@@ -621,17 +677,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 0}
-  groundWatered: {fileID: 0}
-  groundTileTilled: {fileID: 0}
-  groundTileWatered: {fileID: 0}
-  seeds: {fileID: 0}
-  growth1: {fileID: 0}
-  growth2: {fileID: 0}
-  growth3: {fileID: 0}
-  growth4: {fileID: 0}
-  gTiledClone: {fileID: 0}
+  finalCrop: {fileID: 0}
+  groundTile: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
+  groundWatered: {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873,
+    type: 3}
+  groundTileTilled: {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4,
+    type: 3}
+  groundTileWatered: {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731,
+    type: 3}
+  seeds: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  growth1: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  growth2: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  growth3: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  growth4: {fileID: 3315886730132489507, guid: f40010a5ba90d1849ae7ca25a1d718eb, type: 3}
+  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
+    type: 3}
   pPlantedClone: {fileID: 0}
+  GrowthStage: 
   origin: {fileID: 6971303209789551768}
   groundstates: 0
 --- !u!65 &6971303209789551771
