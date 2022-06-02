@@ -6,16 +6,23 @@ public class ReplaceObject : MonoBehaviour
 {
     public GameObject finalCrop;
 
+    public GameObject[] groundTile;
+
+    /*
     public GameObject groundTile;
     public GameObject groundWatered;
     public GameObject groundTileTilled;
     public GameObject groundTileWatered;
+    */
 
+    //public GameObject[] plant;
+    
     public GameObject seeds;
     public GameObject growth1;
     public GameObject growth2;
     public GameObject growth3;
     public GameObject growth4;
+    
 
     public GameObject gTiledClone;
     public GameObject pPlantedClone;
@@ -24,19 +31,19 @@ public class ReplaceObject : MonoBehaviour
 
     public Transform origin;
 
-    public int groundstates;
+    public int groundstates;//enum
 
     // Start is called before the first frame update
     void Start()
     {
         groundstates = 0;
 
-        gTiledClone = Instantiate(groundTile, transform.position, Quaternion.identity);
+        gTiledClone = Instantiate(groundTile[1], transform.position, Quaternion.identity);
     }
     // Update is called once per frame
     void Update()
     {
-        
+        //plant[1];
     }
     public void Replace(string Toolstate)
     {
@@ -47,7 +54,7 @@ public class ReplaceObject : MonoBehaviour
 
             Destroy(gTiledClone);
 
-            gTiledClone = Instantiate(groundTileTilled, transform.position, Quaternion.identity);
+            gTiledClone = Instantiate(groundTile[0], transform.position, Quaternion.identity);
         }
         // waterd ground
         if (Toolstate == "WateringCan" && groundstates == 0)
@@ -56,7 +63,7 @@ public class ReplaceObject : MonoBehaviour
 
             Destroy(gTiledClone);
 
-            gTiledClone = Instantiate(groundWatered, transform.position, Quaternion.identity);
+            gTiledClone = Instantiate(groundTile[2], transform.position, Quaternion.identity);
         }
         // waterd tilled ground Water can last
         if (Toolstate == "WateringCan" && groundstates == 1)
@@ -65,7 +72,7 @@ public class ReplaceObject : MonoBehaviour
 
             Destroy(gTiledClone);
 
-            gTiledClone = Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+            gTiledClone = Instantiate(groundTile[3], transform.position, Quaternion.identity);
         }
         // waterd tilled ground Hoe last
         if (Toolstate == "Hoe" && groundstates == 2)
@@ -74,7 +81,7 @@ public class ReplaceObject : MonoBehaviour
 
             Destroy(gTiledClone);
 
-            gTiledClone = Instantiate(groundTileWatered, transform.position, Quaternion.identity);
+            gTiledClone = Instantiate(groundTile[3], transform.position, Quaternion.identity);
         }
         // planting seeds
         if (Toolstate == "Shovel" && groundstates == 3)
@@ -94,7 +101,7 @@ public class ReplaceObject : MonoBehaviour
             Destroy(pPlantedClone);
             Destroy(gTiledClone);
 
-            gTiledClone = Instantiate(groundTile, transform.position, Quaternion.identity);
+            gTiledClone = Instantiate(groundTile[0], transform.position, Quaternion.identity);
 
             GrowthStage = "Begining";
             groundstates = 0;

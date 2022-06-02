@@ -1312,6 +1312,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7418750322445519113, guid: c0b37d45f6ae8de468ec4be36abba84b,
+        type: 3}
+      propertyPath: groundTile.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418750322445519113, guid: c0b37d45f6ae8de468ec4be36abba84b,
+        type: 3}
+      propertyPath: groundTile.Array.data[0]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: c01fe2eb58fcaf145a27e22db90a95e2,
+        type: 3}
+    - target: {fileID: 7418750322445519113, guid: c0b37d45f6ae8de468ec4be36abba84b,
+        type: 3}
+      propertyPath: groundTile.Array.data[1]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: bf6c9c44774a8684a980792fab7f7760,
+        type: 3}
+    - target: {fileID: 7418750322445519113, guid: c0b37d45f6ae8de468ec4be36abba84b,
+        type: 3}
+      propertyPath: groundTile.Array.data[2]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: 0a2d0d44ef7463f42bd2f4daa64fc47d,
+        type: 3}
+    - target: {fileID: 7418750322445519113, guid: c0b37d45f6ae8de468ec4be36abba84b,
+        type: 3}
+      propertyPath: groundTile.Array.data[3]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: fe8d6e0f6223bb241ac498a49bbf4888,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0b37d45f6ae8de468ec4be36abba84b, type: 3}
 --- !u!1 &1314824897
