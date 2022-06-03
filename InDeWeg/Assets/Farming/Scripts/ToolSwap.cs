@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToolSwamp : MonoBehaviour
+public class ToolSwap : MonoBehaviour
 {
     public int state;
 

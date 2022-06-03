@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720751acc36fec844951274fc4759312, type: 3}
+  m_Name: StroopWafelZaad
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 0}
+  type: 0
+  description: 
+  titleTXT: {fileID: 0}
+  descriptionTXT: {fileID: 0}
+  costTXT: {fileID: 0}
+  growthStage:
+  - {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
+  - {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65, type: 3}
+  - {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
+  - {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
+  - {fileID: 8176833185673825668, guid: 7c9e962f0f096094abd11c9c018f5c48, type: 3}
+  - {fileID: 7114558932767198693, guid: b1c4dcc774db7f84da3c5f82d56d06e9, type: 3}
+  growthTime:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
