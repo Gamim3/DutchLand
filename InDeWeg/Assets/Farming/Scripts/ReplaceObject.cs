@@ -8,22 +8,6 @@ public class ReplaceObject : MonoBehaviour
 
     public GameObject[] groundTile;
 
-    /*
-    public GameObject groundTile;
-    public GameObject groundWatered;
-    public GameObject groundTileTilled;
-    public GameObject groundTileWatered;
-    */
-
-    //public GameObject[] plant;
-    
-    public GameObject seeds;
-    public GameObject growth1;
-    public GameObject growth2;
-    public GameObject growth3;
-    public GameObject growth4;
-    
-
     public GameObject gTiledClone;
     public GameObject pPlantedClone;
 
@@ -83,17 +67,6 @@ public class ReplaceObject : MonoBehaviour
 
             gTiledClone = Instantiate(groundTile[3], transform.position, Quaternion.identity);
         }
-        // planting seeds
-        if (Toolstate == "Shovel" && groundstates == 3)
-        {
-            groundstates = 4;
-
-            pPlantedClone = Instantiate(seeds, transform.position, Quaternion.identity);
-
-            StartCoroutine(Growing1());
-
-            Destroy(pPlantedClone, 8f);
-        }
         if (Toolstate == "Scythe" && GrowthStage == "FinalStage")
         {
             Instantiate(finalCrop);
@@ -106,27 +79,5 @@ public class ReplaceObject : MonoBehaviour
             GrowthStage = "Begining";
             groundstates = 0;
         }
-    }
-    public IEnumerator Growing1()
-    {
-        yield return new WaitForSeconds(8f);
-
-        pPlantedClone = Instantiate(growth1, transform.position, Quaternion.identity);
-        Destroy(pPlantedClone, 5f);
-
-        yield return new WaitForSeconds(5f);
-
-        pPlantedClone = Instantiate(growth2, transform.position, Quaternion.identity);
-        Destroy(pPlantedClone, 5f);
-
-        yield return new WaitForSeconds(5f);
-
-        pPlantedClone = Instantiate(growth3, transform.position, Quaternion.identity);
-        Destroy(pPlantedClone, 5f);
-
-        yield return new WaitForSeconds(5f);
-
-        pPlantedClone = Instantiate(growth4, transform.position, Quaternion.identity);
-        GrowthStage = ("FinalStage");
     }
 }
