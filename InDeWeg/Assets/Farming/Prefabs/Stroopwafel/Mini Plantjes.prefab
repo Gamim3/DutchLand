@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2538501761239425252}
   - component: {fileID: 1483173513197924161}
   - component: {fileID: 3706952026458872715}
+  - component: {fileID: 8014689848675882232}
   m_Layer: 0
   m_Name: Mini Plantjes
   m_TagString: Untagged
@@ -88,3 +89,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8014689848675882232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2914182221693811294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 720b013069de1034892d2a1511cb89a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plant1Stage2: {fileID: 11400000, guid: 9c62cc519c944e848bf78e246b531d3b, type: 2}

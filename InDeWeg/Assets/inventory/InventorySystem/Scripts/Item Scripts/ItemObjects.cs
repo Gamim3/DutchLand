@@ -19,8 +19,8 @@ public abstract class ItemObjects : ScriptableObject
     public TMP_Text descriptionTXT;
     public TMP_Text costTXT;
 
-    public GameObject[] growthStage;
+    public GameObject plant;
 
-    public float[] growthTime;
+    public float growthTime;
 
 }
