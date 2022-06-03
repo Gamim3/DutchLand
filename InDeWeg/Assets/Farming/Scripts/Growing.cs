@@ -6,11 +6,24 @@ public class Growing : MonoBehaviour
 {
     public ZadenObject typeZaad;
     public GameObject[] clone;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        growthStages = GrowthStages.none;
     }
+
+    public enum GrowthStages
+    {
+        seeds,
+        mini,
+        small,
+        normal,
+        big,
+        dead,
+        none
+    }
+    public GrowthStages growthStages;
 
     // Update is called once per frame
     void Update()
@@ -19,7 +32,16 @@ public class Growing : MonoBehaviour
     }
     public void StartGrowing()
     {
-        StartCoroutine(Growth());
+        switch (growthStages)
+        {
+            case GrowthStages.none:
+                //do this;
+                StartCoroutine(Growth());
+                break;
+            case GrowthStages.dead:
+                // do this;
+                break;
+        }
     }
     public IEnumerator Growth()
     {
@@ -40,7 +62,6 @@ public class Growing : MonoBehaviour
 
         clone[3] = Instantiate(typeZaad.growthStage[3], transform.position, Quaternion.identity);
         Destroy(clone[3], typeZaad.growthTime[3]);
-        //GrowthStage = ("FinalStage");
 
         yield return new WaitForSeconds(typeZaad.growthTime[3]);
 
