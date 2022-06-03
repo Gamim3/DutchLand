@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8050786393163286401}
   - component: {fileID: 6347251948345149476}
   - component: {fileID: 9219166737655938286}
+  - component: {fileID: 6251842259130524314}
   m_Layer: 0
   m_Name: Middel Plantjes
   m_TagString: Untagged
@@ -106,3 +107,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6251842259130524314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7273862317802757435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ba0632eba60334c851a54df5298c66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plant1Stage4: {fileID: 11400000, guid: 8024ea92797fa664ebc40e4357bc90e1, type: 2}
