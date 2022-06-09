@@ -82,7 +82,8 @@ public class ToolSwap : MonoBehaviour
         }
         if (state == 3)
         {
-            hit.transform.gameObject.GetComponent<Growing>().StartGrowing();
+            
+
             working = false;
         }
         if (state == 4)
