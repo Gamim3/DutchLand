@@ -20,8 +20,13 @@ public class Grow1Stage2 : MonoBehaviour
             Instantiate(Plant1Stage2, transform.position, Quaternion.identity);
         }
     }
-    void PlaceGrowthStage2()
+    public void PlaceGrowthStage2()
     {
-
+        StartCoroutine(Growing());
+    }
+    public IEnumerator Growing()
+    {
+        yield return new WaitForSeconds(Plant1Stage2.growthTime);
+        Instantiate(Plant1Stage2.plant, transform.position, Quaternion.identity);
     }
 }
