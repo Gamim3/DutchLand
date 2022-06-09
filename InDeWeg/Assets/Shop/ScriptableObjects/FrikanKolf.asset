@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d99cba9f2469adc40b89291e7abe7c9d, type: 3}
-  m_Name: StroopwafelZaadjes
+  m_Name: FrikanKolf
   m_EditorClassIdentifier: 
-  title: Stroopwafel zaadjes
-  description: Door magie en radioactief afval kun je deze zaadjes laten groeien.
-  baseCost: 15
+  title: Frikandel Zaadjes
+  description: Door iets langer te wachten kun je deze frikandellen laten groeien
+  baseCost: 30

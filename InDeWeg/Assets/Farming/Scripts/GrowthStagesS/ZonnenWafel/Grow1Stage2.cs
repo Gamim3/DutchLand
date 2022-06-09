@@ -20,4 +20,8 @@ public class Grow1Stage2 : MonoBehaviour
             Instantiate(Plant1Stage2, transform.position, Quaternion.identity);
         }
     }
+    void PlaceGrowthStage2()
+    {
+
+    }
 }
