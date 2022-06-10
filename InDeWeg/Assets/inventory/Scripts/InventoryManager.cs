@@ -9,10 +9,17 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(Item itemToAdd)
     {
         // for loop to check if one is free, then put it in there.
+        for (int i = 0; i <inventorySlots.Length ; i++)
+        {
+            if(inventorySlots[i].item == null) 
+            {
+                inventorySlots[i].AddItem(itemToAdd);
+            }
+        }
     }
 
     public void RemoveItem(int indexToRemove)
     {
-        // remove the specific index here.
+         //index to remove.
     }
 }
