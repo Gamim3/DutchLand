@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grow1Stage3 : MonoBehaviour
 {
-    public PlantenObject Plant1Stage3;
+    //public PlantenObject Plant1Stage3;
 
     // Start is called before the first frame update
     void Start()
@@ -17,16 +17,16 @@ public class Grow1Stage3 : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(Plant1Stage3, transform.position, Quaternion.identity);
+            //Instantiate(Plant1Stage3, transform.position, Quaternion.identity);
         }
     }
     public void PlaceGrowthStage3()
     {
-        StartCoroutine(Growing());
+        //StartCoroutine(Growing());
     }
-    public IEnumerator Growing()
-    {
-        yield return new WaitForSeconds(Plant1Stage3.growthTime);
-        Instantiate(Plant1Stage3.plant, transform.position, Quaternion.identity);
-    }
+    //public IEnumerator Growing()
+    //{
+    //    //yield return new WaitForSeconds(Plant1Stage3.growthTime);
+    //    //Instantiate(Plant1Stage3.plant, transform.position, Quaternion.identity);
+    //}
 }

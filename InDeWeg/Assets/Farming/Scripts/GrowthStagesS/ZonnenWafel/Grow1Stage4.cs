@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grow1Stage4 : MonoBehaviour
 {
-    public PlantenObject Plant1Stage4;
+    //public PlantenObject Plant1Stage4;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Grow1Stage4 : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(Plant1Stage4, transform.position, Quaternion.identity);
+            //Instantiate(Plant1Stage4, transform.position, Quaternion.identity);
         }
     }
     void PlaceGrowthStage4()

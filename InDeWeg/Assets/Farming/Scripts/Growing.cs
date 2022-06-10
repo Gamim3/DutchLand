@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Growing : MonoBehaviour
 {
-    public ZadenObject typeZaad;
+    //public ZadenObject typeZaad;
     public GameObject[] clone;
 
     // Start is called before the first frame update
