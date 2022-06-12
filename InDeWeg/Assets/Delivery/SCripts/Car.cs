@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    public Transform centerOfMass;
+    
 
     public WheelCollider wheelColliderLeftFront;
     public WheelCollider wheelColliderRightFront;
@@ -23,7 +23,7 @@ public class Car : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.centerOfMass = centerOfMass.localPosition;
+        
     }
 
     void FixedUpdate()
