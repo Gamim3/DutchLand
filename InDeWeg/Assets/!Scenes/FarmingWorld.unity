@@ -3442,6 +3442,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: busje new
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3cfd72208ac8d248ba3631c2d056ecc,
+        type: 3}
+      propertyPath: m_TagString
+      value: CarSceneChanger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3cfd72208ac8d248ba3631c2d056ecc, type: 3}
 --- !u!1 &1067274067
@@ -7427,18 +7432,6 @@ MonoBehaviour:
   speed: 0
   player: {fileID: 3065688509405126333}
   fpsCam: {fileID: 5419781395880391494}
---- !u!114 &3065688509405126331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3065688509405126333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 200801b1e95da6e4dac35a74913f1b5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3065688509405126333
 GameObject:
   m_ObjectHideFlags: 0
@@ -7451,7 +7444,7 @@ GameObject:
   - component: {fileID: 3065688509405126329}
   - component: {fileID: 3065688509405126336}
   - component: {fileID: 3065688509405126330}
-  - component: {fileID: 3065688509405126331}
+  - component: {fileID: 3065688509405126337}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7492,6 +7485,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
+--- !u!114 &3065688509405126337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065688509405126333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0507f3a374d982418d885f6a6ec2981, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5419781395880391494
 GameObject:
   m_ObjectHideFlags: 0
