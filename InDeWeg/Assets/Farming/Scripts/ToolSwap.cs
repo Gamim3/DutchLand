@@ -12,6 +12,9 @@ public class ToolSwap : MonoBehaviour
 
     public bool working;
 
+    public GameObject seedMenu;
+    public bool isShowing;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +85,10 @@ public class ToolSwap : MonoBehaviour
         }
         if (state == 3)
         {
-            
+            isShowing = !isShowing;
+            seedMenu.SetActive(isShowing);
+
+
 
             working = false;
         }
