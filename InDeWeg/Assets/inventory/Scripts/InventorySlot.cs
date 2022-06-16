@@ -1,11 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
     public Item item;
 
+    public int itemAmount;
+
+    public TMP_Text Amount;
+    private void Update()
+    {
+        string s = itemAmount.ToString();
+        Amount.text = s;
+    }
 
     public void AddItem(Item itemToAdd)
     {
@@ -17,5 +26,13 @@ public class InventorySlot : MonoBehaviour
     {
         item = null;
         // Remove item img and stuff here.
+    }
+    public void StackItem()
+    {
+        itemAmount += 1;
+    }
+    public void RemoveStackItem()
+    {
+        itemAmount -= 1;
     }
 }
