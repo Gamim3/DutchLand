@@ -11,12 +11,6 @@ public class InventoryManager : MonoBehaviour
     public int addItemAmount = 1;
     public int removeItemAmount = 1;
 
-
-    private void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
     public void AddItem(Item itemToAdd)
     {
         // for loop to check if one is free, then put it in there.

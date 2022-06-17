@@ -15,6 +15,10 @@ public class ToolSwap : MonoBehaviour
     public GameObject seedMenu;
     public bool isShowing;
 
+    public int seedSlot;
+
+    public int groundToolState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,9 @@ public class ToolSwap : MonoBehaviour
         {
             GetComponent<Movers>().speed = 0.0f;
         }
+
+        
+
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             state += 1;
@@ -48,7 +55,10 @@ public class ToolSwap : MonoBehaviour
         {
             state = 4;
         }
-        ToolWorking();
+
+        
+
+        ToolWorking();  
     }
     void ToolWorking()
     {
@@ -58,10 +68,7 @@ public class ToolSwap : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
             {
-                // maybe make speed of the player lower when working
-                //GetComponent<Movers>().speed = 0.5f;
-
-                working = true;
+                //working = true;
 
                 StartCoroutine(Working());
             }
@@ -75,18 +82,33 @@ public class ToolSwap : MonoBehaviour
         {
             hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("Hoe");
 
+            groundToolState = hit.transform.gameObject.GetComponent<ReplaceObject>().groundstates;
+
             working = false;
         }
         if (state == 2)
         {
             hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("WateringCan");
 
+            groundToolState = hit.transform.gameObject.GetComponent<ReplaceObject>().groundstates;
+
             working = false;
         }
-        if (state == 3)
+        if (state == 3 && groundToolState == 3)
         {
-            isShowing = !isShowing;
-            seedMenu.SetActive(isShowing);
+            working = true;
+            seedSlot = GetComponent<InventoryManager>().slotIndex;
+
+            if (GetComponent<InventoryManager>().inventorySlots[seedSlot].item == null)
+            {
+                working = false;
+            }
+
+            if (GetComponent<InventoryManager>().inventorySlots[seedSlot].item != null && GetComponent<InventoryManager>().inventorySlots[seedSlot].item.itemTag == "seeds")
+            {
+                Instantiate (GetComponent<InventoryManager>().inventorySlots[seedSlot].item.seed, hit.transform.position, Quaternion.identity);
+                working = false;
+            }
 
 
 
@@ -95,6 +117,9 @@ public class ToolSwap : MonoBehaviour
         if (state == 4)
         {
             hit.transform.gameObject.GetComponent<ReplaceObject>().Replace("Scythe");
+
+            groundToolState = hit.transform.gameObject.GetComponent<ReplaceObject>().groundstates;
+
             working = false;
         }
         //GetComponent<Movers>().speed = 1.0f;

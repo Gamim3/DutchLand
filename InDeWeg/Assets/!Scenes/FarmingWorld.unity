@@ -9705,7 +9705,6 @@ GameObject:
   - component: {fileID: 2019176941}
   - component: {fileID: 2019176940}
   - component: {fileID: 2019176939}
-  - component: {fileID: 2019176943}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -9796,27 +9795,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2019176943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019176938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15463d198ca0f9740ae001055b7b787a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventorySlots:
-  - {fileID: 1359313277}
-  - {fileID: 344847040}
-  - {fileID: 105121944}
-  - {fileID: 296723557}
-  - {fileID: 607302580}
-  slotIndex: 0
-  addItemAmount: 1
-  removeItemAmount: 1
 --- !u!1001 &2022680606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10802,7 +10780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &460349210095103158
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10853,6 +10831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameObject 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7978596761189655726, guid: cd48323bcab920448a8bd3749fdb303b,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 3065688509405126333}
     - target: {fileID: 7978596761189655727, guid: cd48323bcab920448a8bd3749fdb303b,
         type: 3}
       propertyPath: m_RootOrder
@@ -11453,6 +11436,8 @@ GameObject:
   - component: {fileID: 3065688509405126338}
   - component: {fileID: 3065688509405126330}
   - component: {fileID: 3065688509405126337}
+  - component: {fileID: 3065688509405126339}
+  - component: {fileID: 3065688509405126340}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -11518,7 +11503,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 0}
-  inventoryMan: {fileID: 2019176938}
+  inventoryMan: {fileID: 3065688509405126333}
+--- !u!114 &3065688509405126339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065688509405126333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d498179fe4db0045a2d278f97c49ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  cam: {fileID: 5419781395880391494}
+  working: 0
+  seedMenu: {fileID: 0}
+  isShowing: 0
+  seedSlot: 0
+  groundToolState: 0
+--- !u!114 &3065688509405126340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065688509405126333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15463d198ca0f9740ae001055b7b787a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySlots:
+  - {fileID: 1359313277}
+  - {fileID: 344847040}
+  - {fileID: 105121944}
+  - {fileID: 296723557}
+  - {fileID: 607302580}
+  slotIndex: 0
+  addItemAmount: 1
+  removeItemAmount: 1
 --- !u!1001 &3470216128272298019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12213,7 +12238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5419781395880391494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee7bedc2608c785478a872e4da31b894, type: 3}
   m_Name: 
