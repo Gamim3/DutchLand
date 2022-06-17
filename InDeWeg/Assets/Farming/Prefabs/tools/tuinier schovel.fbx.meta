@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 794328cec324cfb49a9840e6b95ec824
+guid: 12304d0e9301d1d46b82f29b3a4eb2b7
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: -88723805440604879
-    second: Cylinder|CylinderAction
+      74: -5187248419258813496
+    second: Plane|PlaneAction
   externalObjects: {}
   materials:
     materialImportMode: 2
