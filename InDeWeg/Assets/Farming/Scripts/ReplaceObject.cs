@@ -17,6 +17,7 @@ public class ReplaceObject : MonoBehaviour
 
     public int groundstates;//enum
 
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class ReplaceObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //plant[1];
+        groundstates = player.GetComponent<ToolSwap>().groundToolState;
     }
     public void Replace(string Toolstate)
     {

@@ -5,6 +5,8 @@ using UnityEngine;
 public class ItemPickUp : MonoBehaviour
 {
     public Item item;
+
+    public GameObject inventoryMan;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
@@ -12,7 +14,7 @@ public class ItemPickUp : MonoBehaviour
         {
             item = other.gameObject.GetComponent<ItemDeviner>().item;
 
-            GetComponent<InventoryManager>().AddItem(item);
+            inventoryMan.GetComponent<InventoryManager>().AddItem(item);
             Destroy(other.gameObject);
         }
 

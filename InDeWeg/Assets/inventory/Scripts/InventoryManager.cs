@@ -8,6 +8,9 @@ public class InventoryManager : MonoBehaviour
 
     public int slotIndex;
 
+    public int addItemAmount = 1;
+    public int removeItemAmount = 1;
+
     public void AddItem(Item itemToAdd)
     {
         // for loop to check if one is free, then put it in there.
@@ -15,14 +18,14 @@ public class InventoryManager : MonoBehaviour
         {
             if (inventorySlots[i].item != null && inventorySlots[i].item.idName == itemToAdd.idName)
             {
-                inventorySlots[i].StackItem();
+                inventorySlots[i].StackItem(addItemAmount);
                 return;
             }
             if (inventorySlots[i].item == null)
             {
                 inventorySlots[i].AddItem(itemToAdd);
 
-                inventorySlots[i].StackItem();
+                inventorySlots[i].StackItem(addItemAmount);
                 return;
             }
         }
@@ -36,7 +39,7 @@ public class InventoryManager : MonoBehaviour
         }
         if (inventorySlots[slotIndex].itemAmount >= 1)
         {
-            inventorySlots[slotIndex].RemoveStackItem();
+            inventorySlots[slotIndex].RemoveStackItem(removeItemAmount);
         }
         //index to remove.
 

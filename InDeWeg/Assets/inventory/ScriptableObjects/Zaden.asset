@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Zaden
   m_EditorClassIdentifier: 
   idName: Zaad1
+  itemTag: seeds
   description: d
-  prefab: {fileID: 7488831427914784668, guid: 46f88d70b484711489ccc9d630f8a9e6, type: 3}
-  seed: {fileID: 0}
+  seed: {fileID: 919132149155446097, guid: f8ddc1846fa6f5842affb76e4a689994, type: 3}
   titleTXT: {fileID: 0}
   descriptionTXT: {fileID: 0}
   priveTXT: {fileID: 0}

@@ -7,8 +7,9 @@ using TMPro;
 public class Item : ScriptableObject
 {
     public string idName;
+    public string itemTag;
     public string description;
-    public GameObject prefab;
+
     public GameObject seed;
 
     public TMP_Text titleTXT;
