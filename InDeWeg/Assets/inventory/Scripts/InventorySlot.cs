@@ -10,6 +10,8 @@ public class InventorySlot : MonoBehaviour
     public int itemAmount;
 
     public TMP_Text Amount;
+
+
     private void Update()
     {
         string s = itemAmount.ToString();
@@ -27,12 +29,12 @@ public class InventorySlot : MonoBehaviour
         item = null;
         // Remove item img and stuff here.
     }
-    public void StackItem()
+    public void StackItem(int addItemAmount)
     {
-        itemAmount += 1;
+        itemAmount += addItemAmount;
     }
-    public void RemoveStackItem()
+    public void RemoveStackItem(int removeItemAmount)
     {
-        itemAmount -= 1;
+        itemAmount -= removeItemAmount;
     }
 }

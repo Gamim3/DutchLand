@@ -106213,6 +106213,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8423610335762279139, guid: 768a7adf3b8dd144b8d07f80e92f87ea, type: 3}
+--- !u!1 &2142509724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2142509726}
+  - component: {fileID: 2142509725}
+  m_Layer: 0
+  m_Name: exitHitbox
+  m_TagString: CarSceneChanger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2142509725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142509724}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 26.761215, y: 8.322408, z: 8.203857}
+  m_Center: {x: -3.140358, y: 3.6612034, z: 0.16332722}
+--- !u!4 &2142509726
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142509724}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 97, y: 0, z: -12}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2143164755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107169,6 +107214,7 @@ GameObject:
   - component: {fileID: 4939212071216780305}
   - component: {fileID: 7165064813161373917}
   - component: {fileID: 7165064813161373916}
+  - component: {fileID: 7165064813161373918}
   m_Layer: 0
   m_Name: 'Busje '
   m_TagString: Untagged
@@ -107222,6 +107268,18 @@ MonoBehaviour:
   wheelRightBack: {fileID: 8018169091853242188}
   motorTorque: 100
   maxSteer: 25
+--- !u!114 &7165064813161373918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6884710003993556420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ac2622909015f342ad3dbb7ef7bfa63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7998771266443480843
 Transform:
   m_ObjectHideFlags: 0
