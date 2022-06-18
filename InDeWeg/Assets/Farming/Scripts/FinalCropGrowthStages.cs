@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grow1Stage1 : MonoBehaviour
+public class FinalCropGrowthStages : MonoBehaviour
 {
     public GameObject nextGrowthStage;
 
@@ -10,12 +10,12 @@ public class Grow1Stage1 : MonoBehaviour
 
     public GameObject clonePlant;
 
-    
+    public string growthstage;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
         StartCoroutine(Growing());
     }
@@ -24,7 +24,10 @@ public class Grow1Stage1 : MonoBehaviour
     {
         yield return new WaitForSeconds(growthTime);
 
+        growthstage = "FinalStage";
+
         clonePlant = Instantiate(nextGrowthStage, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
+

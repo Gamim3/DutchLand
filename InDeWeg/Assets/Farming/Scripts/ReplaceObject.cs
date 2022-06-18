@@ -11,17 +11,20 @@ public class ReplaceObject : MonoBehaviour
     public GameObject gTiledClone;
     public GameObject pPlantedClone;
 
-    public string GrowthStage;
+    public string growthStage;
 
     public Transform origin;
 
     public int groundstates;//enum
 
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
         groundstates = 0;
+
+        growthStage = player.GetComponent<ToolSwap>().growthStageTool;
 
         gTiledClone = Instantiate(groundTile[1], transform.position, Quaternion.identity);
     }
@@ -68,16 +71,18 @@ public class ReplaceObject : MonoBehaviour
 
             gTiledClone = Instantiate(groundTile[3], transform.position, Quaternion.identity);
         }
-        if (Toolstate == "Scythe" && GrowthStage == "FinalStage")
+        if (Toolstate == "Scythe" && growthStage == "FinalStage")
         {
-            Instantiate(finalCrop);
+            
 
-            Destroy(pPlantedClone);
+            //Destroy(pPlantedClone);
             Destroy(gTiledClone);
+
+            Instantiate(finalCrop);
 
             gTiledClone = Instantiate(groundTile[0], transform.position, Quaternion.identity);
 
-            GrowthStage = "Begining";
+            growthStage = "Begining";
             groundstates = 0;
         }
     }

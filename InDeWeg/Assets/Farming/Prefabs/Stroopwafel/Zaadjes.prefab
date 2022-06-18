@@ -113,4 +113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a928adf2b5fa564d91c313895fce9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Plant1Stage1: {fileID: 11400000, guid: 4e88d739a47654646a3389c2f8851c44, type: 2}
+  nextGrowthStage: {fileID: 2914182221693811294, guid: a0a7dbd83cf6ca34ab134db448fd7e65,
+    type: 3}
+  growthTime: 1

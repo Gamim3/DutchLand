@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec80283a5aacb6e42adb711a88c44181, type: 3}
-  m_Name: Plant1Stage3
+  m_Script: {fileID: 11500000, guid: 608646887f5c52f4194c3fe8b4577834, type: 3}
+  m_Name: Frikankolf
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  type: 1
+  idName: Frikankolf
+  itemTag: seeds
   description: 
+  seed: {fileID: 1509466298725401802, guid: 7b4f97354bb1e894b83db86e126e1b0c, type: 3}
   titleTXT: {fileID: 0}
   descriptionTXT: {fileID: 0}
-  costTXT: {fileID: 0}
-  plant: {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
-  growthTime: 0
+  priveTXT: {fileID: 0}

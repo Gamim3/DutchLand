@@ -9,7 +9,6 @@ public class InventoryManager : MonoBehaviour
     public int slotIndex;
 
     public int addItemAmount = 1;
-    public int removeItemAmount = 1;
 
     public void AddItem(Item itemToAdd)
     {
@@ -31,7 +30,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void RemoveItem()
+    public void RemoveItem(int removeItemAmount = 1)
     {
         if (inventorySlots[slotIndex].itemAmount == 1)
         {

@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec80283a5aacb6e42adb711a88c44181, type: 3}
-  m_Name: Plant1Stage2
+  m_Script: {fileID: 11500000, guid: 608646887f5c52f4194c3fe8b4577834, type: 3}
+  m_Name: Zonnenwafel
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
-  type: 1
+  idName: Zonnewafel
+  itemTag: seeds
   description: 
+  seed: {fileID: 2567303456635006875, guid: c78b30697c8c1254081692a3a7cb9951, type: 3}
   titleTXT: {fileID: 0}
   descriptionTXT: {fileID: 0}
-  costTXT: {fileID: 0}
-  plant: {fileID: 2522428591678612487, guid: 3830aa43263bb95468baa23f7a7748d5, type: 3}
-  growthTime: 0
+  priveTXT: {fileID: 0}

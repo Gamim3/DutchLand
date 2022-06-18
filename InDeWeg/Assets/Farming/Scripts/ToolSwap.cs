@@ -19,6 +19,8 @@ public class ToolSwap : MonoBehaviour
 
     public int groundToolState;
 
+    public string growthStageTool;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,9 @@ public class ToolSwap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        
+
         if (working == false)
         {
             GetComponent<Movers>().speed = 1.0f;
@@ -69,6 +74,7 @@ public class ToolSwap : MonoBehaviour
             if (Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
             {
                 //working = true;
+                growthStageTool = hit.transform.gameObject.GetComponent<ReplaceObject>().growthStage;
 
                 StartCoroutine(Working());
             }
@@ -107,7 +113,11 @@ public class ToolSwap : MonoBehaviour
             if (GetComponent<InventoryManager>().inventorySlots[seedSlot].item != null && GetComponent<InventoryManager>().inventorySlots[seedSlot].item.itemTag == "seeds")
             {
                 Instantiate (GetComponent<InventoryManager>().inventorySlots[seedSlot].item.seed, hit.transform.position, Quaternion.identity);
+
+                GetComponent<InventoryManager>().RemoveItem(1);
+
                 working = false;
+
             }
 
 

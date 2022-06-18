@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3141127562471634729}
   - component: {fileID: 2033477990683277452}
   - component: {fileID: 4313509720059055174}
+  - component: {fileID: 2703098732114556895}
   m_Layer: 0
   m_Name: Frikankolf6
   m_TagString: Untagged
@@ -83,3 +84,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2703098732114556895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2367862391493832083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a928adf2b5fa564d91c313895fce9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextGrowthStage: {fileID: 9116314505817954480, guid: 693a139a5418d454eb01cccc3448d4b1,
+    type: 3}
+  growthTime: 1
+  clonePlant: {fileID: 0}
