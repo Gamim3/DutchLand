@@ -9,13 +9,23 @@ public class InventorySlot : MonoBehaviour
 
     public int itemAmount;
 
-    public TMP_Text Amount;
+    public TMP_Text itemAmountVisual;
+    public TMP_Text itemNameVisual;
 
 
     private void Update()
     {
+        if (item != null)
+        {
+            itemNameVisual.text = item.idName;
+        }
+        else if (item == null)
+        {
+            itemNameVisual.text = null;
+        }
+        
         string s = itemAmount.ToString();
-        Amount.text = s;
+        itemAmountVisual.text = s;
     }
 
     public void AddItem(Item itemToAdd)
