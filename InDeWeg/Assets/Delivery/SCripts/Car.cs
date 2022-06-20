@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    
+    public AudioSource source;
+    public AudioClip clip;
+
+    public Transform centerOfMass;
 
     public WheelCollider wheelColliderLeftFront;
     public WheelCollider wheelColliderRightFront;
@@ -23,7 +26,7 @@ public class Car : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-        
+        _rigidbody.centerOfMass = centerOfMass.localPosition;
     }
 
     void FixedUpdate()
@@ -55,6 +58,11 @@ public class Car : MonoBehaviour
         wheelColliderRightBack.GetWorldPose(out pos, out rot);
         wheelRightBack.position = pos;
         wheelRightBack.rotation = rot * Quaternion.Euler(0, 180, 0);
+
+        if (Input.GetButton("Jump"))
+        {
+            source.PlayOneShot(clip);
+        }
 
 
     }
