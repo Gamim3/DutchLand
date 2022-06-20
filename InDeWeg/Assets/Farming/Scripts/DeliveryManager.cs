@@ -8,7 +8,7 @@ public class DeliveryManager : MonoBehaviour
 
     public int[] numberPlace;
 
-    public GameObject[] outline;
+    public GameObject outline;
 
     public bool sceneSwitch;
 
@@ -30,15 +30,15 @@ public class DeliveryManager : MonoBehaviour
         {
             numberPlace[0] = Random.Range(0, 2);
 
-            Instantiate(outline[0], deliveryPlace[numberPlace[0]].transform.position, Quaternion.identity);
+            Instantiate(outline, deliveryPlace[numberPlace[0]].transform.position, Quaternion.identity);
 
             numberPlace[1] = Random.Range(3, 6);
 
-            Instantiate(outline[1], deliveryPlace[numberPlace[1]].transform.position, Quaternion.identity);
+            Instantiate(outline, deliveryPlace[numberPlace[1]].transform.position, Quaternion.identity);
 
             numberPlace[2] = Random.Range(7, 9);
 
-            Instantiate(outline[2], deliveryPlace[numberPlace[2]].transform.position, Quaternion.identity);
+            Instantiate(outline, deliveryPlace[numberPlace[2]].transform.position, Quaternion.identity);
 
             sceneSwitch = false;
         }
