@@ -11,6 +11,8 @@ public class ToolSwapping : MonoBehaviour
     public bool working;
 
     public RaycastHit hit;
+
+    public Animation[] anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,11 +65,9 @@ public class ToolSwapping : MonoBehaviour
         {
             case Toolstates.Hoe:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Hoe);
-                //dothis
                 break;
             case Toolstates.Water:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Water);
-                //dothis
                 break;
             case Toolstates.Shovel:
 
@@ -81,11 +81,9 @@ public class ToolSwapping : MonoBehaviour
 
                     GetComponent<InventoryManager>().RemoveItem(1);
                 }
-                //dothis
                 break;
             case Toolstates.Scythe:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Scythe);
-                //dothis
                 break;
         }
     }
