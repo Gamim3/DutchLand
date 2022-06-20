@@ -10,7 +10,9 @@ public class Item : ScriptableObject
     public string itemTag;
     public string description;
 
-    public GameObject seed;
+    public GameObject[] Plant;
+    public GameObject crop;
+    public float growTime;
 
     public TMP_Text titleTXT;
     public TMP_Text descriptionTXT;

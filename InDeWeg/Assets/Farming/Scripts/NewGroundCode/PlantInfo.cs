@@ -15,12 +15,13 @@ public class PlantInfo : MonoBehaviour
 
         if(growTime > growthTimePerState[curState])
         {
-            
-            
-            curState++;
-            
 
-            if(curState > states.Length)
+            // if (SO  curState < array.length -1
+            // if (SO  curState == array.length -1 { give crop
+
+
+
+            if (curState > states.Length)
             {
                 // de max state, nu moet het hele plantje dood?
                  
@@ -31,6 +32,9 @@ public class PlantInfo : MonoBehaviour
                 Instantiate(states[curState], transform.position, Quaternion.identity);
                 growTime = 0;
             }
+
+            curState++;
+
         }
     }
 }

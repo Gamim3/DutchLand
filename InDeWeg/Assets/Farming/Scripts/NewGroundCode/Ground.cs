@@ -55,7 +55,7 @@ public class Ground : MonoBehaviour
             {
                 // Groundstate = ... De bewaterde.
                 allowGrowth = true;
-                GrowPlant();
+                GetComponent<PlantGrowthManager>().Growing();
             }
             if (waterLevel  < fullWaterLevel / 2)
             {
@@ -67,7 +67,7 @@ public class Ground : MonoBehaviour
             // GroundState == unprept state;
         }
     }
-
+/*
     void GrowPlant()
     {
         GetComponent<PlantInfo>().Grow();
@@ -79,7 +79,7 @@ public class Ground : MonoBehaviour
         }
         
     }
-
+*/
     public void AddPlantToThisGround(PlantInfo plantToAdd)
     {
         plantOnThisGround = plantToAdd;
@@ -108,23 +108,36 @@ public class Ground : MonoBehaviour
                 }
                 break;
             case Toolstages.Shovel:
-                if (curGroundState == 2)
+                if (curGroundState == 2 && GetComponent<PlantGrowthManager>().item != null)
                 {
                     SeedsPlanted = true;
                     curGroundState = 3;
                 }
                 break;
             case Toolstages.Scythe:
-                if (curGroundState == 5)
+                if (curGroundState == 6 || curGroundState == 7)
                 {
-                    Destroy(cloneGround);
+                    SeedsPlanted = false;
 
-                    cloneGround = Instantiate(groundStates[0], transform.position, Quaternion.identity);
+                    waterLevel = 0;
 
                     curGroundState = 0;
+
+                    if (curGroundState == 6)
+                    {
+                        Instantiate(GetComponent<PlantGrowthManager>().item.crop, transform.position, Quaternion.identity);
+                    }
+                    GetComponent<PlantGrowthManager>().item = null;
+
+                    GetComponent<PlantGrowthManager>().curState = 0;
+
+                    Destroy(cloneGround);
+                    Destroy(GetComponent<PlantGrowthManager>().clonePlant);
+
+                    cloneGround = Instantiate(groundStates[0], transform.position, Quaternion.identity);
+                    
                 }
                 break;
-
         }
     }
 }
