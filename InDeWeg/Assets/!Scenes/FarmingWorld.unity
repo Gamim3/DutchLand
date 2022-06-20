@@ -12864,6 +12864,7 @@ MonoBehaviour:
   toolState: 
   cam: {fileID: 5419781395880391494}
   working: 0
+  anim: []
   toolstates: 0
 --- !u!1001 &4839496228675730870
 PrefabInstance:
