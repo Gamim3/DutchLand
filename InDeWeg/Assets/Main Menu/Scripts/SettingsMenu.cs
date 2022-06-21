@@ -53,12 +53,22 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetQuality (int qualityIndex)
     {
-
+        PlayerPrefs.SetInt("Quality", qualityIndex);
+        QualitySettings.SetQualityLevel(qualityIndex, true);
     }
 
     public void SetFullscreen (bool isFullscreen)
     {
         Debug.Log ("Fullscreen");
         Screen.fullScreen = isFullscreen;
+    }
+
+    void GetSettingsAtStartAndSetThem()
+    {
+        if (!PlayerPrefs.HasKey("Quality"))
+        {
+            PlayerPrefs.SetInt("Quality", 1);
+        }
+        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
     }
 }
