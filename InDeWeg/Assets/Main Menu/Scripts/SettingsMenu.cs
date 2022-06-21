@@ -11,6 +11,11 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public bool optionsOn = false;
+    public GameObject pauseMenu;
+    public GameObject optionMenu;
+    public bool mayShowMenu = true;
+
     Resolution[] resolutions;
 
     private void Start()
@@ -39,7 +44,45 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
     }
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePauzeMenu();
+        }
+    
+    }
 
+    public void ToggleOptionMenu()
+    {
+        if (optionMenu.activeInHierarchy)
+        {
+            optionMenu.SetActive(false);
+            pauseMenu.SetActive(true);
+            optionsOn = false;
+        }
+        else
+        {
+            optionMenu.SetActive(true);
+            pauseMenu.SetActive(false);
+            optionsOn = true;
+        }
+    }
+
+    public void TogglePauzeMenu()
+    {
+        if (!optionsOn)
+        {
+            if (pauseMenu.activeInHierarchy)
+            {
+                pauseMenu.SetActive(false);
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+            }
+        }
+    }
     public void SetResolution (int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
