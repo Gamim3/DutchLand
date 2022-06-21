@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 8050786393163286401}
   - component: {fileID: 6347251948345149476}
   - component: {fileID: 9219166737655938286}
-  - component: {fileID: 3057633561562425571}
   m_Layer: 0
-  m_Name: Middel Plantjes
+  m_Name: Zonnewafel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,18 +106,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3057633561562425571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7273862317802757435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a928adf2b5fa564d91c313895fce9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextGrowthStage: {fileID: 8176833185673825668, guid: 7c9e962f0f096094abd11c9c018f5c48,
-    type: 3}
-  growthTime: 1

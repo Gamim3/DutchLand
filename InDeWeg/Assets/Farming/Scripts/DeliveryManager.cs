@@ -47,7 +47,35 @@ public class DeliveryManager : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            GetComponent<InventoryManager>().RemoveItem(itemAmountRequested[0]);
+            //GetComponent<InventoryManager>().RemoveItem(itemAmountRequested[0]);
+            switch (tag)
+            {
+                /*
+                case tag == "place1":
+                    // do this
+                    break;
+                case tag == "place2":
+                    break;
+                */
+            }
+            if(tag == "place1")
+            {
+                //numberPlace[0];
+            }
+            if (tag == "place2")
+
+            //int itemType = GetComponent<InventoryManager>().inventorySlots[].item.itemTag;
+
+            if (itemTypeRequested[0] == 3)
+            {
+
+            }
+            else
+            {
+                //int coinAmount = itemType * itemAmountRequested[numberPlace[0]];
+
+                //GetComponent<ShopManager>().AddCoins(coinAmount);
+            }
         }
     }
     public void RequestItem()

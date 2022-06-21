@@ -43,9 +43,9 @@ public class ShopManager : MonoBehaviour
             }
         }
     }
-    public void AddCoins()
+    public void AddCoins(int coinAmount)
     {
-        coins++;
+        coins += (coinAmount);
         coinUI.text = "€: " + coins.ToString();
         CheckPurchaceable();
     }

@@ -10,9 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4311978323060234783}
   - component: {fileID: 8211134036619196653}
-  - component: {fileID: 7379483474879910279}
   m_Layer: 0
-  m_Name: Grote Plant
+  m_Name: Zonnewafel4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,21 +62,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2800523755818893971}
   m_Enabled: 1
---- !u!114 &7379483474879910279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8176833185673825668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a928adf2b5fa564d91c313895fce9cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextGrowthStage: {fileID: 5633744532001518127, guid: b1c4dcc774db7f84da3c5f82d56d06e9,
-    type: 3}
-  growthTime: 1
 --- !u!1001 &4443731156510450131
 PrefabInstance:
   m_ObjectHideFlags: 0

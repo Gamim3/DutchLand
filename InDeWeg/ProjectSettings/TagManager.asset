@@ -12,6 +12,9 @@ TagManager:
   - FarmWalkSound
   - CarSceneChanger
   - Item
+  - place1
+  - place2
+  - place3
   layers:
   - Default
   - TransparentFX
