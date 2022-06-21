@@ -117,16 +117,19 @@ public class Ground : MonoBehaviour
             case Toolstages.Scythe:
                 if (curGroundState == 6 || curGroundState == 7)
                 {
+                    if (curGroundState == 6)
+                    {
+                        print("haha");
+                        
+                        Instantiate(GetComponent<PlantGrowthManager>().item.crop, transform.position, Quaternion.identity);
+                    }
+
                     SeedsPlanted = false;
 
                     waterLevel = 0;
 
                     curGroundState = 0;
 
-                    if (curGroundState == 6)
-                    {
-                        Instantiate(GetComponent<PlantGrowthManager>().item.crop, transform.position, Quaternion.identity);
-                    }
                     GetComponent<PlantGrowthManager>().item = null;
 
                     GetComponent<PlantGrowthManager>().curState = 0;
