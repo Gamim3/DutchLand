@@ -50,15 +50,15 @@ LODGroup:
   m_AnimateCrossFading: 0
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.29804313
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3876948713486112210}
-  - screenRelativeHeight: 0.3
+  - screenRelativeHeight: 0.11859579
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7775854320254515196}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.04956752
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 5906295193306423267}
@@ -226,6 +226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 361e78848781d5f4b9b5f7bac587428e,
         type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.00018991786
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 361e78848781d5f4b9b5f7bac587428e,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 68bc4fba380b0094189f68d9798b7447, type: 2}
@@ -309,6 +314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e280e56794c5cec41a8b9a92acd226c2,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.024025831
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: e280e56794c5cec41a8b9a92acd226c2,
         type: 3}

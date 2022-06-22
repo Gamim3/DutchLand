@@ -47,18 +47,18 @@ LODGroup:
   m_LocalReferencePoint: {x: 0.0989871, y: 5.7166977, z: -0.062128544}
   m_Size: 12.522127
   m_FadeMode: 0
-  m_AnimateCrossFading: 0
+  m_AnimateCrossFading: 1
   m_LastLODIsBillboard: 0
   m_LODs:
-  - screenRelativeHeight: 0.6
+  - screenRelativeHeight: 0.3967346
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3290423684086920139}
-  - screenRelativeHeight: 0.3
+  - screenRelativeHeight: 0.17382306
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 3169428423483297274}
-  - screenRelativeHeight: 0.1
+  - screenRelativeHeight: 0.06086279
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7356353629036725345}
