@@ -23,6 +23,9 @@ public class Car : MonoBehaviour
     public float maxSteer = 20f;
     private Rigidbody _rigidbody;
 
+    public bool isBrake = false;
+    public float brakeTorgue = 5000f;
+
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -36,6 +39,10 @@ public class Car : MonoBehaviour
 
         wheelColliderLeftFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
         wheelColliderRightFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
+
+        HandBrake();
+
+
     }
 
     void Update()
@@ -49,7 +56,7 @@ public class Car : MonoBehaviour
 
         wheelColliderRightFront.GetWorldPose(out pos, out rot);
         wheelRightfront.position = pos;
-        wheelRightfront.rotation = rot * Quaternion.Euler(0, 180, 0);
+        wheelRightfront.rotation = rot * Quaternion.Euler(0, 0, 0);
 
         wheelColliderLeftBack.GetWorldPose(out pos, out rot);
         wheelLeftBack.position = pos;
@@ -57,14 +64,41 @@ public class Car : MonoBehaviour
 
         wheelColliderRightBack.GetWorldPose(out pos, out rot);
         wheelRightBack.position = pos;
-        wheelRightBack.rotation = rot * Quaternion.Euler(0, 180, 0);
+        wheelRightBack.rotation = rot * Quaternion.Euler(0, 0, 0);
 
-        if (Input.GetButton("Jump"))
+        if (Input.GetButton("Horn"))
         {
             source.PlayOneShot(clip);
         }
 
 
+    }
+
+    public void HandBrake()
+    {
+        if (Input.GetButton("Jump"))
+        {
+            isBrake = true;
+        }
+        
+        else
+        {
+            isBrake = false;
+        }
+        
+        if (isBrake == true)
+        {
+            wheelColliderLeftFront.brakeTorque = brakeTorgue;
+            wheelColliderRightFront.brakeTorque = brakeTorgue;
+            wheelColliderLeftBack.motorTorque = 0f;
+            wheelColliderRightBack.motorTorque = 0f;
+        }
+
+        else
+        {
+            wheelColliderLeftFront.brakeTorque = 0f;
+            wheelColliderRightFront.brakeTorque = 0f;
+        }
     }
 
 }
