@@ -14,7 +14,9 @@ public class RequestManager : MonoBehaviour
     private InventoryManager inventoryManager;
 
     public float requestTime;
-    
+
+    public int indextor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +28,11 @@ public class RequestManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (request[i].canDeliver == true)
-        //{
-          //  MakeRequestsOverTime();
-        //}
+
     }
     public void CheckIfAcceptable()
     {
+        /*
         for (int i = 0; i < request.Length; i++)
         {
             for (int y = 0; y < request[i].item.Length; y++)
@@ -55,6 +55,7 @@ public class RequestManager : MonoBehaviour
                 }
             }
         }
+        */
     }
     public void LoadRequests()
     {
@@ -68,11 +69,11 @@ public class RequestManager : MonoBehaviour
     {
         yield return (requestTime);
 
-        for (int i = 0; i < request[i].item.Length; i++)
+        for (indextor = 0; indextor < request[indextor].item.Length; indextor++)
         {
-            if (request[i].item.Length <= 3)
+            if (request[indextor].item.Length <= 3)
             {
-                request[i].canDeliver = false;
+                request[indextor].canDeliver = false;
             }
             else
             {

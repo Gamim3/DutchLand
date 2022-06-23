@@ -13660,10 +13660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0b82893cadd3a4c939aea8712ce883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item:
-  - {fileID: 11400000, guid: 556aad021b5ae974f95b8576842e4757, type: 2}
+  item: []
   requestItemsGO: []
   requestTime: 0
+  indextor: 0
 --- !u!1001 &4550365109070846197
 PrefabInstance:
   m_ObjectHideFlags: 0
