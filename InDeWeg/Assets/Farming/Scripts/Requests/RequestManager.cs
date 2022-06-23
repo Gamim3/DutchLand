@@ -6,76 +6,80 @@ using TMPro;
 
 public class RequestManager : MonoBehaviour
 {
-    public bool canRequest;
-    public int requests;
+    public RequestTemplate[] request;
+    public Item[] item;
 
-    public int[] itemRequest;
-    public int[] itemAmount;
-    public bool isChoosingMultipleItems;
+    public GameObject[] requestItemsGO;
 
-    public int[] requestNumber;
-    public int itemType;
+    private InventoryManager inventoryManager;
 
-    public Button[] requestButton;
-
-
-    public RequestTemplate[] requestTemplate;
-    public GameObject[] requestGO;
-
+    public float requestTime;
+    
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < requestGO.Length; i++)
-        {
-            //requestGO[i].SetActive(true);
-        }
         LoadRequests();
         CheckIfAcceptable();
+
+        inventoryManager = GetComponent<InventoryManager>();
     }
     // Update is called once per frame
     void Update()
     {
-
-    }
-    public void GenerateNewOrder()
-    {
-
+        //if (request[i].canDeliver == true)
+        //{
+          //  MakeRequestsOverTime();
+        //}
     }
     public void CheckIfAcceptable()
     {
-        /*
-        for (int i = 0; i < requestNumber[i]; i++)
+        for (int i = 0; i < request.Length; i++)
         {
-            if (itemRequest[i] >= GetComponent<InventoryManager>().inventorySlots[i].itemAmount)
+            for (int y = 0; y < request[i].item.Length; y++)
             {
-                requestButton[i].interactable = true;
-            }
-            else
-            {
-                requestButton[i].interactable = false;
+                for (int s = 0; s < inventoryManager.inventorySlots.Length; s++)
+                {
+                    if (inventoryManager.inventorySlots[s].item == request[i].item[y])
+                    {
+                        if (request[i].itemAmount[y] >= request[i].itemAmount[i])
+                        {
+                            request[i].canDeliver = true;
+                            print("werkt");
+                        }
+                        else
+                        {
+                            request[i].canDeliver = false;
+                            print("werkt niet");
+                        }
+                    }
+                }
             }
         }
-        */
-    }
-    public void ChoosingItems()
-    {
-
-    }
-    public void ChoosingMultipleItems()
-    {
-
     }
     public void LoadRequests()
     {
 
     }
-    public void InstantiateTemplates()
+    public void MakeRequests()
     {
-        /*
-        for (int i = 0; i < requestNumber[i]; i++)
-        {
 
+    }
+    public IEnumerator MakeRequestsOverTime()
+    {
+        yield return (requestTime);
+
+        for (int i = 0; i < request[i].item.Length; i++)
+        {
+            if (request[i].item.Length <= 3)
+            {
+                request[i].canDeliver = false;
+            }
+            else
+            {
+                requestTime += 5f;
+
+                MakeRequests();
+            }
         }
-        */
     }
 }

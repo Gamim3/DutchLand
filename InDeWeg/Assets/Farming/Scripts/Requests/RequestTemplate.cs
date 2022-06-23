@@ -6,4 +6,5 @@ public class RequestTemplate
 {
     public Item[] item;
     public List<int> itemAmount = new List<int>();
+    public bool canDeliver = false;
 }
