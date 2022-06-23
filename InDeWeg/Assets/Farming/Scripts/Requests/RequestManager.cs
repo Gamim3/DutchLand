@@ -13,12 +13,12 @@ public class RequestManager : MonoBehaviour
     public int[] itemAmount;
     public bool isChoosingMultipleItems;
 
-    public int requestNumber;
+    public int[] requestNumber;
     public int itemType;
 
     public Button[] requestButton;
 
-    public RequestSO[] requestSO;
+
     public RequestTemplate[] requestTemplate;
     public GameObject[] requestGO;
 
@@ -27,7 +27,7 @@ public class RequestManager : MonoBehaviour
     {
         for (int i = 0; i < requestGO.Length; i++)
         {
-            requestGO[i].SetActive(true);
+            //requestGO[i].SetActive(true);
         }
         LoadRequests();
         CheckIfAcceptable();
@@ -37,13 +37,14 @@ public class RequestManager : MonoBehaviour
     {
 
     }
-  public void GenerateNewOrder()
+    public void GenerateNewOrder()
     {
 
     }
     public void CheckIfAcceptable()
     {
-        for (int i = 0; i < requestNumber; i++)
+        /*
+        for (int i = 0; i < requestNumber[i]; i++)
         {
             if (itemRequest[i] >= GetComponent<InventoryManager>().inventorySlots[i].itemAmount)
             {
@@ -54,10 +55,11 @@ public class RequestManager : MonoBehaviour
                 requestButton[i].interactable = false;
             }
         }
+        */
     }
     public void ChoosingItems()
     {
-        
+
     }
     public void ChoosingMultipleItems()
     {
@@ -65,17 +67,15 @@ public class RequestManager : MonoBehaviour
     }
     public void LoadRequests()
     {
-        for (int i = 0; i < requestSO.Length; i++)
+
+    }
+    public void InstantiateTemplates()
+    {
+        /*
+        for (int i = 0; i < requestNumber[i]; i++)
         {
-            requestTemplate[i].itemTXT.text = requestSO[i].itemTXT;
-            requestTemplate[i].amountTXT.text = requestSO[i].amountTXT.ToString();
-            /*
-            if (canRequest == true)
-            {
-                requestTemplate[i].item2TXT.text = requestSO[i].item2TXT;
-                requestTemplate[i].amonunt2TXT.text = requestSO[i].amonunt2TXT.ToString();
-            }
-            */
+
         }
+        */
     }
 }
