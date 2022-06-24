@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlantGrowthManager : MonoBehaviour
 {
-    public Item item;
+    public ItemSeeds item;
 
     public int curState;
 

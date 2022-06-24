@@ -7,7 +7,7 @@ using TMPro;
 public class RequestManager : MonoBehaviour
 {
     public RequestTemplate[] request;
-    public Item[] allPossibleItems;
+    public ItemProduct[] allPossibleItems;
 
     public GameObject[] requestItemsGO;
 
@@ -125,18 +125,18 @@ public class RequestManager : MonoBehaviour
                 //item 1
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                if (inventoryManager.inventorySlots[i].itemS.itemTag == "crop")
+                if (inventoryManager.inventorySlots[i].itemS)
                 {
-                    newRequest.item.Add(inventoryManager.inventorySlots[i].itemS);
+                    newRequest.item.Add(inventoryManager.inventorySlots[i].itemP);
                     newRequest.itemAmount.Add(itemsAmount);
 
                     itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
                     for (int y = 0; y < newRequest.item.Count; y++)
                     {
-                        if (inventoryManager.inventorySlots[i].itemS.itemTag == "crop" && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
+                        if (inventoryManager.inventorySlots[i].itemS && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
                         {
-                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].itemS);
+                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].itemP);
                             newRequest.itemAmount.Add(itemsAmount);
                         }
                     }
@@ -156,7 +156,7 @@ public class RequestManager : MonoBehaviour
             {
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemS);
+                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemP);
                 newRequest.itemAmount.Add(itemsAmount);
 
                 StartCoroutine(MakeRequestsOverTime());

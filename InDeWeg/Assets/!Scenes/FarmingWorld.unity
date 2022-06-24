@@ -5167,7 +5167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a7629663c40324496211ce9ad1b364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 1cac4e357e1cb58419b24c6c588abe64, type: 2}
+  itemS: {fileID: 0}
+  itemP: {fileID: 0}
 --- !u!135 &884999816
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13609,7 +13610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11db97cf0b50fb94ab737046af8fe7db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  itemS: {fileID: 0}
+  itemP: {fileID: 0}
   inventoryMan: {fileID: 3065688509405126333}
 --- !u!114 &3065688509405126340
 MonoBehaviour:
@@ -14147,7 +14149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a7629663c40324496211ce9ad1b364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 556aad021b5ae974f95b8576842e4757, type: 2}
+  itemS: {fileID: 0}
+  itemP: {fileID: 0}
 --- !u!33 &7096845480534586728
 MeshFilter:
   m_ObjectHideFlags: 0
