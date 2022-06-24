@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 608646887f5c52f4194c3fe8b4577834, type: 3}
-  m_Name: ZonnewafelCrop
+  m_Name: FrikankolfCrop
   m_EditorClassIdentifier: 
-  idName: Zonnewafel
+  idName: Frikankolf
   itemTag: crop
   description: 
   Plant: []

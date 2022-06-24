@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[CreateAssetMenu(fileName = "Inventory System",menuName ="ScriptableObject")]
+[CreateAssetMenu(fileName = "Inventory System",menuName ="seeds")]
 public class Item : ScriptableObject
 {
     public string idName;
-    public string itemTag;
-    public string description;
 
     public GameObject[] Plant;
     public GameObject crop;
     public float growTime;
-
-    public TMP_Text titleTXT;
-    public TMP_Text descriptionTXT;
-    public TMP_Text priveTXT;
    
 
 

@@ -7,7 +7,7 @@ using TMPro;
 public class RequestManager : MonoBehaviour
 {
     public RequestTemplate[] request;
-    public Item[] item;
+    public Item[] allPossibleItems;
 
     public GameObject[] requestItemsGO;
 
@@ -24,12 +24,14 @@ public class RequestManager : MonoBehaviour
 
     public bool requestTwice;
 
+    public int howmanyRequests;
+
+    public Button[] deleteRequestButtonA;
+
     // Start is called before the first frame update
     void Start()
     {
         requestTime = 1f;
-
-        print("dit deel werkt4");
 
         LoadRequests();
         CheckIfAcceptable();
@@ -58,7 +60,9 @@ public class RequestManager : MonoBehaviour
     }
     public void CheckIfAcceptable()
     {
-        for (int i = 0; i < request.Length; i++)
+        RequestTemplate newRequest = new RequestTemplate();
+
+        for (int i = 0; i < newRequest.item.Count; i++)
         {
             for (int y = 0; y < request[i].item.Count; y++)
             {
@@ -81,9 +85,22 @@ public class RequestManager : MonoBehaviour
             }
         }
     }
+    public void DeleteRequests()
+    {
+        //Destroy(correct panel);
+    }
     public void LoadRequests()
     {
-        
+
+    }
+    public void AcceptRequest()
+    {
+        RequestTemplate newRequest = new RequestTemplate();
+
+        for (int i = 0; i < inventoryManager.inventorySlots.Length; i++)
+        {
+            //inventoryManager.inventorySlots[i].item.idName
+        }
     }
     public void MakeRequests()
     {
@@ -95,30 +112,43 @@ public class RequestManager : MonoBehaviour
         }
         else
         {
+            print("hahah");
             requestTwice = false;
         }
 
         RequestTemplate newRequest = new RequestTemplate();
 
-        for (int i = 0; i < request.Length; i++)
+        for (int i = 0; i < newRequest.item.Count; i++)
         {
             if (requestTwice == true)
             {
                 //item 1
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].item);
-                newRequest.itemAmount.Add(itemsAmount);
+                if (inventoryManager.inventorySlots[i].item.itemTag == "crop")
+                {
+                    newRequest.item.Add(inventoryManager.inventorySlots[i].item);
+                    newRequest.itemAmount.Add(itemsAmount);
+
+                    itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
+
+                    for (int y = 0; y < newRequest.item.Count; y++)
+                    {
+                        if (inventoryManager.inventorySlots[i].item.itemTag == "crop" && inventoryManager.inventorySlots[y].item.idName != inventoryManager.inventorySlots[i].item.idName)
+                        {
+                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].item);
+                            newRequest.itemAmount.Add(itemsAmount);
+                        }
+                    }
+                }
+                else
+                {
+                    return;
+                }
+                
 
                 //item 2
-                itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
-
-                i++;
-
-                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].item);
-                newRequest.itemAmount.Add(itemsAmount);
-
-                i--;
+                
 
                 StartCoroutine(MakeRequestsOverTime());
             }
@@ -138,19 +168,27 @@ public class RequestManager : MonoBehaviour
     {
         yield return new WaitForSeconds(requestTime);
 
-        print("dit deel werkt3");
+        RequestTemplate newRequest = new RequestTemplate();
 
-        for (int i = 0; i < request[i].item.Count; i++)
+        int newRandomItem = Random.RandomRange(0, allPossibleItems.Length);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+
+
+        print("Vis");
+
+        for (int i = 0; i < newRequest.item.Count; i++)
         {
-            if (request[i].item.Count <= 3)
+            print("hagagh");
+
+            if (howmanyRequests < 4)
             {
-                print("dit deel werkt2");
+                MakeRequests();
             }
             else
             {
-                print("dit deel werkt");
+                requestTime += Random.Range(1, 15);
 
-                requestTime += Random.Range(-15, 15);
+                howmanyRequests++;
 
                 MakeRequests();
             }

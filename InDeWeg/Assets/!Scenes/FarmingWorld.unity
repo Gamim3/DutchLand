@@ -13660,7 +13660,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0b82893cadd3a4c939aea8712ce883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: []
+  allPossibleItems:
+  - {fileID: 11400000, guid: 697379f4c7e10ab44a6265e1f6ca9e4a, type: 2}
+  - {fileID: 11400000, guid: 5a3a7b923650e424daacf43b006159e8, type: 2}
   requestItemsGO: []
   requestTime: 2
   indextor: 0
@@ -13668,6 +13670,8 @@ MonoBehaviour:
   maximumRequestAmount: 22
   itemsAmount: 0
   requestTwice: 0
+  howmanyRequests: 0
+  deleteRequestButtonA: []
 --- !u!1001 &4550365109070846197
 PrefabInstance:
   m_ObjectHideFlags: 0
