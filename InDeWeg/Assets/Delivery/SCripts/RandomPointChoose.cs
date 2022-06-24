@@ -6,6 +6,7 @@ public class RandomPointChoose : MonoBehaviour
 {
     public Transform[] points;
     public GameObject deliverPoint;
+    public GameObject miniMapIcon;
 
     public void Start()
     {
@@ -17,6 +18,7 @@ public class RandomPointChoose : MonoBehaviour
         int indexNumber = Random.Range(0, points.Length);
         Debug.Log(points[indexNumber].name);
         Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
+        Instantiate(miniMapIcon, points[indexNumber].position,Quaternion.identity);
     }
 
 
