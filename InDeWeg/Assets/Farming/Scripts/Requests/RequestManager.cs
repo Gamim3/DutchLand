@@ -6,76 +6,81 @@ using TMPro;
 
 public class RequestManager : MonoBehaviour
 {
-    public bool canRequest;
-    public int requests;
+    public RequestTemplate[] request;
+    public Item[] item;
 
-    public int[] itemRequest;
-    public int[] itemAmount;
-    public bool isChoosingMultipleItems;
+    public GameObject[] requestItemsGO;
 
-    public int requestNumber;
-    public int itemType;
+    private InventoryManager inventoryManager;
 
-    public Button[] requestButton;
+    public float requestTime;
 
-    public RequestSO[] requestSO;
-    public RequestTemplate[] requestTemplate;
-    public GameObject[] requestGO;
+    public int indextor;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < requestGO.Length; i++)
-        {
-            requestGO[i].SetActive(true);
-        }
         LoadRequests();
         CheckIfAcceptable();
+
+        inventoryManager = GetComponent<InventoryManager>();
     }
     // Update is called once per frame
     void Update()
     {
 
     }
-  public void GenerateNewOrder()
-    {
-
-    }
     public void CheckIfAcceptable()
     {
-        for (int i = 0; i < requestNumber; i++)
+        /*
+        for (int i = 0; i < request.Length; i++)
         {
-            if (itemRequest[i] >= GetComponent<InventoryManager>().inventorySlots[i].itemAmount)
+            for (int y = 0; y < request[i].item.Length; y++)
             {
-                requestButton[i].interactable = true;
-            }
-            else
-            {
-                requestButton[i].interactable = false;
+                for (int s = 0; s < inventoryManager.inventorySlots.Length; s++)
+                {
+                    if (inventoryManager.inventorySlots[s].item == request[i].item[y])
+                    {
+                        if (request[i].itemAmount[y] >= request[i].itemAmount[i])
+                        {
+                            request[i].canDeliver = true;
+                            print("werkt");
+                        }
+                        else
+                        {
+                            request[i].canDeliver = false;
+                            print("werkt niet");
+                        }
+                    }
+                }
             }
         }
-    }
-    public void ChoosingItems()
-    {
-        
-    }
-    public void ChoosingMultipleItems()
-    {
-
+        */
     }
     public void LoadRequests()
     {
-        for (int i = 0; i < requestSO.Length; i++)
+
+    }
+    public void MakeRequests()
+    {
+
+    }
+    public IEnumerator MakeRequestsOverTime()
+    {
+        yield return (requestTime);
+
+        for (indextor = 0; indextor < request[indextor].item.Length; indextor++)
         {
-            requestTemplate[i].itemTXT.text = requestSO[i].itemTXT;
-            requestTemplate[i].amountTXT.text = requestSO[i].amountTXT.ToString();
-            /*
-            if (canRequest == true)
+            if (request[indextor].item.Length <= 3)
             {
-                requestTemplate[i].item2TXT.text = requestSO[i].item2TXT;
-                requestTemplate[i].amonunt2TXT.text = requestSO[i].amonunt2TXT.ToString();
+                request[indextor].canDeliver = false;
             }
-            */
+            else
+            {
+                requestTime += 5f;
+
+                MakeRequests();
+            }
         }
     }
 }

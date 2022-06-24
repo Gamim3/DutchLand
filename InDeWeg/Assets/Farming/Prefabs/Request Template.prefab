@@ -673,7 +673,6 @@ GameObject:
   - component: {fileID: 4550365109838224151}
   - component: {fileID: 4550365109838224145}
   - component: {fileID: 4550365109838224150}
-  - component: {fileID: 9078787313615854460}
   m_Layer: 5
   m_Name: Request Template
   m_TagString: Untagged
@@ -745,22 +744,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &9078787313615854460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4550365109838224148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32996971171f3b94e9e6d65159f81bf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemTXT: {fileID: 2083507509669011425}
-  amountTXT: {fileID: 5268938118281696619}
-  item2TXT: {fileID: 7483403985922771236}
-  amonunt2TXT: {fileID: 8803178233019533498}
 --- !u!1 &5197494721606188805
 GameObject:
   m_ObjectHideFlags: 0
