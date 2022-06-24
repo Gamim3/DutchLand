@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-    public Item item;
+    public ItemSeeds itemS;
+    public ItemProduct itemP;
 
     public GameObject inventoryMan;
     // Start is called before the first frame update
@@ -12,16 +13,30 @@ public class ItemPickUp : MonoBehaviour
     {
         if(other.gameObject.tag == "Item")
         {
-            item = other.gameObject.GetComponent<ItemDeviner>().item;
+            if(other.gameObject.GetComponent<ItemDeviner>().itemP != null)
+            {
+                itemP = other.gameObject.GetComponent<ItemDeviner>().itemP;
 
-            inventoryMan.GetComponent<InventoryManager>().AddItem(item);
-            Destroy(other.gameObject);
+                inventoryMan.GetComponent<InventoryManager>().AddItemProduct(itemP);
+                Destroy(other.gameObject);
+            }
+            else if(other.gameObject.GetComponent<ItemDeviner>().itemS != null)
+            {
+                if (other.gameObject.GetComponent<ItemDeviner>().itemP != null)
+                {
+                    itemS = other.gameObject.GetComponent<ItemDeviner>().itemS;
+
+                    inventoryMan.GetComponent<InventoryManager>().AddItemSeeds(itemS);
+                    Destroy(other.gameObject);
+                }
+            }
         }
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        item = null;
+        itemS = null;
+        itemP = null;
     }
 }

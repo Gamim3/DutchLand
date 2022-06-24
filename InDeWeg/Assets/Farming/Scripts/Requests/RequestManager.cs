@@ -68,7 +68,7 @@ public class RequestManager : MonoBehaviour
             {
                 for (int s = 0; s < inventoryManager.inventorySlots.Length; s++)
                 {
-                    if (inventoryManager.inventorySlots[s].item == request[i].item[y])
+                    if (inventoryManager.inventorySlots[s].itemS == request[i].item[y])
                     {
                         if (request[i].itemAmount[y] >= request[i].itemAmount[i])
                         {
@@ -125,18 +125,18 @@ public class RequestManager : MonoBehaviour
                 //item 1
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                if (inventoryManager.inventorySlots[i].item.itemTag == "crop")
+                if (inventoryManager.inventorySlots[i].itemS.itemTag == "crop")
                 {
-                    newRequest.item.Add(inventoryManager.inventorySlots[i].item);
+                    newRequest.item.Add(inventoryManager.inventorySlots[i].itemS);
                     newRequest.itemAmount.Add(itemsAmount);
 
                     itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
                     for (int y = 0; y < newRequest.item.Count; y++)
                     {
-                        if (inventoryManager.inventorySlots[i].item.itemTag == "crop" && inventoryManager.inventorySlots[y].item.idName != inventoryManager.inventorySlots[i].item.idName)
+                        if (inventoryManager.inventorySlots[i].itemS.itemTag == "crop" && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
                         {
-                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].item);
+                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].itemS);
                             newRequest.itemAmount.Add(itemsAmount);
                         }
                     }
@@ -156,7 +156,7 @@ public class RequestManager : MonoBehaviour
             {
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].item);
+                newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemS);
                 newRequest.itemAmount.Add(itemsAmount);
 
                 StartCoroutine(MakeRequestsOverTime());

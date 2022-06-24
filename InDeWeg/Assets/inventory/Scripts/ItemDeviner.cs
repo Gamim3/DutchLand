@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class ItemDeviner : MonoBehaviour
 {
-    public Item item;
+    public ItemSeeds itemS;
+    public ItemProduct itemP;
 }

@@ -5,7 +5,8 @@ using TMPro;
 
 public class InventorySlot : MonoBehaviour
 {
-    public Item item;
+    public ItemSeeds itemS;
+    public ItemProduct itemP;
 
     public int itemAmount;
 
@@ -15,11 +16,11 @@ public class InventorySlot : MonoBehaviour
 
     private void Update()
     {
-        if (item != null)
+        if (itemS != null)
         {
-            itemNameVisual.text = item.idName;
+            itemNameVisual.text = itemS.idName;
         }
-        else if (item == null)
+        else if (itemS == null)
         {
             itemNameVisual.text = null;
         }
@@ -28,15 +29,21 @@ public class InventorySlot : MonoBehaviour
         itemAmountVisual.text = s;
     }
 
-    public void AddItem(Item itemToAdd)
+    public void AddItemS(ItemSeeds itemToAddSeed)
     {
-        item = itemToAdd;
+        itemS = itemToAddSeed;
+        // set img and stuff here.
+    }
+    public void AddItemP(ItemProduct itemToAddProduct)
+    {
+        itemP = itemToAddProduct;
         // set img and stuff here.
     }
 
     public void RemoveItem()
     {
-        item = null;
+        itemS = null;
+        itemP = null;
         // Remove item img and stuff here.
     }
     public void StackItem(int addItemAmount)

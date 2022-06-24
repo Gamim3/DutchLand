@@ -73,9 +73,9 @@ public class ToolSwapping : MonoBehaviour
 
                 int seedSlot = GetComponent<InventoryManager>().slotIndex;
 
-                if (GetComponent<InventoryManager>().inventorySlots[seedSlot].item != null && GetComponent<InventoryManager>().inventorySlots[seedSlot].item.itemTag == "seeds")
+                if (GetComponent<InventoryManager>().inventorySlots[seedSlot].itemS != null && GetComponent<InventoryManager>().inventorySlots[seedSlot].itemS.itemTag == "seeds")
                 {
-                    hit.transform.gameObject.GetComponent<PlantGrowthManager>().item = GetComponent<InventoryManager>().inventorySlots[seedSlot].item;
+                    hit.transform.gameObject.GetComponent<PlantGrowthManager>().item = GetComponent<InventoryManager>().inventorySlots[seedSlot].itemS;
 
                     hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Shovel);
 

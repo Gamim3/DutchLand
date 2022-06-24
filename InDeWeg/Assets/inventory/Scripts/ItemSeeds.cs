@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 
 [CreateAssetMenu(fileName = "Inventory System",menuName ="seeds")]
-public class Item : ScriptableObject
+public class ItemSeeds : ScriptableObject
 {
     public string idName;
 

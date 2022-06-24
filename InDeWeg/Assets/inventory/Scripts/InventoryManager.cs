@@ -10,22 +10,47 @@ public class InventoryManager : MonoBehaviour
 
     public int addItemAmount = 1;
 
-    public void AddItem(Item itemToAdd)
+    public void AddItemSeeds(ItemSeeds itemToAddSeed)
     {
         // for loop to check if one is free, then put it in there.
         for (int i = 0; i < inventorySlots.Length; i++)
         {
-            if (inventorySlots[i].item != null && inventorySlots[i].item.idName == itemToAdd.idName)
+            if(inventorySlots[i].itemP == null)
             {
-                inventorySlots[i].StackItem(addItemAmount);
-                return;
-            }
-            if (inventorySlots[i].item == null)
-            {
-                inventorySlots[i].AddItem(itemToAdd);
+                if (inventorySlots[i].itemS != null && inventorySlots[i].itemS.idName == itemToAddSeed.idName)
+                {
+                    inventorySlots[i].StackItem(addItemAmount);
+                    return;
+                }
+                if (inventorySlots[i].itemS == null)
+                {
+                    inventorySlots[i].AddItemS(itemToAddSeed);
 
-                inventorySlots[i].StackItem(addItemAmount);
-                return;
+                    inventorySlots[i].StackItem(addItemAmount);
+                    return;
+                }
+            }
+        }
+    }
+    public void AddItemProduct(ItemProduct itemToAddProduct)
+    {
+        // for loop to check if one is free, then put it in there.
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            if(inventorySlots[i].itemS == null)
+            {
+                if (inventorySlots[i].itemP != null && inventorySlots[i].itemP.idName == itemToAddProduct.idName)
+                {
+                    inventorySlots[i].StackItem(addItemAmount);
+                    return;
+                }
+                if (inventorySlots[i].itemP == null)
+                {
+                    inventorySlots[i].AddItemP(itemToAddProduct);
+
+                    inventorySlots[i].StackItem(addItemAmount);
+                    return;
+                }
             }
         }
     }
