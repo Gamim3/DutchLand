@@ -170,7 +170,7 @@ public class RequestManager : MonoBehaviour
 
         RequestTemplate newRequest = new RequestTemplate();
 
-        int newRandomItem = Random.RandomRange(0, allPossibleItems.Length);
+        int newRandomItem = Random.Range(0, allPossibleItems.Length);
         newRequest.item.Add(allPossibleItems[newRandomItem]);
 
 

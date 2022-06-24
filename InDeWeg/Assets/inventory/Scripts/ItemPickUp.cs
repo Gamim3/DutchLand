@@ -22,13 +22,10 @@ public class ItemPickUp : MonoBehaviour
             }
             else if(other.gameObject.GetComponent<ItemDeviner>().itemS != null)
             {
-                if (other.gameObject.GetComponent<ItemDeviner>().itemP != null)
-                {
-                    itemS = other.gameObject.GetComponent<ItemDeviner>().itemS;
+                itemS = other.gameObject.GetComponent<ItemDeviner>().itemS;
 
-                    inventoryMan.GetComponent<InventoryManager>().AddItemSeeds(itemS);
-                    Destroy(other.gameObject);
-                }
+                inventoryMan.GetComponent<InventoryManager>().AddItemSeeds(itemS);
+                Destroy(other.gameObject);
             }
         }
 

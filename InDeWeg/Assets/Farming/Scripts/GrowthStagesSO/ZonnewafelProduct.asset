@@ -9,15 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608646887f5c52f4194c3fe8b4577834, type: 3}
-  m_Name: ZonnewafelCrop
+  m_Script: {fileID: 11500000, guid: 47947d7f7c37d174ab02ab1070319c82, type: 3}
+  m_Name: ZonnewafelProduct
   m_EditorClassIdentifier: 
-  idName: Zonnewafel
-  itemTag: crop
-  description: 
-  Plant: []
-  crop: {fileID: 0}
-  growTime: 0
-  titleTXT: {fileID: 0}
-  descriptionTXT: {fileID: 0}
-  priveTXT: {fileID: 0}
+  idName: 
+  waarde: 0

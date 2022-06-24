@@ -9,15 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 608646887f5c52f4194c3fe8b4577834, type: 3}
-  m_Name: FrikankolfCrop
+  m_Script: {fileID: 11500000, guid: f9449602aff8e4843b2368051ea7ba7a, type: 3}
+  m_Name: ZonnewafelSeeds
   m_EditorClassIdentifier: 
-  idName: Frikankolf
-  itemTag: crop
-  description: 
+  idName: 
   Plant: []
   crop: {fileID: 0}
   growTime: 0
-  titleTXT: {fileID: 0}
-  descriptionTXT: {fileID: 0}
-  priveTXT: {fileID: 0}
