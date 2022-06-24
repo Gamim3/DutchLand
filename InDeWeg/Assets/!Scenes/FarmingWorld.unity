@@ -13662,8 +13662,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: []
   requestItemsGO: []
-  requestTime: 0
+  requestTime: 2
   indextor: 0
+  minimumRequestAmount: 1
+  maximumRequestAmount: 22
+  itemsAmount: 0
+  requestTwice: 0
 --- !u!1001 &4550365109070846197
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class RequestTemplate
 {
-    public Item[] item;
+    public List<Item> item = new List<Item>();
     public List<int> itemAmount = new List<int>();
     public bool canDeliver = false;
 }
