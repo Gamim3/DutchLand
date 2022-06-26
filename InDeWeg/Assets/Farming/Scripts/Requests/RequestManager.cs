@@ -104,7 +104,7 @@ public class RequestManager : MonoBehaviour
     }
     public void MakeRequests()
     {
-        int t = Random.Range(0, 1);
+        int t = Random.Range(0, 2);
 
         print("1");
 
@@ -114,7 +114,7 @@ public class RequestManager : MonoBehaviour
 
             requestTwice = true;
         }
-        else
+        if (t == 1)
         {
             print("2.5");
 
@@ -153,6 +153,10 @@ public class RequestManager : MonoBehaviour
                     {
                         print("6");
 
+                        // keeps repeating it cant find a 2nd item
+
+                        //return;
+
                         if (inventoryManager.inventorySlots[i].itemS && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
                         {
                             print("7");
@@ -180,6 +184,8 @@ public class RequestManager : MonoBehaviour
 
                 newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemP);
                 newRequest.itemAmount.Add(itemsAmount);
+
+                return;
 
                 StartCoroutine(MakeRequestsOverTime());
             }

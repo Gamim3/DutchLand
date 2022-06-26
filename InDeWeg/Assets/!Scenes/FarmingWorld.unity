@@ -5168,7 +5168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemS: {fileID: 0}
-  itemP: {fileID: 11400000, guid: 6ff76fcb6500c5a42973c02a9cf5e571, type: 2}
+  itemP: {fileID: 11400000, guid: ff87f4533b35ab84089c3b07353f8381, type: 2}
 --- !u!135 &884999816
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14149,8 +14149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a7629663c40324496211ce9ad1b364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemS: {fileID: 11400000, guid: b12bf8bec446e384c87ac1d56fb64fd0, type: 2}
-  itemP: {fileID: 0}
+  itemS: {fileID: 0}
+  itemP: {fileID: 11400000, guid: 6ff76fcb6500c5a42973c02a9cf5e571, type: 2}
 --- !u!33 &7096845480534586728
 MeshFilter:
   m_ObjectHideFlags: 0
