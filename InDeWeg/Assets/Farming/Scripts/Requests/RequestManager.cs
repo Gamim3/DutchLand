@@ -106,27 +106,44 @@ public class RequestManager : MonoBehaviour
     {
         int t = Random.Range(0, 1);
 
+        print("1");
+
         if (t == 0)
         {
+            print("2");
+
             requestTwice = true;
         }
         else
         {
-            print("hahah");
+            print("2.5");
+
             requestTwice = false;
         }
 
         RequestTemplate newRequest = new RequestTemplate();
 
+        int newRandomItem = Random.Range(0, allPossibleItems.Length);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+
         for (int i = 0; i < newRequest.item.Count; i++)
         {
+            print("3");
+
             if (requestTwice == true)
             {
+                print("4");
                 //item 1
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                if (inventoryManager.inventorySlots[i].itemS)
+                if (inventoryManager.inventorySlots[i].itemP)
                 {
+                    print("5");
+
                     newRequest.item.Add(inventoryManager.inventorySlots[i].itemP);
                     newRequest.itemAmount.Add(itemsAmount);
 
@@ -134,8 +151,12 @@ public class RequestManager : MonoBehaviour
 
                     for (int y = 0; y < newRequest.item.Count; y++)
                     {
+                        print("6");
+
                         if (inventoryManager.inventorySlots[i].itemS && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
                         {
+                            print("7");
+
                             newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].itemP);
                             newRequest.itemAmount.Add(itemsAmount);
                         }
@@ -154,6 +175,7 @@ public class RequestManager : MonoBehaviour
             }
             else
             {
+                print("4.5");
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
                 newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemP);
@@ -173,20 +195,21 @@ public class RequestManager : MonoBehaviour
         int newRandomItem = Random.Range(0, allPossibleItems.Length);
         newRequest.item.Add(allPossibleItems[newRandomItem]);
 
-
-        print("Vis");
-
         for (int i = 0; i < newRequest.item.Count; i++)
         {
-            print("hagagh");
+            howmanyRequests++;
 
-            if (howmanyRequests < 4)
+            if (howmanyRequests > 4)
             {
+                print("More Than 3");
+
                 MakeRequests();
             }
             else
             {
-                requestTime += Random.Range(1, 15);
+                print("Less Than 3");
+
+                requestTime += Random.Range(1, 2);
 
                 howmanyRequests++;
 
