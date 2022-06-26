@@ -24,7 +24,15 @@ public class InventorySlot : MonoBehaviour
         {
             itemNameVisual.text = null;
         }
-        
+        if (itemP != null)
+        {
+            itemNameVisual.text = itemP.idName;
+        }
+        else if (itemP == null)
+        {
+            itemNameVisual.text = null;
+        }
+
         string s = itemAmount.ToString();
         itemAmountVisual.text = s;
     }

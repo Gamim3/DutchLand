@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47947d7f7c37d174ab02ab1070319c82, type: 3}
   m_Name: ZonnewafelProduct
   m_EditorClassIdentifier: 
-  idName: 
+  idName: zonnewafel
   waarde: 0
