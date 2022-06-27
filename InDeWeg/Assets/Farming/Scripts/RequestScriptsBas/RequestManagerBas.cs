@@ -23,6 +23,8 @@ public class RequestManagerBas : MonoBehaviour
     public float requestTime = 100f;
 
     public int numberdRequest;
+
+    public int baseCostForItem;
     private void Start()
     {
         hidden = true;
@@ -32,6 +34,11 @@ public class RequestManagerBas : MonoBehaviour
     public void Update()
     {
 
+    }
+    public void RewardCalculations()
+    {
+
+        //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
     }
     public void RandomItemSelector(int slotIndex)
     {

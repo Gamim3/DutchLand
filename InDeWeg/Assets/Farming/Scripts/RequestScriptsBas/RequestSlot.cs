@@ -18,6 +18,8 @@ public class RequestSlot : MonoBehaviour
     public TMP_Text itemTextDisplayTwo;
     public TMP_Text itemAmountDisplayTwo;
 
+    public TMP_Text reward;
+
     // Update is called once per frame
     void Update()
     {
