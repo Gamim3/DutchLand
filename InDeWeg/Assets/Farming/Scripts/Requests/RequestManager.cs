@@ -212,7 +212,7 @@ public class RequestManager : MonoBehaviour
         int newRandomItem = Random.Range(0, allPossibleItems.Length);
         newRequest.item.Add(allPossibleItems[newRandomItem]);
 
-        if (howmanyRequests < 3)
+        if (howmanyRequests < 2)
         {
             for (int i = 0; i < newRequest.item.Count; i++)
             {
