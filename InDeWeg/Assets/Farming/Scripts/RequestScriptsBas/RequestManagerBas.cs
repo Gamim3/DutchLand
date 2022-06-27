@@ -17,19 +17,33 @@ public class RequestManagerBas : MonoBehaviour
 
     public bool twoItems;
 
+    public float requestTime = 100f;
+
+    public int numberdRequest;
     private void Start()
     {
         RandomItemSelector(0);
     }
+    public void Update()
+    {
+
+    }
     public void RandomItemSelector(int slotIndex)
     {
+        //requestTime += Random.Range(-10, 10);
+
+        //if (requestTime >= 0)
+        //{
+           // requestTime = Random.Range(5, 15);
+        //}
+
         if (twoItems == false)
         {
             UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = null;
             UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = 0;
         }
 
-        int newRandomTwoItems = Random.Range(0, 1);
+        int newRandomTwoItems = Random.Range(0, 2);
         if(newRandomTwoItems == 0)
         {
             twoItems = true;
@@ -42,6 +56,8 @@ public class RequestManagerBas : MonoBehaviour
         UiPannels[slotIndex].GetComponent<RequestSlot>().itemOne = allItemP[newRandomItem];
         UiPannels[slotIndex].GetComponent<RequestSlot>().itemOneAmount = newRandomAmount;
 
+        UiPannels[numberdRequest].SetActive(true);
+
         if (twoItems == true)
         {
             int newRandomItemTwo = Random.Range(0, allItemP.Length);
@@ -50,6 +66,8 @@ public class RequestManagerBas : MonoBehaviour
             {
                 UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = allItemP[newRandomItemTwo];
                 UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = newRandomAmountTwo;
+
+                UiPannels[numberdRequest].SetActive(true);
             }
         }
         
@@ -68,15 +86,37 @@ public class RequestManagerBas : MonoBehaviour
             //UiPannels[i].
         }
     }
+    public void DeleteRequest(int requestButtonNumber)
+    {
+        numberdRequest = requestButtonNumber;
 
+        UiPannels[numberdRequest].SetActive(false);
+
+        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOne = null;
+
+        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwo = null;
+
+        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOneAmount = 0;
+
+        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwoAmount = 0;
+
+        //numberdRequest = requestButtonNumber;
+
+        StartCoroutine(makeNewRequestOverTime());
+    }
+    public void HideUIPanelIfEmpty()
+    {
+        //UiPannels[numberdRequest].SetActive(false);
+    }
     public IEnumerator makeNewRequestOverTime()
     {
-        yield return new WaitForSeconds(2);
-        for(int i = 0; i < UiPannels.Length; i++)
+        yield return new WaitForSeconds(requestTime);
+
+        for(numberdRequest = 0; numberdRequest < UiPannels.Length; numberdRequest++)
         {
-            if(UiPannels[i].GetComponent<RequestSlot>().itemOne == null)
+            if(UiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
             {
-                RandomItemSelector(i);
+                RandomItemSelector(numberdRequest);
             }
         }
         print("break");
