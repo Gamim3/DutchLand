@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9449602aff8e4843b2368051ea7ba7a, type: 3}
-  m_Name: FrikankolfSeeds
+  m_Name: GarnatuurSeeds
   m_EditorClassIdentifier: 
-  idName: Frikankolf seeds
+  idName: Garnatuur seeds
   Plant: []
   crop: {fileID: 0}
   growTime: 0
