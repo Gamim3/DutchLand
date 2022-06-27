@@ -15,7 +15,7 @@ public class RequestManager : MonoBehaviour
 
     public float requestTime;
 
-    public int indextor;
+    //public int indextor;
 
     public int minimumRequestAmount;
     public int maximumRequestAmount;
@@ -62,6 +62,14 @@ public class RequestManager : MonoBehaviour
     {
         RequestTemplate newRequest = new RequestTemplate();
 
+        int newRandomItem = Random.Range(0, allPossibleItems.Length);
+
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+        newRequest.item.Add(allPossibleItems[newRandomItem]);
+
         for (int i = 0; i < newRequest.item.Count; i++)
         {
             for (int y = 0; y < request[i].item.Count; y++)
@@ -87,6 +95,7 @@ public class RequestManager : MonoBehaviour
     }
     public void DeleteRequests()
     {
+        howmanyRequests--;
         //Destroy(correct panel);
     }
     public void LoadRequests()
@@ -125,10 +134,6 @@ public class RequestManager : MonoBehaviour
 
         int newRandomItem = Random.Range(0, allPossibleItems.Length);
         newRequest.item.Add(allPossibleItems[newRandomItem]);
-        newRequest.item.Add(allPossibleItems[newRandomItem]);
-        newRequest.item.Add(allPossibleItems[newRandomItem]);
-        newRequest.item.Add(allPossibleItems[newRandomItem]);
-        newRequest.item.Add(allPossibleItems[newRandomItem]);
 
         for (int i = 0; i < newRequest.item.Count; i++)
         {
@@ -140,28 +145,34 @@ public class RequestManager : MonoBehaviour
                 //item 1
                 itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
 
-                if (inventoryManager.inventorySlots[i].itemP)
+                if (allPossibleItems[i])
                 {
                     print("5");
 
-                    newRequest.item.Add(inventoryManager.inventorySlots[i].itemP);
+                    newRequest.item.Add(allPossibleItems[newRandomItem]);
                     newRequest.itemAmount.Add(itemsAmount);
 
                     itemsAmount = Random.Range(minimumRequestAmount, maximumRequestAmount);
+
+                    
 
                     for (int y = 0; y < newRequest.item.Count; y++)
                     {
                         print("6");
 
                         // keeps repeating it cant find a 2nd item
+                        RequestTemplate new2Request = new RequestTemplate();
+
+                        int new2RandomItem = Random.Range(0, allPossibleItems.Length);
+                        new2Request.item.Add(allPossibleItems[newRandomItem]);
 
                         //return;
 
-                        if (inventoryManager.inventorySlots[i].itemS && inventoryManager.inventorySlots[y].itemS.idName != inventoryManager.inventorySlots[i].itemS.idName)
+                        if (new2Request.item == newRequest.item)
                         {
                             print("7");
 
-                            newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[y].itemP);
+                            newRequest.item.Add(allPossibleItems[newRandomItem]);
                             newRequest.itemAmount.Add(itemsAmount);
                         }
                     }
@@ -201,25 +212,18 @@ public class RequestManager : MonoBehaviour
         int newRandomItem = Random.Range(0, allPossibleItems.Length);
         newRequest.item.Add(allPossibleItems[newRandomItem]);
 
-        for (int i = 0; i < newRequest.item.Count; i++)
+        if (howmanyRequests < 3)
         {
-            howmanyRequests++;
-
-            if (howmanyRequests > 4)
+            for (int i = 0; i < newRequest.item.Count; i++)
             {
-                print("More Than 3");
-
-                MakeRequests();
-            }
-            else
-            {
+                howmanyRequests++;
+                
                 print("Less Than 3");
 
                 requestTime += Random.Range(1, 2);
 
-                howmanyRequests++;
-
                 MakeRequests();
+                
             }
         }
     }

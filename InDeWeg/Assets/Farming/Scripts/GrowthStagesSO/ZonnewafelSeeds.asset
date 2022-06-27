@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9449602aff8e4843b2368051ea7ba7a, type: 3}
   m_Name: ZonnewafelSeeds
   m_EditorClassIdentifier: 
-  idName: 
+  idName: Zonnewafel seeds
   Plant: []
   crop: {fileID: 0}
   growTime: 0
