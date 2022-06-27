@@ -11,6 +11,9 @@ public class RequestManagerBas : MonoBehaviour
     public ItemProduct[] allItemP;
 
     public GameObject[] UiPannels;
+    public GameObject[] requestManagerGO;
+
+    public bool hidden;
 
     public int maxItemAmount;
     public int minItemAmount;
@@ -22,6 +25,8 @@ public class RequestManagerBas : MonoBehaviour
     public int numberdRequest;
     private void Start()
     {
+        hidden = true;
+
         RandomItemSelector(0);
     }
     public void Update()
@@ -108,6 +113,28 @@ public class RequestManagerBas : MonoBehaviour
     {
         //UiPannels[numberdRequest].SetActive(false);
     }
+    public void HideRequestUI()
+    {
+        if (hidden == true)
+        {
+            requestManagerGO[0].SetActive(true);
+            requestManagerGO[1].SetActive(true);
+
+            hidden = false;
+            return;
+        }
+
+        if (hidden == false)
+        {
+            requestManagerGO[0].SetActive(false);
+            requestManagerGO[1].SetActive(false);
+
+            hidden = true;
+            return;
+        }
+
+    }
+
     public IEnumerator makeNewRequestOverTime()
     {
         yield return new WaitForSeconds(requestTime);
