@@ -6,8 +6,9 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    public int coins;
+    public int coins = 50;
     public TMP_Text coinUI;
+    public TMP_Text otherCoinUI;
     public ShopItemSO[] shopItemsSO;
     public ShopTemplate[] shoppanels;
     public GameObject[] shoppannelsGO;
@@ -47,6 +48,7 @@ public class ShopManager : MonoBehaviour
     {
         coins += (coinAmount);
         coinUI.text = "€: " + coins.ToString();
+        otherCoinUI.text = "€: " + coins.ToString();
         CheckPurchaceable();
     }
     public void PurchaseItem(int BTNNo)
@@ -55,6 +57,7 @@ public class ShopManager : MonoBehaviour
         {
             coins = coins - shopItemsSO[BTNNo].baseCost;
             coinUI.text = "€: " + coins.ToString();
+            otherCoinUI.text = "€: " + coins.ToString();
             CheckPurchaceable();
             //
         }
