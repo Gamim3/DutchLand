@@ -10,7 +10,7 @@ public class RequestManagerBas : MonoBehaviour
 
     public ItemProduct[] allItemP;
 
-    public GameObject[] UiPannels;
+    public GameObject[] uiPannels;
     public GameObject[] requestManagerGO;
 
     public bool hidden;
@@ -26,10 +26,15 @@ public class RequestManagerBas : MonoBehaviour
 
     public int baseWorthForItem;
 
+    public int itemWorthOne;
+    public int itemWorthTwo;
+    public int requestWorth;
+
+
     private void Start()
     {
         hidden = true;
-
+        RewardCalculations();
         RandomItemSelector(0);
     }
     public void Update()
@@ -38,28 +43,34 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void RewardCalculations()
     {
-        for (int i = 0; i < UiPannels.Length; i++)
+        baseWorthForItem = uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne.waarde;
+
+        baseWorthForItem *= uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOneAmount;
+
+        itemWorthOne = baseWorthForItem;
+
+        print(itemWorthOne);
+
+        if (uiPannels[numberdRequest].GetComponent<RequestSlot>().doubleOrder == true)
         {
-            if (GetComponent<RequestSlot>().doubleOrder == true)
-            {
-                if (GetComponent<RequestSlot>().itemOne == allItemP[0])
-                {
+            baseWorthForItem = uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne.waarde;
 
-                }
-                if (GetComponent<RequestSlot>().itemTwo == allItemP[0])
-                {
+            baseWorthForItem *= uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOneAmount;
 
-                }
-            }
-            else
-            {
-                if (GetComponent<RequestSlot>().itemOne == allItemP[0])
-                {
+            itemWorthTwo = baseWorthForItem;
 
-                }
-            }
-            //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
+            itemWorthOne += itemWorthTwo = requestWorth;
+
+            print(requestWorth);
+
+            GetComponent<ShopManager>().AddCoins(requestWorth);
         }
+        else
+        {
+            GetComponent<ShopManager>().AddCoins(itemWorthOne);
+        }
+        //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
+
 
     }
     public void RandomItemSelector(int slotIndex)
@@ -73,8 +84,8 @@ public class RequestManagerBas : MonoBehaviour
 
         if (twoItems == false)
         {
-            UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = null;
-            UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = 0;
+            uiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = null;
+            uiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = 0;
         }
 
         int newRandomTwoItems = Random.Range(0, 2);
@@ -87,10 +98,10 @@ public class RequestManagerBas : MonoBehaviour
 
         int newRandomAmount = Random.Range(minItemAmount, maxItemAmount);
 
-        UiPannels[slotIndex].GetComponent<RequestSlot>().itemOne = allItemP[newRandomItem];
-        UiPannels[slotIndex].GetComponent<RequestSlot>().itemOneAmount = newRandomAmount;
+        uiPannels[slotIndex].GetComponent<RequestSlot>().itemOne = allItemP[newRandomItem];
+        uiPannels[slotIndex].GetComponent<RequestSlot>().itemOneAmount = newRandomAmount;
 
-        UiPannels[numberdRequest].SetActive(true);
+        uiPannels[numberdRequest].SetActive(true);
 
         if (twoItems == true)
         {
@@ -98,10 +109,10 @@ public class RequestManagerBas : MonoBehaviour
             int newRandomAmountTwo = Random.Range(minItemAmount, maxItemAmount);
             if (newRandomItemTwo != newRandomItem)
             {
-                UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = allItemP[newRandomItemTwo];
-                UiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = newRandomAmountTwo;
+                uiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = allItemP[newRandomItemTwo];
+                uiPannels[slotIndex].GetComponent<RequestSlot>().itemTwoAmount = newRandomAmountTwo;
 
-                UiPannels[numberdRequest].SetActive(true);
+                uiPannels[numberdRequest].SetActive(true);
             }
         }
         
@@ -110,12 +121,13 @@ public class RequestManagerBas : MonoBehaviour
 
         print("request Ready");
 
+        RewardCalculations();
         StartCoroutine(makeNewRequestOverTime()); 
     }
 
     public void CreateUi()
     {
-        for(int i = 0; i < UiPannels.Length; i++)
+        for(int i = 0; i < uiPannels.Length; i++)
         {
             //UiPannels[i].
         }
@@ -124,15 +136,15 @@ public class RequestManagerBas : MonoBehaviour
     {
         numberdRequest = requestButtonNumber;
 
-        UiPannels[numberdRequest].SetActive(false);
+        uiPannels[numberdRequest].SetActive(false);
 
-        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOne = null;
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOne = null;
 
-        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwo = null;
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwo = null;
 
-        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOneAmount = 0;
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOneAmount = 0;
 
-        UiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwoAmount = 0;
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwoAmount = 0;
 
         //numberdRequest = requestButtonNumber;
 
@@ -164,9 +176,9 @@ public class RequestManagerBas : MonoBehaviour
     {
         yield return new WaitForSeconds(requestTime);
 
-        for(numberdRequest = 0; numberdRequest < UiPannels.Length; numberdRequest++)
+        for(numberdRequest = 0; numberdRequest < uiPannels.Length; numberdRequest++)
         {
-            if(UiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
+            if(uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
             {
                 RandomItemSelector(numberdRequest);
             }

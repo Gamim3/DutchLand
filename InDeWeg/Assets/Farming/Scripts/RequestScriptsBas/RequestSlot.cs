@@ -18,7 +18,7 @@ public class RequestSlot : MonoBehaviour
     public TMP_Text itemTextDisplayTwo;
     public TMP_Text itemAmountDisplayTwo;
 
-    public TMP_Text reward;
+    public TMP_Text rewardText;
 
     public bool doubleOrder;
 
