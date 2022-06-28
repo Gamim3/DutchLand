@@ -24,7 +24,8 @@ public class RequestManagerBas : MonoBehaviour
 
     public int numberdRequest;
 
-    public int baseCostForItem;
+    public int baseWorthForItem;
+
     private void Start()
     {
         hidden = true;
@@ -37,8 +38,29 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void RewardCalculations()
     {
+        for (int i = 0; i < UiPannels.Length; i++)
+        {
+            if (GetComponent<RequestSlot>().doubleOrder == true)
+            {
+                if (GetComponent<RequestSlot>().itemOne == allItemP[0])
+                {
 
-        //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
+                }
+                if (GetComponent<RequestSlot>().itemTwo == allItemP[0])
+                {
+
+                }
+            }
+            else
+            {
+                if (GetComponent<RequestSlot>().itemOne == allItemP[0])
+                {
+
+                }
+            }
+            //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
+        }
+
     }
     public void RandomItemSelector(int slotIndex)
     {
@@ -115,10 +137,6 @@ public class RequestManagerBas : MonoBehaviour
         //numberdRequest = requestButtonNumber;
 
         StartCoroutine(makeNewRequestOverTime());
-    }
-    public void HideUIPanelIfEmpty()
-    {
-        //UiPannels[numberdRequest].SetActive(false);
     }
     public void HideRequestUI()
     {

@@ -196,7 +196,7 @@ public class RequestManager : MonoBehaviour
                 newRequest.item.Add(GetComponent<InventoryManager>().inventorySlots[i].itemP);
                 newRequest.itemAmount.Add(itemsAmount);
 
-                return;
+                //return;
 
                 StartCoroutine(MakeRequestsOverTime());
             }

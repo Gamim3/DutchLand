@@ -20,6 +20,8 @@ public class RequestSlot : MonoBehaviour
 
     public TMP_Text reward;
 
+    public bool doubleOrder;
+
     // Update is called once per frame
     void Update()
     {
@@ -42,6 +44,11 @@ public class RequestSlot : MonoBehaviour
         {
             itemTextDisplayTwo.text = null;
             itemAmountDisplayTwo.text = null;
+        }
+
+        if (itemOne != null && itemTwo != null)
+        {
+            doubleOrder = true;
         }
     }
 }
