@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class SettingsMenu : MonoBehaviour
 {
 
@@ -15,14 +15,19 @@ public class SettingsMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionMenu;
     public bool mayShowMenu = true;
+    public int sceneIndex;
 
     Resolution[] resolutions;
 
+
+
     private void Start()
     {
-        resolutions = Screen.resolutions;
 
+        
+        resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
+        
 
         List<string> Options = new List<string>();
 
@@ -113,5 +118,16 @@ public class SettingsMenu : MonoBehaviour
             PlayerPrefs.SetInt("Quality", 1);
         }
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
+    }
+
+    public void SceneSwitch()
+    {
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+        print("Quit");
     }
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/!Scenes/MainMenu.unity
     guid: 8e086fd5f2c3ed348a855b0b9d574939
   - enabled: 1
+    path: Assets/!Scenes/Game.unity
+    guid: a183e9767e42b9b42b6db2f05875c834
+  - enabled: 0
     path: Assets/!Scenes/FarmingWorld.unity
     guid: df577a01b7628214394f66210724e902
   - enabled: 0
