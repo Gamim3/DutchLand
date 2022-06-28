@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.Audio;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
 
     public AudioMixer audioMixer;
+    public Slider audioSlider;
 
     public TMP_Dropdown resolutionDropdown;
 
@@ -48,6 +50,9 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.AddOptions(Options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+
+        GetResolution();
+        GetVolume();
     }
     public void Update()
     {
@@ -88,16 +93,52 @@ public class SettingsMenu : MonoBehaviour
             }
         }
     }
+
+#region Resolutionstuff
     public void SetResolution (int resolutionIndex)
     {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        print(resolutionIndex);
+        PlayerPrefs.SetInt("ResolutionIndex", resolutionIndex);
+        Screen.SetResolution(resolutions[resolutionIndex].width,
+                             resolutions[resolutionIndex].height,
+                             Screen.fullScreen);
+        resolutionDropdown.value = resolutionIndex;
     }
 
+    public void GetResolution()
+    {
+        if (PlayerPrefs.HasKey("ResolutionIndex"))
+        {
+            SetResolution(PlayerPrefs.GetInt("ResolutionIndex"));
+        }
+        else
+        {
+            SetResolution(0);
+        }
+    }
+
+    #endregion
+
+    #region Audio settings
     public void SetVolume (float volume)
     {
+        PlayerPrefs.SetFloat("MasterVolume", volume);
         audioMixer.SetFloat("MasterVolume", volume);
+        audioSlider.value = volume;
     }
+
+    public void GetVolume()
+    {
+        if (PlayerPrefs.HasKey("MasterVolume"))
+        {
+            SetVolume(PlayerPrefs.GetFloat("MasterVolume"));
+        }
+        else
+        {
+            SetVolume(0.5f);
+        }
+    }
+    #endregion
 
     public void SetQuality (int qualityIndex)
     {

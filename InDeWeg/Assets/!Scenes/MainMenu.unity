@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 8d6e3ff76f8fdba44b5294e96ef7e0e2, type: 2}
+  audioSlider: {fileID: 978934016}
   resolutionDropdown: {fileID: 889829701}
   optionsOn: 0
   pauseMenu: {fileID: 0}
@@ -2412,7 +2413,15 @@ MonoBehaviour:
   m_ItemImage: {fileID: 0}
   m_Value: 2
   m_Options:
-    m_Options: []
+    m_Options:
+    - m_Text: 640x480
+      m_Image: {fileID: 0}
+    - m_Text: 800x600
+      m_Image: {fileID: 0}
+    - m_Text: 1280x720
+      m_Image: {fileID: 0}
+    - m_Text: 1920x1080
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
