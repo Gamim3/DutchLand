@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GoInCar : MonoBehaviour
 {
-    public GameObject car;
-    public GameObject player;
+    public GameObject carCam;
+    public GameObject playerCam;
    
     // Start is called before the first frame update
     void Start()
     {
-        
+        carCam.SetActive(false);
+       
+
+        playerCam.SetActive(true);
+
     }
 
     // Update is called once per frame
@@ -18,16 +22,21 @@ public class GoInCar : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump"))
         {
-            car.SetActive(true);
-            player.SetActive(false);
-        
+            carCam.SetActive(true);
+           
+
+            playerCam.SetActive(false);
+            
+
         }
 
         if (Input.GetButtonDown("Use"))
         {
-            player.SetActive(true);
-            car.SetActive(false);
+            carCam.SetActive(false);
             
+
+            playerCam.SetActive(true);
+           
 
         }
         
