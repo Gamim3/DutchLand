@@ -30,44 +30,49 @@ public class RequestManagerBas : MonoBehaviour
     public int itemWorthTwo;
     public int requestWorth;
 
-
+    public GameObject shopManagerGO;
     private void Start()
     {
         hidden = true;
-        RewardCalculations();
+        
         RandomItemSelector(0);
     }
     public void Update()
     {
 
     }
-    public void RewardCalculations()
+    public void RewardCalculations(int requestNumberButton)
     {
-        baseWorthForItem = uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne.waarde;
+        baseWorthForItem = uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemOne.waarde;
 
-        baseWorthForItem *= uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOneAmount;
+        baseWorthForItem *= uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemOneAmount;
 
         itemWorthOne = baseWorthForItem;
 
-        print(itemWorthOne);
+        requestWorth = itemWorthOne;
 
-        if (uiPannels[numberdRequest].GetComponent<RequestSlot>().doubleOrder == true)
+        print(requestWorth);
+
+        if (uiPannels[requestNumberButton].GetComponent<RequestSlot>().doubleOrder == true)
         {
-            baseWorthForItem = uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne.waarde;
+            baseWorthForItem = uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemTwo.waarde;
 
-            baseWorthForItem *= uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOneAmount;
+            baseWorthForItem *= uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemTwoAmount;
 
             itemWorthTwo = baseWorthForItem;
 
-            itemWorthOne += itemWorthTwo = requestWorth;
+            requestWorth = itemWorthOne += itemWorthTwo;
 
             print(requestWorth);
 
-            GetComponent<ShopManager>().AddCoins(requestWorth);
+            uiPannels[requestNumberButton].GetComponent<RequestSlot>().FillRewardText(requestWorth);
+
+            //shopManagerGO.GetComponent<ShopManager>().AddCoins(requestWorth);
         }
         else
         {
-            GetComponent<ShopManager>().AddCoins(itemWorthOne);
+            uiPannels[requestNumberButton].GetComponent<RequestSlot>().FillRewardText(requestWorth);
+            //shopManagerGO.GetComponent<ShopManager>().AddCoins(itemWorthOne);
         }
         //baseCostForItem += itemAmount + baseCostForitem2 + itemTwoAmount
 
@@ -79,9 +84,9 @@ public class RequestManagerBas : MonoBehaviour
 
         //if (requestTime >= 0)
         //{
-           // requestTime = Random.Range(5, 15);
+        // requestTime = Random.Range(5, 15);
         //}
-
+        uiPannels[slotIndex].GetComponent<RequestSlot>().requestNumber = slotIndex;
         if (twoItems == false)
         {
             uiPannels[slotIndex].GetComponent<RequestSlot>().itemTwo = null;
@@ -121,7 +126,7 @@ public class RequestManagerBas : MonoBehaviour
 
         print("request Ready");
 
-        RewardCalculations();
+        RewardCalculations(numberdRequest);
         StartCoroutine(makeNewRequestOverTime()); 
     }
 
@@ -171,6 +176,12 @@ public class RequestManagerBas : MonoBehaviour
         }
 
     }
+    public void GiveMoney(int acceptButtonNumber)
+    {
+        shopManagerGO.GetComponent<ShopManager>().AddCoins(uiPannels[acceptButtonNumber].GetComponent<RequestSlot>().moneyForthisRequest);
+
+        DeleteRequest(acceptButtonNumber);
+    }
 
     public IEnumerator makeNewRequestOverTime()
     {
@@ -181,6 +192,10 @@ public class RequestManagerBas : MonoBehaviour
             if(uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
             {
                 RandomItemSelector(numberdRequest);
+
+                RewardCalculations(numberdRequest);
+                yield return new WaitForSeconds(requestTime);
+                requestTime = Random.Range(10, 15);
             }
         }
         print("break");

@@ -22,6 +22,10 @@ public class RequestSlot : MonoBehaviour
 
     public bool doubleOrder;
 
+    public int requestNumber;
+
+    public int moneyForthisRequest;
+
     // Update is called once per frame
     void Update()
     {
@@ -50,5 +54,13 @@ public class RequestSlot : MonoBehaviour
         {
             doubleOrder = true;
         }
+        
+        
+    }
+    public void FillRewardText(int AmountOfMoney)
+    {
+        rewardText.text = "€: " + AmountOfMoney.ToString();
+
+        moneyForthisRequest = AmountOfMoney;
     }
 }
