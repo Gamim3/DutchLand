@@ -9,12 +9,10 @@ public class Deliveroo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ParkPoint")
+        if (other.gameObject.tag == "ParkSpace")
         {
-            print ("test");
-            Destroy(other.gameObject);
+
         }
-        Destroy(other.gameObject);
     }
     private void OnTriggerExit(Collider other)
     {

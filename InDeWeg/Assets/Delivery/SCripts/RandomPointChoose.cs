@@ -13,19 +13,22 @@ public class RandomPointChoose : MonoBehaviour
     public GameObject clone;
 
     public bool parked;
-   
+
+    public GameObject player;
+    public int indexNumber;
     //public GameObject ;
     public void Start()
     {
-        PickPoints();
-        
+        //PickPoints();
     }
 
     public void Update()
     {
-        if (parked == true&&Input.GetButtonDown("Jump"))
+        if (parked == true && Input.GetButtonDown("Jump"))
         {
             Destroy(clone);
+
+            player.GetComponent<RequestManager>().GiveMoney(indexNumber);
         }
      
     }
@@ -43,7 +46,7 @@ public class RandomPointChoose : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ParkPoint")
+        if (other.gameObject.tag == "ParkPlace")
         {
             parked = true;
         }
@@ -51,7 +54,10 @@ public class RandomPointChoose : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        parked = false;
+        if (other.gameObject.tag == "ParkPlace")
+        {
+            parked = false;
+        }
     }
 
 }

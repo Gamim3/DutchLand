@@ -34,6 +34,8 @@ public class RequestManager : MonoBehaviour
     public GameObject shopManagerGO;
 
     public GameObject playerCam;
+
+    public GameObject randomPointChoose;
     private void Start()
     {
         hidden = true;
@@ -241,6 +243,9 @@ public class RequestManager : MonoBehaviour
     }
     public void AcceptRequest(int buttonnumberindex)
     {
+        randomPointChoose.GetComponent<RandomPointChoose>().PickPoints();
+        randomPointChoose.GetComponent<RandomPointChoose>().indexNumber = buttonnumberindex;
+
         for (int i = 0; i < GetComponent<InventoryManager>().inventorySlots.Length; i++)
         {
             if (uiPannels[buttonnumberindex].GetComponent<RequestSlot>().itemOne == GetComponent<InventoryManager>().inventorySlots[i].itemP)

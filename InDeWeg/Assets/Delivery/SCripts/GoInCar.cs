@@ -14,8 +14,6 @@ public class GoInCar : MonoBehaviour
 
     public bool parkSpaceFarm;
 
-    public bool parkSpaceDelivery;
-
     public bool carRange;
    
     // Start is called before the first frame update
@@ -63,10 +61,6 @@ public class GoInCar : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ParkSpace")
-        {
-            parkSpaceDelivery = true;
-        }
         if (other.gameObject.tag == "FarmSpace")
         {
             parkSpaceFarm = true;
@@ -78,10 +72,6 @@ public class GoInCar : MonoBehaviour
     }
 private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "ParkSpace")
-        {
-            parkSpaceDelivery = false;
-        }
         if (other.gameObject.tag == "FarmSpace")
         {
             parkSpaceFarm = false;
