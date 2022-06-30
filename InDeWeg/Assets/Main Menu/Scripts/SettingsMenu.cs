@@ -12,6 +12,7 @@ public class SettingsMenu : MonoBehaviour
     public Slider audioSlider;
 
     public TMP_Dropdown resolutionDropdown;
+    public TMP_Dropdown qualityDropdown;
 
     public bool optionsOn = false;
     public GameObject pauseMenu;
@@ -25,34 +26,9 @@ public class SettingsMenu : MonoBehaviour
 
     private void Start()
     {
-
-        
-        resolutions = Screen.resolutions;
-        resolutionDropdown.ClearOptions();
-        
-
-        List<string> Options = new List<string>();
-
-        int currentResolutionIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string Option = resolutions[i].width + "x" + resolutions[i].height;
-            Options.Add(Option);
-
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-
-        resolutionDropdown.AddOptions(Options);
-        resolutionDropdown.value = currentResolutionIndex;
-        resolutionDropdown.RefreshShownValue();
-
-        GetResolution();
+        GetAndSetResolution();
         GetVolume();
+        GetSettingsAtStartAndSetThem();
     }
     public void Update()
     {
@@ -95,6 +71,36 @@ public class SettingsMenu : MonoBehaviour
     }
 
 #region Resolutionstuff
+
+    public void GetAndSetResolution()
+    {
+        int currentResolutionIndex = 0;
+        if (PlayerPrefs.HasKey("ResolutionIndex"))
+        {
+            currentResolutionIndex = PlayerPrefs.GetInt("ResolutionIndex");
+        }
+        else
+        {
+            currentResolutionIndex = 2;
+        }
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+
+
+        List<string> Options = new List<string>();
+
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string Option = resolutions[i].width + "x" + resolutions[i].height;
+            Options.Add(Option);
+        }
+
+        resolutionDropdown.AddOptions(Options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+        Screen.SetResolution(resolutions[currentResolutionIndex].width, resolutions[currentResolutionIndex].height, true);
+    }
     public void SetResolution (int resolutionIndex)
     {
         print(resolutionIndex);
@@ -159,6 +165,8 @@ public class SettingsMenu : MonoBehaviour
             PlayerPrefs.SetInt("Quality", 1);
         }
         QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
+        qualityDropdown.value = PlayerPrefs.GetInt("Quality");
+
     }
 
     public void SceneSwitch()
