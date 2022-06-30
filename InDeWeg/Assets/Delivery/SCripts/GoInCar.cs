@@ -9,6 +9,8 @@ public class GoInCar : MonoBehaviour
     public GameObject miniMap;
 
     public RaycastHit hit;
+
+    public bool parkSpaceFarm;
    
     // Start is called before the first frame update
     void Start()
@@ -19,8 +21,6 @@ public class GoInCar : MonoBehaviour
         {
             GetComponent<Car>().enabled = false;
         }
-       
-        
 
         playerCam.SetActive(true);
         if (GetComponent<Movers>())
@@ -28,48 +28,59 @@ public class GoInCar : MonoBehaviour
             GetComponent<Movers>().enabled = true;
         }
 
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetButtonDown("Jump"))
+        if (parkSpaceFarm == true)
         {
-            carCam.SetActive(true);
-            miniMap.SetActive(true);
-            if (GetComponent<Car>())
+            if (Input.GetButtonDown("Jump"))
             {
-                GetComponent<Car>().enabled = true;
+                carCam.SetActive(true);
+                miniMap.SetActive(true);
+                if (GetComponent<Car>())
+                {
+                    GetComponent<Car>().enabled = true;
+                }
+
+                playerCam.SetActive(false);
+                if (GetComponent<Movers>())
+                {
+                    GetComponent<Movers>().enabled = false;
+                }
             }
 
-            playerCam.SetActive(false);
-            if (GetComponent<Movers>())
+            if (Input.GetButtonDown("Fire1"))
             {
-                GetComponent<Movers>().enabled = false;
+                carCam.SetActive(false);
+                miniMap.SetActive(false);
+                if (GetComponent<Car>())
+                {
+                    GetComponent<Car>().enabled = false;
+                }
+
+                playerCam.SetActive(true);
+                if (GetComponent<Movers>())
+                {
+                    GetComponent<Movers>().enabled = true;
+                }
+
             }
+
         }
-           
-        if (Input.GetButtonDown("Fire1"))
-        {
-            carCam.SetActive(false);
-            miniMap.SetActive(false);
-            if (GetComponent<Car>())
-            {
-                GetComponent<Car>().enabled = false;
-            }
-
-            playerCam.SetActive(true);
-            if (GetComponent<Movers>())
-            {
-                GetComponent<Movers>().enabled = true;
-            }
-
-        }
-
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        parkSpaceFarm = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        parkSpaceFarm = false;
+    }
+
+
 }
