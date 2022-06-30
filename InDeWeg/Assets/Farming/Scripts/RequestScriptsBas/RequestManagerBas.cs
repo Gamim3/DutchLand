@@ -34,7 +34,11 @@ public class RequestManagerBas : MonoBehaviour
     private void Start()
     {
         hidden = true;
-        
+
+        CheckIfAcceptable(0);
+        CheckIfAcceptable(1);
+        CheckIfAcceptable(2);
+
         RandomItemSelector(0);
     }
     public void Update()
@@ -43,6 +47,10 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void RewardCalculations(int requestNumberButton)
     {
+        CheckIfAcceptable(0);
+        CheckIfAcceptable(1);
+        CheckIfAcceptable(2);
+
         baseWorthForItem = uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemOne.waarde;
 
         baseWorthForItem *= uiPannels[requestNumberButton].GetComponent<RequestSlot>().itemOneAmount;
@@ -126,6 +134,12 @@ public class RequestManagerBas : MonoBehaviour
 
         print("request Ready");
 
+        CheckIfAcceptable(0);
+        CheckIfAcceptable(1);
+        CheckIfAcceptable(2);
+
+        //print("sjhjasjfkhasdfhqwuipafhuqisadhfuiawhsfuipqwhaseufiphasuipfhjuaiwefhuipoqweshfjioaqhwsgfiuvaehsjgioashduifohwrauidofhqwueidsofhawurisdogfhuawisodfhuiewoasdfhuiawoesdhfucioawesdhfucioewaesdhfuicpqewdshfucioqwerdsahxfucipawdszxhfucipewadsxhzfuicpqweradshxfuicoqerwasdhzfuicoaweasdhufioaewh");
+
         RewardCalculations(numberdRequest);
         StartCoroutine(makeNewRequestOverTime()); 
     }
@@ -150,6 +164,10 @@ public class RequestManagerBas : MonoBehaviour
         uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemOneAmount = 0;
 
         uiPannels[requestButtonNumber].GetComponent<RequestSlot>().itemTwoAmount = 0;
+
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().doubleOrder = false;
+
+        uiPannels[requestButtonNumber].GetComponent<RequestSlot>().AcceptRequest(false);
 
         //numberdRequest = requestButtonNumber;
 
@@ -181,6 +199,69 @@ public class RequestManagerBas : MonoBehaviour
         shopManagerGO.GetComponent<ShopManager>().AddCoins(uiPannels[acceptButtonNumber].GetComponent<RequestSlot>().moneyForthisRequest);
 
         DeleteRequest(acceptButtonNumber);
+    }
+    public void CheckIfAcceptable(int requestNumber)
+    {
+        for (int i = 0; i < GetComponent<InventoryManager>().inventorySlots.Length; i++)
+        {
+            if (uiPannels[requestNumber].GetComponent<RequestSlot>().itemOne == GetComponent<InventoryManager>().inventorySlots[i].itemP)
+            {
+                if (uiPannels[requestNumber].GetComponent<RequestSlot>().itemOneAmount <= GetComponent<InventoryManager>().inventorySlots[i].itemAmount)
+                {
+                    uiPannels[requestNumber].GetComponent<RequestSlot>().AcceptRequest(true);
+
+                    if (uiPannels[requestNumber].GetComponent<RequestSlot>().doubleOrder == true)
+                    {
+                        for (int y = 0; y < GetComponent<InventoryManager>().inventorySlots.Length; y++)
+                        {
+                            if (uiPannels[requestNumber].GetComponent<RequestSlot>().itemTwo == GetComponent<InventoryManager>().inventorySlots[y].itemP)
+                            {
+                                if ((uiPannels[requestNumber].GetComponent<RequestSlot>().itemTwoAmount <= GetComponent<InventoryManager>().inventorySlots[y].itemAmount))
+                                {
+                                    uiPannels[requestNumber].GetComponent<RequestSlot>().AcceptRequest(true);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    public void AcceptRequest(int buttonnumberindex)
+    {
+        for (int i = 0; i < GetComponent<InventoryManager>().inventorySlots.Length; i++)
+        {
+            if (uiPannels[buttonnumberindex].GetComponent<RequestSlot>().itemOne == GetComponent<InventoryManager>().inventorySlots[i].itemP)
+            {
+                int b = uiPannels[buttonnumberindex].GetComponent<RequestSlot>().itemOneAmount;
+
+                GetComponent<InventoryManager>().slotIndex = i;
+                GetComponent<InventoryManager>().RemoveItem(b);
+            }
+        }
+        if (uiPannels[buttonnumberindex].GetComponent<RequestSlot>().doubleOrder == true)
+        {
+            for (int i = 0; i < GetComponent<InventoryManager>().inventorySlots.Length; i++)
+            {
+
+                if (uiPannels[buttonnumberindex].GetComponent<RequestSlot>().itemTwo == GetComponent<InventoryManager>().inventorySlots[i].itemP)
+                {
+
+                    int b = uiPannels[buttonnumberindex].GetComponent<RequestSlot>().itemTwoAmount;
+
+                    GetComponent<InventoryManager>().slotIndex = i;
+                    GetComponent<InventoryManager>().RemoveItem(b);
+                }
+            }
+        }
+
+        uiPannels[0].GetComponent<RequestSlot>().AcceptRequest(false);
+        uiPannels[1].GetComponent<RequestSlot>().AcceptRequest(false);
+        uiPannels[2].GetComponent<RequestSlot>().AcceptRequest(false);
+
+        CheckIfAcceptable(0);
+        CheckIfAcceptable(1);
+        CheckIfAcceptable(2);
     }
 
     public IEnumerator makeNewRequestOverTime()

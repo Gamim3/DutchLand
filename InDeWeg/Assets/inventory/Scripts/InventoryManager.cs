@@ -34,11 +34,17 @@ public class InventoryManager : MonoBehaviour
     }
     public void AddItemProduct(ItemProduct itemToAddProduct)
     {
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(0);
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(1);
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(2);
+
         // for loop to check if one is free, then put it in there.
         for (int i = 0; i < inventorySlots.Length; i++)
         {
             if(inventorySlots[i].itemS == null)
             {
+                
+
                 if (inventorySlots[i].itemP != null && inventorySlots[i].itemP.idName == itemToAddProduct.idName)
                 {
                     inventorySlots[i].StackItem(addItemAmount);
@@ -57,6 +63,10 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItem(int removeItemAmount = 1)
     {
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(0);
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(1);
+        GetComponent<RequestManagerBas>().CheckIfAcceptable(2);
+
         if (inventorySlots[slotIndex].itemAmount == 1)
         {
             inventorySlots[slotIndex].RemoveItem();

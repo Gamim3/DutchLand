@@ -60,6 +60,14 @@ public class InventorySlot : MonoBehaviour
     }
     public void RemoveStackItem(int removeItemAmount)
     {
-        itemAmount -= removeItemAmount;
+        if(removeItemAmount >= itemAmount)
+        {
+            RemoveItem();
+            itemAmount = 0;
+        }
+        else
+        {
+            itemAmount -= removeItemAmount;
+        }
     }
 }

@@ -26,7 +26,13 @@ public class RequestSlot : MonoBehaviour
 
     public int moneyForthisRequest;
 
+    public Button acceptButton;
+
     // Update is called once per frame
+    private void Start()
+    {
+        acceptButton.interactable = false;
+    }
     void Update()
     {
         if(itemOne != null)
@@ -54,6 +60,10 @@ public class RequestSlot : MonoBehaviour
         {
             doubleOrder = true;
         }
+        else
+        {
+            doubleOrder = false;
+        }
         
         
     }
@@ -62,5 +72,9 @@ public class RequestSlot : MonoBehaviour
         rewardText.text = "€: " + AmountOfMoney.ToString();
 
         moneyForthisRequest = AmountOfMoney;
+    }
+    public void AcceptRequest(bool interactable)
+    {
+        acceptButton.interactable = interactable;
     }
 }
