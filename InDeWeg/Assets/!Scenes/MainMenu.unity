@@ -370,6 +370,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 8d6e3ff76f8fdba44b5294e96ef7e0e2, type: 2}
   audioSlider: {fileID: 978934016}
   resolutionDropdown: {fileID: 889829701}
+  qualityDropdown: {fileID: 971818299}
   optionsOn: 0
   pauseMenu: {fileID: 0}
   optionMenu: {fileID: 0}
