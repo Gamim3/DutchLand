@@ -36,7 +36,7 @@ public class GoInCar : MonoBehaviour
 
         if (parkSpaceFarm == true)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("GetInCar"))
             {
                 carCam.SetActive(true);
                 miniMap.SetActive(true);
@@ -52,7 +52,7 @@ public class GoInCar : MonoBehaviour
                 }
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            else if (Input.GetButtonDown("GetOutCar"))
             {
                 carCam.SetActive(false);
                 miniMap.SetActive(false);
@@ -81,6 +81,5 @@ public class GoInCar : MonoBehaviour
     {
         parkSpaceFarm = false;
     }
-
 
 }
