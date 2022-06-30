@@ -7,16 +7,13 @@ public class RandomPointChoose : MonoBehaviour
     public Transform[] points;
     public GameObject deliverPoint;
     public GameObject pointer;
-<<<<<<< Updated upstream
+
     public GameObject parkSpot;
-=======
 
     public GameObject clone;
 
     public bool parked;
    
->>>>>>> Stashed changes
-
     //public GameObject ;
     public void Start()
     {
@@ -37,15 +34,10 @@ public class RandomPointChoose : MonoBehaviour
     {
         int indexNumber = Random.Range(0, points.Length);
         Debug.Log(points[indexNumber].name);
-<<<<<<< Updated upstream
         Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
 
-        
-=======
         clone =Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
 
-       
->>>>>>> Stashed changes
         pointer.GetComponent<Pointer>().target = points[indexNumber].transform;
     }
 
