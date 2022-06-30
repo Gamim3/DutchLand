@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ToolSwapping : MonoBehaviour
 {
-    public string toolState;
 
     public GameObject cam;
 
     public bool working;
 
     public RaycastHit hit;
+
+    public GameObject[] tools;
 
     public Animation[] anim;
     // Start is called before the first frame update
@@ -20,12 +21,10 @@ public class ToolSwapping : MonoBehaviour
     }
     public enum Toolstates
     {
-        UnderFlow,
         Hoe,
         Water,
         Shovel,
-        Scythe,
-        OverFlow
+        Scythe
 
     }
     public Toolstates toolstates;
@@ -35,22 +34,27 @@ public class ToolSwapping : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            toolstates--;
+            if ((int)toolstates == 0)
+            {
+                toolstates = (Toolstates)System.Enum.GetValues(typeof(Toolstates)).Length - 1;
+            } else
+            {
+                toolstates--;
+            }
+
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            toolstates++;
+            if ((int)toolstates == System.Enum.GetValues(typeof(Toolstates)).Length - 1)
+            {
+                toolstates = (Toolstates)0;
+            }
+            else
+            {
+                toolstates++;
+            }
         }
 
-        switch (toolstates)
-        {
-            case Toolstates.OverFlow:
-                toolstates = Toolstates.Hoe;
-                break;
-            case Toolstates.UnderFlow:
-                toolstates = Toolstates.Scythe;
-                break;
-        }
         Vector3 direction = cam.transform.forward;
 
         if (Input.GetButtonDown("Fire1") && working == false && Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
@@ -58,6 +62,13 @@ public class ToolSwapping : MonoBehaviour
             Working();
 
         }
+
+        foreach (GameObject tool in tools)
+        {
+            tool.SetActive(false);
+        }
+        tools[(int)toolstates].SetActive(true);
+
     }
     public void Working()
     {
