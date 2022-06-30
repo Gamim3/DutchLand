@@ -66,12 +66,6 @@ public class Car : MonoBehaviour
         wheelRightBack.position = pos;
         wheelRightBack.rotation = rot * Quaternion.Euler(0, 0, 0);
 
-        if (Input.GetButton("Jump"))
-        {
-            source.PlayOneShot(clip);
-        }
-
-
     }
 
     public void HandBrake()
