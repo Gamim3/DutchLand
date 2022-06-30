@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7978596761189655727}
-  - component: {fileID: 7978596761189655726}
   - component: {fileID: 7978596761189655713}
+  - component: {fileID: 3000594662279458469}
   m_Layer: 0
   m_Name: GameObject 1 1
   m_TagString: FarmTile
@@ -33,31 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7978596761189655726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7978596761189655712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d346059874a2904a98ef513dab401a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  finalCrop: {fileID: 770772948761960747, guid: 8acf228017faaa543a3463f44086590b,
-    type: 3}
-  groundTile:
-  - {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4, type: 3}
-  - {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab, type: 3}
-  - {fileID: 5501381650085961114, guid: 0b76adf7d572c56429f5ea499795a873, type: 3}
-  - {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731, type: 3}
-  gTiledClone: {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab,
-    type: 3}
-  pPlantedClone: {fileID: 0}
-  GrowthStage: 
-  origin: {fileID: 7978596761189655727}
-  groundstates: 0
 --- !u!65 &7978596761189655713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,3 +46,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3000594662279458469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7978596761189655712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a899c49a03c5e04fa9e0333c7176290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plantOnThisGround: {fileID: 0}
+  groundStates:
+  - {fileID: 3263561339828963246, guid: ae49067014fa5144493a62ba9df8e7ab, type: 3}
+  - {fileID: 3601486096184730028, guid: c9632980505ba1746826bca45372fef4, type: 3}
+  - {fileID: 9075235187731871305, guid: 75a959cc84ce24f4b99ddd75eeb64731, type: 3}
+  curGroundState: 0
+  SeedsPlanted: 0
+  allowGrowth: 0
+  waterLevel: 0
+  cloneGround: {fileID: 0}
+  fullWaterLevel: 30
+  toolstages: 0
