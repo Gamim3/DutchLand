@@ -8,8 +8,8 @@ public class RandomPointChoose : MonoBehaviour
     public GameObject deliverPoint;
     public GameObject pointer;
     public GameObject parkSpot;
-   
 
+    //public GameObject ;
     public void Start()
     {
         PickPoints();
@@ -21,8 +21,8 @@ public class RandomPointChoose : MonoBehaviour
         int indexNumber = Random.Range(0, points.Length);
         Debug.Log(points[indexNumber].name);
         Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
-       
 
+        
         pointer.GetComponent<Pointer>().target = points[indexNumber].transform;
     }
 

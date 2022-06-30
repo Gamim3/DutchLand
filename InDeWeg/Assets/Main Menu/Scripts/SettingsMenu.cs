@@ -43,18 +43,21 @@ public class SettingsMenu : MonoBehaviour
     }
     public void MouseLock()
     {
-        if (toggleMouse == false)
+        if (toggleMouse == true)
         {
             Cursor.lockState = CursorLockMode.None;
-            playerCam.GetComponent<Cams>().inMenu = false;
-            toggleMouse = true;
+            playerCam.GetComponent<Cams>().inMenu = true;
+
+            toggleMouse = false;
             return;
         }
-        else
+        else if (toggleMouse == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
-            playerCam.GetComponent<Cams>().inMenu = true;
-            toggleMouse = false;
+
+            playerCam.GetComponent<Cams>().inMenu = false;
+
+            toggleMouse = true;
             return;
         }
     }
