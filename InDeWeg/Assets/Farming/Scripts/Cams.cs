@@ -9,6 +9,8 @@ public class Cams : MonoBehaviour
     float xRotation = 0f;
     public float mSpeed;
 
+    public bool inMenu = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,10 @@ public class Cams : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cam();
+        if(inMenu == false)
+        {
+            Cam();
+        }
     }
     void Cam()
     {

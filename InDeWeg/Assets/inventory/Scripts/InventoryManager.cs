@@ -10,6 +10,31 @@ public class InventoryManager : MonoBehaviour
 
     public int addItemAmount = 1;
 
+    public GameObject inventory;
+    public bool hiding;
+    public GameObject playerCam;
+    public void Update()
+    {
+        if (Input.GetButtonDown("Use"))
+        {
+            if (hiding == true)
+            {
+                inventory.SetActive(false);
+                hiding = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                playerCam.GetComponent<Cams>().inMenu = false;
+                return;
+            }
+            if (hiding == false)
+            {
+                inventory.SetActive(true);
+                hiding = true;
+                Cursor.lockState = CursorLockMode.None;
+                playerCam.GetComponent<Cams>().inMenu = true;
+                return;
+            }
+        }
+    }
     public void AddItemSeeds(ItemSeeds itemToAddSeed)
     {
         // for loop to check if one is free, then put it in there.
@@ -43,8 +68,6 @@ public class InventoryManager : MonoBehaviour
         {
             if(inventorySlots[i].itemS == null)
             {
-                
-
                 if (inventorySlots[i].itemP != null && inventorySlots[i].itemP.idName == itemToAddProduct.idName)
                 {
                     inventorySlots[i].StackItem(addItemAmount);

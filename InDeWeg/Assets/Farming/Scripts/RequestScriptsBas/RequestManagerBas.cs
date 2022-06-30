@@ -13,7 +13,10 @@ public class RequestManagerBas : MonoBehaviour
     public GameObject[] uiPannels;
     public GameObject[] requestManagerGO;
 
+    public bool fullyHidden;
     public bool hidden;
+
+    public GameObject requestGOui;
 
     public int maxItemAmount;
     public int minItemAmount;
@@ -31,6 +34,8 @@ public class RequestManagerBas : MonoBehaviour
     public int requestWorth;
 
     public GameObject shopManagerGO;
+
+    public GameObject playerCam;
     private void Start()
     {
         hidden = true;
@@ -43,7 +48,7 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void Update()
     {
-
+        HideRequestUI();
     }
     public void RewardCalculations(int requestNumberButton)
     {
@@ -175,24 +180,32 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void HideRequestUI()
     {
-        if (hidden == true)
+        if (Input.GetButtonDown("Tab"))
         {
-            requestManagerGO[0].SetActive(true);
-            requestManagerGO[1].SetActive(true);
+            if (hidden == true)
+            {
+                requestManagerGO[0].SetActive(true);
+                requestManagerGO[1].SetActive(true);
 
-            hidden = false;
-            return;
+                Cursor.lockState = CursorLockMode.None;
+                playerCam.GetComponent<Cams>().inMenu = true;
+
+                hidden = false;
+                return;
+            }
+            else if (hidden == false)
+            {
+                requestManagerGO[0].SetActive(false);
+                requestManagerGO[1].SetActive(false);
+
+                Cursor.lockState = CursorLockMode.Locked;
+
+                playerCam.GetComponent<Cams>().inMenu = false;
+
+                hidden = true;
+                return;
+            }
         }
-
-        if (hidden == false)
-        {
-            requestManagerGO[0].SetActive(false);
-            requestManagerGO[1].SetActive(false);
-
-            hidden = true;
-            return;
-        }
-
     }
     public void GiveMoney(int acceptButtonNumber)
     {

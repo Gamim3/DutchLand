@@ -20,9 +20,11 @@ public class SettingsMenu : MonoBehaviour
     public bool mayShowMenu = true;
     public int sceneIndex;
 
+    public bool toggleMouse;
+
     Resolution[] resolutions;
 
-
+    public GameObject playerCam;
 
     private void Start()
     {
@@ -35,8 +37,26 @@ public class SettingsMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauzeMenu();
+            MouseLock();
         }
     
+    }
+    public void MouseLock()
+    {
+        if (toggleMouse == false)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            playerCam.GetComponent<Cams>().inMenu = false;
+            toggleMouse = true;
+            return;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            playerCam.GetComponent<Cams>().inMenu = true;
+            toggleMouse = false;
+            return;
+        }
     }
 
     public void ToggleOptionMenu()
@@ -67,6 +87,8 @@ public class SettingsMenu : MonoBehaviour
             {
                 pauseMenu.SetActive(true);
             }
+
+            MouseLock();
         }
     }
 
