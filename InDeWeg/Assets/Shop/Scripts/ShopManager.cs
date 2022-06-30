@@ -71,7 +71,5 @@ public class ShopManager : MonoBehaviour
             shoppanels[i].PriceTXT.text = "€: " + shopItemsSO[i].baseCost.ToString();
             //shoppanels[i].iconIMG. = shopItemsSO[i].icon;
         }
-        
-
     }
 }

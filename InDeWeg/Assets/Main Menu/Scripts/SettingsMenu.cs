@@ -26,6 +26,7 @@ public class SettingsMenu : MonoBehaviour
 
     public GameObject playerCam;
 
+    public GameObject player;
     private void Start()
     {
         GetAndSetResolution();
@@ -34,6 +35,7 @@ public class SettingsMenu : MonoBehaviour
     }
     public void Update()
     {
+        //toggleMouse = player.GetComponent<MenuOpenScript>().gameMenu;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauzeMenu();

@@ -13,8 +13,10 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventory;
     public bool hiding;
     public GameObject playerCam;
+
     public void Update()
     {
+        //hiding = GetComponent<MenuOpenScript>().inventoryMenu;
         if (Input.GetButtonDown("Use"))
         {
             if (hiding == true)
@@ -59,9 +61,9 @@ public class InventoryManager : MonoBehaviour
     }
     public void AddItemProduct(ItemProduct itemToAddProduct)
     {
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(0);
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(1);
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(2);
+        GetComponent<RequestManager>().CheckIfAcceptable(0);
+        GetComponent<RequestManager>().CheckIfAcceptable(1);
+        GetComponent<RequestManager>().CheckIfAcceptable(2);
 
         // for loop to check if one is free, then put it in there.
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -86,9 +88,9 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItem(int removeItemAmount = 1)
     {
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(0);
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(1);
-        GetComponent<RequestManagerBas>().CheckIfAcceptable(2);
+        GetComponent<RequestManager>().CheckIfAcceptable(0);
+        GetComponent<RequestManager>().CheckIfAcceptable(1);
+        GetComponent<RequestManager>().CheckIfAcceptable(2);
 
         if (inventorySlots[slotIndex].itemAmount == 1)
         {

@@ -22,6 +22,8 @@ public class OpenShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //switching = GetComponent<MenuOpenScript>().shopMenu;
+
         Vector3 direction = playerCam.transform.forward;
         if (Input.GetButtonDown("Fire1"))
         {

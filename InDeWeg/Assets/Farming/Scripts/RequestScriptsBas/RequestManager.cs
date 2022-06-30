@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 
-public class RequestManagerBas : MonoBehaviour
+public class RequestManager : MonoBehaviour
 {
     public RequestTemplate request;
 
@@ -48,6 +46,7 @@ public class RequestManagerBas : MonoBehaviour
     }
     public void Update()
     {
+        //hidden = GetComponent<MenuOpenScript>().requestMenu;
         HideRequestUI();
     }
     public void RewardCalculations(int requestNumberButton)
@@ -107,7 +106,7 @@ public class RequestManagerBas : MonoBehaviour
         }
 
         int newRandomTwoItems = Random.Range(0, 2);
-        if(newRandomTwoItems == 0)
+        if (newRandomTwoItems == 0)
         {
             twoItems = true;
         }
@@ -133,7 +132,7 @@ public class RequestManagerBas : MonoBehaviour
                 uiPannels[numberdRequest].SetActive(true);
             }
         }
-        
+
 
         twoItems = false;
 
@@ -146,12 +145,12 @@ public class RequestManagerBas : MonoBehaviour
         //print("sjhjasjfkhasdfhqwuipafhuqisadhfuiawhsfuipqwhaseufiphasuipfhjuaiwefhuipoqweshfjioaqhwsgfiuvaehsjgioashduifohwrauidofhqwueidsofhawurisdogfhuawisodfhuiewoasdfhuiawoesdhfucioawesdhfucioewaesdhfuicpqewdshfucioqwerdsahxfucipawdszxhfucipewadsxhzfuicpqweradshxfuicoqerwasdhzfuicoaweasdhufioaewh");
 
         RewardCalculations(numberdRequest);
-        StartCoroutine(makeNewRequestOverTime()); 
+        StartCoroutine(makeNewRequestOverTime());
     }
 
     public void CreateUi()
     {
-        for(int i = 0; i < uiPannels.Length; i++)
+        for (int i = 0; i < uiPannels.Length; i++)
         {
             //UiPannels[i].
         }
@@ -281,9 +280,9 @@ public class RequestManagerBas : MonoBehaviour
     {
         yield return new WaitForSeconds(requestTime);
 
-        for(numberdRequest = 0; numberdRequest < uiPannels.Length; numberdRequest++)
+        for (numberdRequest = 0; numberdRequest < uiPannels.Length; numberdRequest++)
         {
-            if(uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
+            if (uiPannels[numberdRequest].GetComponent<RequestSlot>().itemOne == null)
             {
                 RandomItemSelector(numberdRequest);
 

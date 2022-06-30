@@ -17,6 +17,8 @@ TagManager:
   - place3
   - ParkPoint
   - Shop
+  - FarmSpace
+  - ParkSpace
   layers:
   - Default
   - TransparentFX
