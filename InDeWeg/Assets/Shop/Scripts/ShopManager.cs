@@ -14,6 +14,9 @@ public class ShopManager : MonoBehaviour
     public GameObject[] shoppannelsGO;
     public Button[] myPurchaseBTNs;
 
+    public GameObject inventoryManager;
+    public ItemSeeds[] allPosibleItems;
+
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +61,10 @@ public class ShopManager : MonoBehaviour
             coins = coins - shopItemsSO[BTNNo].baseCost;
             coinUI.text = "€: " + coins.ToString();
             otherCoinUI.text = "€: " + coins.ToString();
+
+            inventoryManager.GetComponent<InventoryManager>().addItemAmount = 1;
+            inventoryManager.GetComponent<InventoryManager>().AddItemSeeds(allPosibleItems[BTNNo]);
+
             CheckPurchaceable();
             //
         }

@@ -15,7 +15,7 @@ public class Movers : MonoBehaviour
     public GameObject player;
 
     public GameObject fpsCam;
-
+    public bool isOutOfCar;
     void Start()
     {
         speed = 1.5f;
@@ -23,12 +23,15 @@ public class Movers : MonoBehaviour
     }
     void Update()
     {
-        vertical = Input.GetAxis("Vertical");
-        horizontal = Input.GetAxis("Horizontal");
+        if (isOutOfCar)
+        {
+            vertical = Input.GetAxis("Vertical");
+            horizontal = Input.GetAxis("Horizontal");
 
-        move.x = horizontal;
-        move.z = vertical;
+            move.x = horizontal;
+            move.z = vertical;
 
-        transform.Translate(move * speed * Time.deltaTime * 5);
+            transform.Translate(move * speed * Time.deltaTime * 5);
+        }
     }
 }

@@ -11,53 +11,61 @@ public class RandomPointChoose : MonoBehaviour
     public GameObject parkSpot;
 
     public GameObject clone;
+    public Transform parkSpotTransform;
 
     public bool parked;
 
-    public GameObject player;
+    public GameObject requestManagerGo;
+    public Transform player;
     public int indexNumber;
+
+    public float currentDistanceToParkSpace;
+    public float inRangeOfParkSpace;
+
+    public bool acceptedRequest;
+
     //public GameObject ;
     public void Start()
     {
+        inRangeOfParkSpace = 1;
+        parked = false;
         //PickPoints();
     }
-
     public void Update()
     {
-        if (parked == true && Input.GetButtonDown("Jump"))
+        if (acceptedRequest == true)
         {
-            Destroy(clone);
+            currentDistanceToParkSpace = Vector3.Distance(player.position, parkSpotTransform.position);
+            if (currentDistanceToParkSpace < inRangeOfParkSpace)
+            {
+                parked = true;
+            }
+            else
+            {
+                parked = false;
+            }
 
-            player.GetComponent<RequestManager>().GiveMoney(indexNumber);
+            if (parked == true && Input.GetButtonDown("Jump"))
+            {
+                Destroy(clone);
+
+                parked = false;
+                acceptedRequest = false;
+                requestManagerGo.GetComponent<RequestManager>().GiveMoney(indexNumber);
+            }
         }
-     
     }
-
     public void PickPoints()
     {
         int indexNumber = Random.Range(0, points.Length);
         Debug.Log(points[indexNumber].name);
-        Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
 
-        clone =Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
+        clone = Instantiate(deliverPoint, points[indexNumber].position, deliverPoint.transform.rotation);
+
+        parkSpotTransform = clone.transform;
 
         pointer.GetComponent<Pointer>().target = points[indexNumber].transform;
-    }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "ParkPlace")
-        {
-            parked = true;
-        }
+        acceptedRequest = true;
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "ParkPlace")
-        {
-            parked = false;
-        }
-    }
-
 }

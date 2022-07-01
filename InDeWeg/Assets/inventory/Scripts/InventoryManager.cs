@@ -44,15 +44,15 @@ public class InventoryManager : MonoBehaviour
         {
             if(inventorySlots[i].itemP == null)
             {
-                if (inventorySlots[i].itemS != null && inventorySlots[i].itemS.idName == itemToAddSeed.idName)
-                {
-                    inventorySlots[i].StackItem(addItemAmount);
-                    return;
-                }
                 if (inventorySlots[i].itemS == null)
                 {
                     inventorySlots[i].AddItemS(itemToAddSeed);
 
+                    inventorySlots[i].StackItem(addItemAmount);
+                    return;
+                }
+                else if (inventorySlots[i].itemS != null && inventorySlots[i].itemS.idName == itemToAddSeed.idName)
+                {
                     inventorySlots[i].StackItem(addItemAmount);
                     return;
                 }

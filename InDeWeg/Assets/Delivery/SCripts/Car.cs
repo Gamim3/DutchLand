@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+
+    public bool isControllingCar;
     public AudioSource source;
     public AudioClip clip;
 
@@ -34,37 +36,41 @@ public class Car : MonoBehaviour
 
     void FixedUpdate()
     {
-        wheelColliderLeftBack.motorTorque = Input.GetAxis("Vertical") * motorTorque;
-        wheelColliderRightBack.motorTorque = Input.GetAxis("Vertical") * motorTorque;
+        if (isControllingCar)
+        {
+            wheelColliderLeftBack.motorTorque = Input.GetAxis("Vertical") * motorTorque;
+            wheelColliderRightBack.motorTorque = Input.GetAxis("Vertical") * motorTorque;
 
-        wheelColliderLeftFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
-        wheelColliderRightFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
+            wheelColliderLeftFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
+            wheelColliderRightFront.steerAngle = Input.GetAxis("Horizontal") * maxSteer;
 
-        HandBrake();
-
-
+            HandBrake();
+        }
     }
 
     void Update()
     {
-        var pos = Vector3.zero;
-        var rot = Quaternion.identity;
+        if (isControllingCar)
+        {
+            var pos = Vector3.zero;
+            var rot = Quaternion.identity;
 
-        wheelColliderLeftFront.GetWorldPose(out pos, out rot);
-        wheelLeftFront.position = pos;
-        wheelLeftFront.rotation = rot;
+            wheelColliderLeftFront.GetWorldPose(out pos, out rot);
+            wheelLeftFront.position = pos;
+            wheelLeftFront.rotation = rot;
 
-        wheelColliderRightFront.GetWorldPose(out pos, out rot);
-        wheelRightfront.position = pos;
-        wheelRightfront.rotation = rot * Quaternion.Euler(0, 0, 0);
+            wheelColliderRightFront.GetWorldPose(out pos, out rot);
+            wheelRightfront.position = pos;
+            wheelRightfront.rotation = rot * Quaternion.Euler(0, 0, 0);
 
-        wheelColliderLeftBack.GetWorldPose(out pos, out rot);
-        wheelLeftBack.position = pos;
-        wheelLeftBack.rotation = rot;
+            wheelColliderLeftBack.GetWorldPose(out pos, out rot);
+            wheelLeftBack.position = pos;
+            wheelLeftBack.rotation = rot;
 
-        wheelColliderRightBack.GetWorldPose(out pos, out rot);
-        wheelRightBack.position = pos;
-        wheelRightBack.rotation = rot * Quaternion.Euler(0, 0, 0);
+            wheelColliderRightBack.GetWorldPose(out pos, out rot);
+            wheelRightBack.position = pos;
+            wheelRightBack.rotation = rot * Quaternion.Euler(0, 0, 0);
+        }
 
     }
 
