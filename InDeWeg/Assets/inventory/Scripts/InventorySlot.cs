@@ -20,15 +20,11 @@ public class InventorySlot : MonoBehaviour
         {
             itemNameVisual.text = itemS.idName;
         }
-        else if (itemS == null)
-        {
-            itemNameVisual.text = null;
-        }
         if (itemP != null)
         {
             itemNameVisual.text = itemP.idName;
         }
-        else if (itemP == null)
+        else if (itemP == null && itemS == null)
         {
             itemNameVisual.text = null;
         }
