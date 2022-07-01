@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: GarnatuurSeeds
   m_EditorClassIdentifier: 
   idName: Garnatuur seeds
-  Plant: []
+  Plant:
+  - {fileID: 2134339740853286606, guid: 3bca22cbe565924469ae3efa9ce7b396, type: 3}
+  - {fileID: 4971602633116045913, guid: cbe6f61f114667e4c8361393df48d769, type: 3}
+  - {fileID: 2332471090855714146, guid: 2fb18da3d7ff3704ea24608648db5d76, type: 3}
+  - {fileID: 6319386123474709447, guid: 630a321080c03a6419a8988c3616311c, type: 3}
+  - {fileID: 7270926831577174398, guid: fcc95d3865273dc47a026ce16ffe91dd, type: 3}
+  - {fileID: 8407590493926089107, guid: 15c37b3078ed3fb4582d4cc9d5737b77, type: 3}
+  - {fileID: 2262464400324460487, guid: 0518f7314af14b64187fa2a376b76bcf, type: 3}
+  - {fileID: 6379170009960229286, guid: da3ff61eebaad064da287199559d0e85, type: 3}
   crop: {fileID: 0}
   growTime: 0
