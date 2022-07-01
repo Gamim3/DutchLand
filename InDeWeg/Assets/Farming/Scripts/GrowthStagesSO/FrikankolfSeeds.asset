@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: FrikankolfSeeds
   m_EditorClassIdentifier: 
   idName: FrikankolfSeeds
-  Plant: []
+  Plant:
+  - {fileID: 4437984116813713480, guid: adaa7b6a58d82d64a9ca59fd5fd9da6d, type: 3}
+  - {fileID: 2816360820601191880, guid: 4610aa3400601a54e9aa16d3642be1fb, type: 3}
+  - {fileID: 5324084943899140839, guid: 28092e3e7ac64f94bb6698dee506d0c6, type: 3}
+  - {fileID: 8876256329543281080, guid: fa97debbfba3af547aef9293d085d262, type: 3}
+  - {fileID: 1570335125736661721, guid: 9941a4bde29a0f94ead90a44c8bd6203, type: 3}
+  - {fileID: 4437350675874773922, guid: 7c396f4996ebd8946a5130c251d5a020, type: 3}
+  - {fileID: 1615985187767174398, guid: 8cc951ab3c8eae4428ce5693057bad93, type: 3}
+  - {fileID: 302349852370399396, guid: b5fd72445dd141b4ea88737770d24f54, type: 3}
   crop: {fileID: 0}
-  growTime: 0
+  growTime: 1
