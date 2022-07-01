@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/!Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/!Scenes/PreMenuScreen.unity
+    guid: 88aeb0c0564fb4c4f8d8cb80de3f9b61
+  - enabled: 1
     path: Assets/!Scenes/MainMenu.unity
     guid: 8e086fd5f2c3ed348a855b0b9d574939
   - enabled: 1
     path: Assets/!Scenes/Game.unity
     guid: a183e9767e42b9b42b6db2f05875c834
-  - enabled: 1
-    path: Assets/!Scenes/PreMenuScreen.unity
-    guid: 88aeb0c0564fb4c4f8d8cb80de3f9b61
   - enabled: 1
     path: Assets/!Scenes/Game Over.unity
     guid: 6ad814012d35e434b931300edeb71da2
