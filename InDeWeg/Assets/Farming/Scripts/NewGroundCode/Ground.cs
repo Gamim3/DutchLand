@@ -103,7 +103,7 @@ public class Ground : MonoBehaviour
                     Destroy(cloneGround);
                     cloneGround = Instantiate(groundStates[2], transform.position, Quaternion.identity);
 
-                    waterLevel = fullWaterLevel;
+                    waterLevel = 10000f;
                     curGroundState = 2;
                 }
                 break;
