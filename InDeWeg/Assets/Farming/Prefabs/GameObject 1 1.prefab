@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7978596761189655727}
   - component: {fileID: 7978596761189655713}
   - component: {fileID: 3000594662279458469}
+  - component: {fileID: -6415386561255250724}
   m_Layer: 0
   m_Name: GameObject 1 1
   m_TagString: FarmTile
@@ -70,3 +71,18 @@ MonoBehaviour:
   cloneGround: {fileID: 0}
   fullWaterLevel: 30
   toolstages: 0
+--- !u!114 &-6415386561255250724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7978596761189655712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741df529a178d5942971c59e129f4b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  curState: 0
+  clonePlant: {fileID: 0}
