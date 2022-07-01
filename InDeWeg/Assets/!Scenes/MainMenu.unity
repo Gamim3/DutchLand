@@ -376,6 +376,9 @@ MonoBehaviour:
   optionMenu: {fileID: 0}
   mayShowMenu: 1
   sceneIndex: 1
+  toggleMouse: 0
+  playerCam: {fileID: 0}
+  player: {fileID: 0}
 --- !u!82 &71192426
 AudioSource:
   m_ObjectHideFlags: 0
@@ -387,7 +390,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 8d6e3ff76f8fdba44b5294e96ef7e0e2,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8c293410c4cb8a74cbf5937dd5d35ed2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 184a5151982695641bece1183a791727, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
