@@ -13,11 +13,13 @@ public class ToolSwapping : MonoBehaviour
 
     public GameObject[] tools;
 
-    public Animation[] anim;
+    public Animation anim;
     // Start is called before the first frame update
     void Start()
     {
         toolstates = Toolstates.Hoe;
+
+        anim = gameObject.GetComponent<Animation>();
     }
     public enum Toolstates
     {
@@ -41,6 +43,7 @@ public class ToolSwapping : MonoBehaviour
             {
                 toolstates--;
             }
+            SwapItem();
 
         }
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
@@ -53,8 +56,8 @@ public class ToolSwapping : MonoBehaviour
             {
                 toolstates++;
             }
+            SwapItem();
         }
-
         Vector3 direction = cam.transform.forward;
 
         if (Input.GetButtonDown("Fire1") && working == false && Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
@@ -62,12 +65,16 @@ public class ToolSwapping : MonoBehaviour
             Working();
 
         }
+    }
 
+    public void SwapItem()
+    {
         foreach (GameObject tool in tools)
         {
             tool.SetActive(false);
         }
         tools[(int)toolstates].SetActive(true);
+        anim = tools[(int)toolstates].GetComponent<Animation>();
 
     }
     public void Working()
@@ -76,9 +83,11 @@ public class ToolSwapping : MonoBehaviour
         {
             case Toolstates.Hoe:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Hoe);
+                anim.Play();
                 break;
             case Toolstates.Water:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Water);
+                anim.Play();
                 break;
             case Toolstates.Shovel:
 
@@ -92,10 +101,17 @@ public class ToolSwapping : MonoBehaviour
 
                     GetComponent<InventoryManager>().RemoveItem(1);
                 }
+                anim.Play();
                 break;
             case Toolstates.Scythe:
                 hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Scythe);
+                anim.Play();
                 break;
         }
+    }
+
+    public void SetAllAnimStatesToFalse()
+    {
+       
     }
 }
