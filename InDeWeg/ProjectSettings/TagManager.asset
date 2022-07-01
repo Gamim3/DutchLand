@@ -19,6 +19,7 @@ TagManager:
   - Shop
   - FarmSpace
   - ParkSpace
+  - Well
   layers:
   - Default
   - TransparentFX

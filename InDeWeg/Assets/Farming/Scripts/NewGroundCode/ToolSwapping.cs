@@ -14,6 +14,8 @@ public class ToolSwapping : MonoBehaviour
     public GameObject[] tools;
 
     public Animation anim;
+
+    public int waterInCan;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +65,20 @@ public class ToolSwapping : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && working == false && Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "FarmTile")
         {
             Working();
-
+        }
+        if (Input.GetButtonDown("Fire1") && working == false && Physics.Raycast(transform.position, direction, out hit, 3f) && hit.transform.tag == "Well")
+        {
+            if (waterInCan == 0)
+            {
+                switch (toolstates)
+                {
+                    case Toolstates.Water:
+                        waterInCan = 15;
+                        // play animation of well
+                        anim.Play();
+                        break;
+                }
+            }
         }
     }
 
@@ -86,8 +101,12 @@ public class ToolSwapping : MonoBehaviour
                 anim.Play();
                 break;
             case Toolstates.Water:
-                hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Water);
-                anim.Play();
+                if (waterInCan > 0)
+                {
+                    waterInCan--;
+                    hit.transform.gameObject.GetComponent<Ground>().WorkTheGround(Ground.Toolstages.Water);
+                    anim.Play();
+                }
                 break;
             case Toolstates.Shovel:
 
