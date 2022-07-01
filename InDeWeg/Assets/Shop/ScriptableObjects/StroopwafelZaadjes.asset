@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Stroopwafel zaadjes
   description: Door magie en radioactief afval kun je deze zaadjes laten groeien.
-  baseCost: 15
+  baseCost: 3

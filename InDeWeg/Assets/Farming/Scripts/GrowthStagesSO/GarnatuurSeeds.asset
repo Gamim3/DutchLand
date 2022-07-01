@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9449602aff8e4843b2368051ea7ba7a, type: 3}
   m_Name: GarnatuurSeeds
   m_EditorClassIdentifier: 
-  idName: Garnatuur seeds
+  idName: Garnatuur zaadjes
   Plant:
   - {fileID: 2134339740853286606, guid: 3bca22cbe565924469ae3efa9ce7b396, type: 3}
   - {fileID: 4971602633116045913, guid: cbe6f61f114667e4c8361393df48d769, type: 3}
@@ -22,5 +22,5 @@ MonoBehaviour:
   - {fileID: 8407590493926089107, guid: 15c37b3078ed3fb4582d4cc9d5737b77, type: 3}
   - {fileID: 2262464400324460487, guid: 0518f7314af14b64187fa2a376b76bcf, type: 3}
   - {fileID: 6379170009960229286, guid: da3ff61eebaad064da287199559d0e85, type: 3}
-  crop: {fileID: 0}
-  growTime: 0
+  crop: {fileID: 8398200479585452552, guid: cd473aa49983b334493726201adf0cda, type: 3}
+  growTime: 7

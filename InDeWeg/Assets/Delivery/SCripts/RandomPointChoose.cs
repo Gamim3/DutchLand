@@ -24,6 +24,8 @@ public class RandomPointChoose : MonoBehaviour
 
     public bool acceptedRequest;
 
+    public Transform respawnpoint;
+
     //public GameObject ;
     public void Start()
     {
@@ -52,6 +54,8 @@ public class RandomPointChoose : MonoBehaviour
                 parked = false;
                 acceptedRequest = false;
                 requestManagerGo.GetComponent<RequestManager>().GiveMoney(indexNumber);
+
+                pointer.GetComponent<Pointer>().target = respawnpoint;
             }
         }
     }

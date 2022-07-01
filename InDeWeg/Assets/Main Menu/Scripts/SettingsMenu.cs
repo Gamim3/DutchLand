@@ -39,7 +39,6 @@ public class SettingsMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePauzeMenu();
-            MouseLock();
         }
     
     }

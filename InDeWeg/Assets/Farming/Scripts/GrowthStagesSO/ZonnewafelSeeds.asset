@@ -20,5 +20,5 @@ MonoBehaviour:
   - {fileID: 7273862317802757435, guid: 9a300f37f5e4d0340a0345de3d82e405, type: 3}
   - {fileID: 8176833185673825668, guid: 7c9e962f0f096094abd11c9c018f5c48, type: 3}
   - {fileID: 5633744532001518127, guid: b1c4dcc774db7f84da3c5f82d56d06e9, type: 3}
-  crop: {fileID: 0}
-  growTime: 1
+  crop: {fileID: 7869272126779521102, guid: ce70ee5bebab17a48b0bfcffc041fe10, type: 3}
+  growTime: 10

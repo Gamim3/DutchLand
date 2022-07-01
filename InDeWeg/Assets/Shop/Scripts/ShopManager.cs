@@ -6,7 +6,7 @@ using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    public int coins = 50;
+    public int coins;
     public TMP_Text coinUI;
     public TMP_Text otherCoinUI;
     public ShopItemSO[] shopItemsSO;
@@ -25,6 +25,9 @@ public class ShopManager : MonoBehaviour
             shoppannelsGO[i].SetActive(true);
         coinUI.text = "€: " + coins.ToString();
         LoadPanels();
+
+        AddCoins(100);
+
         CheckPurchaceable();
     }
 
