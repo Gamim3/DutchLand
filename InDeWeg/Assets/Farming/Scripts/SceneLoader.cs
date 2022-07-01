@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public bool noMoney;
+
+    public GameObject shopmanager;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +17,15 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (shopmanager.GetComponent<ShopManager>().coins == 0)
+        {
+            noMoney = true;
+        }
 
+        if (noMoney == true)
+        {
+            SceneLoadeerLose();
+        }
     }
 
     public void SceneLoadeerVictory()
