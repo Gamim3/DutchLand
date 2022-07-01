@@ -375,7 +375,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   optionMenu: {fileID: 0}
   mayShowMenu: 1
-  sceneIndex: 1
+  sceneIndex: 2
   toggleMouse: 0
   playerCam: {fileID: 0}
   player: {fileID: 0}
